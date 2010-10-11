@@ -1,0 +1,21 @@
+[user]
+	name = Victor Koronen
+	email = koronen@kth.se
+
+[color]
+	branch = auto
+	status = auto
+	diff = auto
+
+[alias]
+	last = log -1 HEAD
+    visual = !gitk
+    co = checkout
+
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 467x333+400+253
+	history-view-vpane-position = 623
+	main-window-view = HistoryView
+	file-view-hpane-position = 265
+	file-view-vpane-position = 772
