@@ -4,7 +4,8 @@
 # see /usr/share/doc/bash/examples/startup-files for examples.
 # the files are located in the bash-doc package.
 
-# the default umask is set in /etc/profile
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
 # set PATH so it includes user's private bin if it exists
@@ -16,7 +17,7 @@ fi
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	    . "$HOME/.bashrc"
+	. "$HOME/.bashrc"
     fi
 fi
 
