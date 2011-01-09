@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Some useful aliases (from /usr/share/doc/bash/examples/startup-files/Bash_aliases)
+alias texclean='rm -f *.toc *.aux *.log *.cp *.fn *.tp *.vr *.pg *.ky'
+alias clean='echo -n "Really clean this directory? ";
+    read yorn;
+    if test "$yorn" = "y"; then
+       rm -f \#* *~ .*~ *.bak .*.bak  *.tmp .*.tmp core a.out;
+       echo "Cleaned.";
+    else
+       echo "Not cleaned.";
+    fi'
+alias pu="pushd"
+alias po="popd"
+
 # Enable color
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -22,10 +35,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Misc hacks
 alias nano='nano -w'
 alias df='df -h'
+alias sl='sl -e'
 
 # Handy shorts
 alias ..='cd ..'
 alias trm='rm *~'
+alias clr='clear'
 function lsd { cd $*; ls -aF; }
 #function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
 
@@ -46,12 +61,12 @@ alias gco="git commit -v"
 #alias sd="svn diff"
 
 # Rails aliases
-alias rsc="script/console"
-alias rss="script/server"
+#alias rsc="script/console"
+#alias rss="script/server"
 #alias ssd="script/server --debugger"
 #alias sg="script/generate"
 #alias sp="script/plugin"
-alias rdbm="rake db:migrate"
+#alias rdbm="rake db:migrate"
 #alias fl="rake db:fixtures:load"
 #alias prepare="RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rdm"
 #alias cpd="cap deploy"
