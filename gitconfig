@@ -11,6 +11,7 @@
 	last = log -1 HEAD
     visual = !gitk
     co = checkout
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [giggle]
 	main-window-maximized = true

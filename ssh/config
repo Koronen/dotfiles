@@ -1,0 +1,19 @@
+Host *.csc.kth.se *.csc.kth.se. *.nada.kth.se *.nada.kth.se. *.speech.kth.se  *.speech.kth.se. *.pdc.kth.se *.pdc.kth.se.
+	GSSAPIAuthentication yes
+	GSSAPIKeyExchange yes
+	GSSAPIDelegateCredentials yes
+
+Host s-shell my µ
+	HostName	s-shell.csc.kth.se
+	User		koronen
+	GSSAPIAuthentication yes
+	GSSAPIKeyExchange yes
+	GSSAPIDelegateCredentials yes
+
+Host u-shell u3 u
+	HostName	u-shell.csc.kth.se
+	User		koronen
+	GSSAPIAuthentication yes
+	GSSAPIKeyExchange yes
+	GSSAPIDelegateCredentials yes
+
