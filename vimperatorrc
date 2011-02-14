@@ -9,7 +9,7 @@ set suggestengines=google
 
 " completion priority in :[tab]open
 " bookmarks, suggestions, awesome bar
-set complete=bSl
+"set complete=bSl
 
 " show right and bottom scroll bar
 "set guioptions=rb
