@@ -45,14 +45,15 @@ function lsd { cd $*; ls -aF; }
 #function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
 
 # Git aliases
-alias gst="git status"
-alias gc="git commit"
 alias ga="git add"
 alias gb="git branch"
-alias gd="git diff"
+alias gc="git commit"
 alias gco="git checkout"
-alias gr="git rm"
+alias gd="git diff"
+alias gl="git log --pretty=\"%C(yellow)%h%Creset|%aN|%Cblue%ar%Creset|%s\""
 alias gp="git push"
+alias gr="git rm"
+alias gst="git status"
 
 # SVN aliases
 #alias sup="svn up"
