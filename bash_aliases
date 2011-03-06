@@ -2,7 +2,7 @@
 
 # Some useful aliases (from /usr/share/doc/bash/examples/startup-files/Bash_aliases)
 alias texclean='rm -f *.toc *.aux *.log *.cp *.fn *.tp *.vr *.pg *.ky'
-alias clean='echo -n "Really clean this directory? ";
+alias clean='echo -n "Really clean this directory (y/n) [n]? ";
     read yorn;
     if test "$yorn" = "y"; then
        rm -f \#* *~ .*~ *.bak .*.bak  *.tmp .*.tmp core a.out;
@@ -40,20 +40,19 @@ alias sl='sl -e'
 # Handy shorts
 alias ..='cd ..'
 alias trm='rm *~'
-alias clr='clear'
+alias cls='clear'
 function lsd { cd $*; ls -aF; }
 #function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
 
 # Git aliases
 alias gst="git status"
-alias gco="git commit -v"
-#alias gca="git commit -v -a"
-#alias ga="git add"
-#alias gb="git branch"
-#alias gd="git diff"
-#alias gco="git checkout"
-#alias gr="git rm"
-#alias gp="git push"
+alias gc="git commit"
+alias ga="git add"
+alias gb="git branch"
+alias gd="git diff"
+alias gco="git checkout"
+alias gr="git rm"
+alias gp="git push"
 
 # SVN aliases
 #alias sup="svn up"
