@@ -43,6 +43,7 @@ alias trm='rm *~'
 alias clr='clear'
 function lsd { cd $*; ls -aF; }
 #function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
+alias up='sudo apt-get update && sudo apt-get upgrade'
 
 # Git aliases
 alias gst="git status"
