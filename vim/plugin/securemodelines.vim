@@ -1,0 +1,1 @@
+../../submodules/securemodelines/plugin/securemodelines.vim
