@@ -1,0 +1,3 @@
+[submodule "securemodelines"]
+	path = submodules/securemodelines
+	url = git://github.com/ciaranm/securemodelines.git
