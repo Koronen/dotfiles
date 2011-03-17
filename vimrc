@@ -161,6 +161,12 @@ nnoremap <C-L> :nohl<CR><C-L>
 "
 " Your own custom settings.
 
+" Use Unicode and Unix linebreaks
+" "let &termencoding = &encoding
+set termencoding=utf-8
+set encoding=utf-8
+set fileformat=unix
+
 " Change the title bar to show the file that is edited
 set title
 
