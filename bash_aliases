@@ -10,8 +10,8 @@ alias clean='echo -n "Really clean this directory (y/n) [n]? ";
     else
        echo "Not cleaned.";
     fi'
-alias pu="pushd"
-alias po="popd"
+alias pu='pushd'
+alias po='popd'
 
 # Enable color
 alias ls='ls --color=auto'
@@ -43,6 +43,7 @@ alias trm='rm *~'
 alias cls='clear'
 function lsd { cd $*; ls -aF; }
 #function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
+alias up='sudo apt-get update && sudo apt-get upgrade'
 
 # Git aliases
 alias ga="git add"
@@ -72,9 +73,4 @@ alias gst="git status"
 #alias prepare="RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rdm"
 #alias cpd="cap deploy"
 
-# Misc Shell-Fu
-alias unixtime='date +%s'
-alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
-alias gen8Bpasswd='< /dev/urandom tr -dc A-Za-z0-9_ | head -c8 && echo'
-alias utop='top -u $(whoami)'
 

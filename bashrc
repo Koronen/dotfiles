@@ -87,10 +87,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Make .hosts file work for ssh tab autocompleting.
-#HOSTFILE=~/.hosts
-#complete -A hostname ssh scp
-
 # Environmental variables
 export EDITOR=vim
 export VISUAL=vim
