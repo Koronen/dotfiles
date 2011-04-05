@@ -45,17 +45,18 @@ function lsd { cd $*; ls -aF; }
 #function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
+alias reload='. ~/.bashrc'
 
 # Git aliases
 alias ga="git add"
 alias gb="git branch"
 alias gc="git commit"
-alias gco="git checkout"
 alias gd="git diff"
 alias gdh="git diff HEAD"
-alias gl="git log --pretty=\"%C(yellow)%h%Creset|%aN|%Cblue%ar%Creset|%s\""
+alias gl="git pull"
+alias glg="git log --pretty=\"%C(yellow)%h%Creset|%aN|%Cblue%ar%Creset|%s\""
 alias gp="git push"
-alias gr="git rm"
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gst="git status"
 
 # SVN aliases
