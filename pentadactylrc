@@ -8,7 +8,7 @@ group user
 set titlestring='Firefox with Pentadactyl'
 
 " Tabline
-set showtabline=never
+set showtabline=multitab
 
 " Windows keybind
 noremap <C-a> <C-v><C-a>
