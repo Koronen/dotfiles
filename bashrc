@@ -50,8 +50,51 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# prompt color chart
+c_gray='\033[01;30m'
+c_red='\033[01;31m'
+c_green='\033[01;32m'
+c_yellow='\033[01;33m'
+c_blue='\033[01;34m'
+c_purple='\033[01;35m'
+c_teal='\033[01;36m'
+c_white='\033[01;37m'
+c_reset='\033[00m'
+
+# prompt helper functions
+__hostname_colored() {
+  case $(hostname -s| tr "[:upper:]" "[:lower:]") in
+    equidae)
+      echo -ne "${c_purple}$(hostname)${c_reset}"
+      ;;
+    *)
+      echo -ne "${c_white}$(hostname)${c_reset}"
+      ;;
+  esac
+}
+
+__username_colored() {
+  case $(whoami) in
+    root)
+      echo -ne "${c_red}root${c_reset}"
+      ;;
+    *)
+      echo -ne "${c_white}$(whoami)${c_reset}"
+      ;;
+  esac
+}
+
+# prompt building blocks
+#
+# \[\033[01;32m\] -- colorize!
+# ${debian_chroot:+($debian_chroot)} -- display current chroot, if any
+# \u@\h -- user@hostname
+# \w -- current working directory
+# \$(__git_ps1 " (%s)") -- print git branch, if any
+# \$(__my_command) -- print output of command "__my_command"
+#
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}${c_green}\u@\h${c_reset}:${c_blue}\w${c_reset}\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
