@@ -45,7 +45,7 @@ function lsd { cd $*; ls -aF; }
 #function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
-alias reload='. ~/.bashrc'
+alias brc='. ~/.bashrc'
 
 # Git aliases
 alias ga="git add"
