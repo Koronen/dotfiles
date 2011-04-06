@@ -24,33 +24,7 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
-
-# prompt color chart
+# prompt colors as variables
 c_gray='\033[01;30m'
 c_red='\033[01;31m'
 c_green='\033[01;32m'
@@ -61,7 +35,7 @@ c_teal='\033[01;36m'
 c_white='\033[01;37m'
 c_reset='\033[00m'
 
-# prompt helper functions
+# output a colored hostname
 __hostname_colored() {
   case $(hostname -s| tr "[:upper:]" "[:lower:]") in
     equidae)
@@ -73,6 +47,7 @@ __hostname_colored() {
   esac
 }
 
+# output a colored username
 __username_colored() {
   case $(whoami) in
     root)
@@ -84,6 +59,11 @@ __username_colored() {
   esac
 }
 
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
 # prompt building blocks
 #
 # \[\033[01;32m\] -- colorize!
@@ -92,22 +72,43 @@ __username_colored() {
 # \w -- current working directory
 # \$(__git_ps1 " (%s)") -- print git branch, if any
 # \$(__my_command) -- print output of command "__my_command"
-#
-if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${c_green}\u@\h${c_reset}:${c_blue}\w${c_yellow}\$(__git_ps1)${c_reset}\$ "
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)\$ '
-fi
-unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+# sets the prompt (set $1 for forced color)
+__set_prompt() {
+  # default behavior
+  # set a fancy prompt (non-color, unless we know we "want" color)
+  case "$TERM" in
+    xterm-color)
+      color_prompt=yes
+      ;;
+#    xterm*|rxvt*)
+#      # If this is an xterm set the title to user@host:dir
+#      PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#      return
+#      ;;
+  esac
+
+  # override?
+  if [ -n "$1" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+      # We have color support; assume it's compliant with Ecma-48
+      # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+      # a case would tend to support setf rather than setaf.)
+	  color_prompt=yes
+    else
+	  color_prompt=
+    fi
+  fi
+
+  # set the prompt
+  if [ "$color_prompt" = yes ]; then
+    PS1="${debian_chroot:+($debian_chroot)}${c_green}\u@\h${c_reset}:${c_blue}\w${c_yellow}\$(__git_ps1)${c_reset}\$ "
+  else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)\$ '
+  fi
+  unset color_prompt
+}
+__set_prompt
 
 # enable color support
 if [ -x /usr/bin/dircolors ]; then
