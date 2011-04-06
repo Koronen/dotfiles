@@ -119,7 +119,6 @@ fi
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -140,6 +139,11 @@ export TMPDIR=/tmp
 # '[ -z $PS1 ] && return' substitute
 fi
 
-# This is a good place to source rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# Load RVM into shell session
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Local settings.
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
 
