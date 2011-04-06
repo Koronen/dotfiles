@@ -94,9 +94,9 @@ __username_colored() {
 # \$(__my_command) -- print output of command "__my_command"
 #
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${c_green}\u@\h${c_reset}:${c_blue}\w${c_reset}\$ "
+    PS1="${debian_chroot:+($debian_chroot)}${c_green}\u@\h${c_reset}:${c_blue}\w${c_yellow}\$(__git_ps1)${c_reset}\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)\$ '
 fi
 unset color_prompt force_color_prompt
 
