@@ -20,6 +20,6 @@ Host u-shell u3 u
 Host home
 	HostName	victorofsweden.dyndns.org
 
-Host souseiseki sss
-	HostName	souseiseki.mine.nu
+Host cirno c
+	HostName	cirno.se
 
