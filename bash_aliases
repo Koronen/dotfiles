@@ -46,6 +46,7 @@ function lsd { cd $*; ls -aF; }
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias brc='. ~/.bashrc'
+alias lockscreen='gnome-screensaver-command --lock'
 
 # Git aliases
 alias ga="git add"
