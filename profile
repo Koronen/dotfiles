@@ -27,5 +27,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # map caps lock to ctrl
-setxkbmap -option ctrl:nocaps
+if [ -n "`which setxkbmap`" ]; then
+    setxkbmap -option ctrl:nocaps
+fi
 
