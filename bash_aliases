@@ -29,6 +29,10 @@ alias lA='ls -Alh'
 #alias la='ls -A'
 #alias l='ls -CF'
 
+# nada printer aliases
+alias oops='lprm -'
+alias lpview='echo The command you are looking for is called pkview >2!; pkview'
+
 # Add an "alert" alias for long running commands.  Use like so: 'sleep 10; alert'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
@@ -42,7 +46,7 @@ alias ..='cd ..'
 alias trm='rm *~'
 alias cls='clear'
 function lsd { cd $*; ls -aF; }
-#function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
+function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias brc='. ~/.bashrc'
