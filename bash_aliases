@@ -46,7 +46,7 @@ alias ..='cd ..'
 alias trm='rm *~'
 alias cls='clear'
 function lsd { cd $*; ls -aF; }
-function suspend-and-lock { sudo su -c 'gnome-screensaver-command --lock && pm-suspend'; }
+function suspend-and-lock { sudo echo && gnome-screensaver-command --lock && sudo pm-suspend; }
 alias up='sudo apt-get update && sudo apt-get upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias brc='. ~/.bashrc'
