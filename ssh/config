@@ -3,7 +3,7 @@ Host *.csc.kth.se *.csc.kth.se. *.nada.kth.se *.nada.kth.se. *.speech.kth.se  *.
 	GSSAPIKeyExchange yes
 	GSSAPIDelegateCredentials yes
 
-Host s-shell my µ
+Host s-shell s
 	HostName	s-shell.csc.kth.se
 	User		koronen
 	GSSAPIAuthentication yes
