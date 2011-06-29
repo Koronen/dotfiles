@@ -19,15 +19,5 @@ shell -$SHELL
 # Use C-z instead of C-a as this makes more sense for Emacs
 #escape ^z^z
 
-# Autocreate windows
-chdir "~"
-screen -t "root     -- shell"
-chdir "~/git/spargris/"
-screen -t "spargris -- editor"
-screen -t "spargris -- shell"
-screen -t "spargris -- console"
-screen -t "spargris -- server"
-chdir "~/spargris_old/"
-screen -t "spargris -- legacy"
-chdir "~"
-select 1
+# Source local config
+source "${HOME}/.screenrc.local"
