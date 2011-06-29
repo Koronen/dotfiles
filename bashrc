@@ -107,6 +107,11 @@ __set_prompt() {
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)\$ '
   fi
   unset color_prompt
+
+  # use a simple prompt on s-shell
+  if [[ "`uname`" == "SunOS" ]]; then
+    PS1='\u@\h:\w\$ '
+  fi
 }
 __set_prompt
 

@@ -14,10 +14,12 @@ alias pu='pushd'
 alias po='popd'
 
 # Enable color
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+if [[ "`uname`" != "SunOS" ]]; then # avoid on s-shell
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
 
 # ls aliases
 alias ll='ls -lh'
