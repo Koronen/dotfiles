@@ -1,0 +1,58 @@
+#!/bin/bash
+
+TARGET_ROOT=$HOME; cd $TARGET_ROOT
+LOCAL_ROOT=".dotfiles"
+REPLACE_ALL=0
+
+function replace_file {
+  echo "replace $2"
+  echo rm -rf $2 >&2
+  #echo mkdir -p "`dirname $2`" >&2
+  echo ln -s $1 $2 >&2
+}
+
+function check_file {
+  if [[ ! -f $2 && ! -d $2 ]]; then
+    echo "create $2"
+    echo ln -s $1 $2 >&2
+  elif [[ `diff -q $1 $2 >/dev/null` -eq 0 ]]; then
+    echo "identical $2"
+  else
+    if [[ $REPLACE_ALL -gt 0 ]]; then
+      replace_file $1 $2
+    else
+      echo -n "overwrite $2? [ynaq] "
+      read overwrite
+      case $overwrite in
+      a)
+        REPLACE_ALL=1
+        replace_file $1 $2
+        ;;
+      y)
+        replace_file $1 $2
+        ;;
+      q)
+        exit 1
+        ;;
+      *)
+        echo "skipping $2"
+        ;;
+      esac
+    fi
+  fi
+}
+
+#check_file "$LOCAL_ROOT/awesome" "$TARGET_ROOT/.awesome"
+check_file "$LOCAL_ROOT/bash_aliases" "$TARGET_ROOT/.bash_aliases"
+check_file "$LOCAL_ROOT/bashrc" "$TARGET_ROOT/.bashrc"
+check_file "$LOCAL_ROOT/gemrc" "$TARGET_ROOT/.gemrc"
+check_file "$LOCAL_ROOT/gitconfig" "$TARGET_ROOT/.gitconfig"
+check_file "$LOCAL_ROOT/irbrc" "$TARGET_ROOT/.irbrc"
+#check_file "$LOCAL_ROOT/pentadactylrc" "$TARGET_ROOT/.pentadactylrc"
+check_file "$LOCAL_ROOT/profile" "$TARGET_ROOT/.profile"
+check_file "$LOCAL_ROOT/screenrc" "$TARGET_ROOT/.screenrc"
+check_file "$LOCAL_ROOT/ssh/config" "$TARGET_ROOT/.ssh/config"
+#check_file "$LOCAL_ROOT/vim" "$TARGET_ROOT/.vim"
+#check_file "$LOCAL_ROOT/vimperatorrc" "$TARGET_ROOT/.vimperatorrc"
+check_file "$LOCAL_ROOT/vimrc" "$TARGET_ROOT/.vimrc"
+
