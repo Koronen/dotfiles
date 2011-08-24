@@ -41,6 +41,12 @@ __hostname_colored() {
     equidae)
       echo -ne "${c_purple}$(hostname)${c_reset}"
       ;;
+    accipitridae)
+      echo -ne "${c_blue}$(hostname)${c_reset}"
+      ;;
+    strigiformes)
+      echo -ne "${c_yellow}$(hostname)${c_reset}"
+      ;;
     *)
       echo -ne "${c_white}$(hostname)${c_reset}"
       ;;
@@ -102,7 +108,7 @@ __set_prompt() {
 
   # set the prompt
   if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${c_green}\u@\h${c_reset}:${c_blue}\w${c_yellow}\$(__git_ps1)${c_reset}\$ "
+    PS1="${debian_chroot:+($debian_chroot)}${c_green}$(__username_colored)@$(__hostname_colored)${c_reset}:${c_blue}\w${c_yellow}\$(__git_ps1)${c_reset}\$ "
   else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)\$ '
   fi
