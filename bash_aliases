@@ -44,12 +44,13 @@ alias df='df -h'
 alias sl='sl -e'
 
 # Handy shorts
+alias e='echo'
 alias ..='cd ..'
 alias trm='rm *~'
 alias cls='clear'
 function lsd { cd $*; ls -aF; }
 function suspend-and-lock { sudo echo && gnome-screensaver-command --lock && sudo pm-suspend; }
-alias up='sudo apt-get update && sudo apt-get upgrade'
+alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias brc='. ~/.bashrc'
 alias lockscreen='gnome-screensaver-command --lock'
@@ -73,14 +74,26 @@ alias gst="git status"
 #alias sd="svn diff"
 
 # Rails aliases
-#alias rsc="script/console"
-#alias rss="script/server"
-#alias ssd="script/server --debugger"
-#alias sg="script/generate"
-#alias sp="script/plugin"
-#alias rdbm="rake db:migrate"
-#alias fl="rake db:fixtures:load"
-#alias prepare="RAILS_ENV=test rake db:drop && RAILS_ENV=test rake db:create && RAILS_ENV=test rdm"
-#alias cpd="cap deploy"
-
+function rsc {
+  if [[ -f ./script/console ]]; then
+    ./script/console $*;
+  else
+    rails c $*;
+  fi
+}
+function rss {
+  if [[ -f ./script/server ]]; then
+    ./script/server $*;
+  else
+    rails s $*;
+  fi
+}
+function rsg {
+  if [[ -f ./script/generate ]]; then
+    ./script/generate $*;
+  else
+    rails g $*;
+  fi
+}
+alias rdbm="bundle exec rake db:migrate"
 
