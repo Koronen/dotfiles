@@ -106,7 +106,7 @@ set visualbell
 set t_vb=
 
 " Enable use of the mouse for all modes
-set mouse=a
+"set mouse=a
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
@@ -156,6 +156,18 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" List buffers with <F5>, and allow switching by using the corresponding
+" number
+noremap <F5> :buffers<CR>:buffer<Space>
+
+" Ctrl+Left/right switches between buffers
+noremap <C-Left> :bprevious<CR>
+noremap <C-Right> :bnext<CR>
+
+" Using Tab and Shift-Tab to (un)indent
+map <Tab> >gv
+map <S-Tab> <gv
+
 "------------------------------------------------------------
 " Custom settings {{{1
 "
@@ -168,7 +180,7 @@ set encoding=utf-8
 set fileformat=unix
 
 " Change the title bar to show the file that is edited
-set title
+"set title
 
 " Set a custom color scheme
 "colorscheme desert
@@ -184,5 +196,20 @@ set scrolloff=3
 set ttyfast
 
 " Show matching brackets
-set showmatch		
+set showmatch
+
+"------------------------------------------------------------
+" Language specific settings {{{1
+"
+" Language specific settings.
+autocmd FileType ruby setlocal formatoptions=ql tabstop=2 shiftwidth=2 smarttab expandtab
+autocmd FileType ruby setlocal makeprg=ruby\ -w\ $* errorformat=
+            \%+E%f:%l:\ parse\ error,
+            \%W%f:%l:\ warning:\ %m,
+            \%E%f:%l:in\ %*[^:]:\ %m,
+            \%E%f:%l:\ %m,
+            \%-C%\tfrom\ %f:%l:in\ %.%#,
+            \%-Z%\tfrom\ %f:%l,
+            \%-Z%p^,
+            \%-G%.%#
 
