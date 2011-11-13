@@ -8,16 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# add android sdk tools to PATH, if exist
-if [ -d "$HOME/lib/android-sdk-linux_86" ] ; then
-    PATH="$HOME/lib/android-sdk-linux_86/tools:$HOME/lib/android-sdk-linux_86/platform-tools:$PATH"
-fi
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -26,8 +16,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# map caps lock to ctrl
-if [ -n "`which setxkbmap`" ]; then
-    setxkbmap -option ctrl:nocaps
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
 fi
-
