@@ -17,9 +17,7 @@ Host u-shell u3 u
 	GSSAPIKeyExchange yes
 	GSSAPIDelegateCredentials yes
 
-Host home
-	HostName	victorofsweden.dyndns.org
-
 Host cirno c
 	HostName	cirno.se
+	User        koronen
 
