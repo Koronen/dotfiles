@@ -114,8 +114,8 @@ __set_prompt() {
   fi
   unset color_prompt
 
-  # use a simple prompt on s-shell
-  if [[ "`uname`" == "SunOS" ]]; then
+  # use a simple prompt on s-shell and OSX hosts
+  if [[ "`uname`" == "SunOS" ||  "`uname`" == "Darwin" ]]; then
     PS1='\u@\h:\w\$ '
   fi
 }
