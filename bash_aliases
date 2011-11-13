@@ -88,6 +88,7 @@ function rss {
     rails s $*;
   fi
 }
+alias rssp="rss -e production"
 function rsg {
   if [[ -f ./script/generate ]]; then
     ./script/generate $*;
@@ -96,4 +97,5 @@ function rsg {
   fi
 }
 alias rdbm="bundle exec rake db:migrate"
-
+alias rcc="bundle exec rake cucumber"
+alias rrc="bundle exec rake spec"
