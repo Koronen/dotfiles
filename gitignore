@@ -1,4 +1,6 @@
 *~
 .DS_Store
+.rbenv-version
+.rvmrc
 .svn/*
 *.swp
