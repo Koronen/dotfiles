@@ -8,15 +8,15 @@
 	diff = auto
 
 [alias]
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	tree = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	unstage = reset HEAD --
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
 	last = log -1 HEAD
-    visual = !gitk
+	visual = !gitk
 
 [core]
-    excludesfile = /home/koronen/.gitignore
+	excludesfile = ~/.gitignore
 
