@@ -2,16 +2,6 @@
 
 # Some useful aliases (from /usr/share/doc/bash/examples/startup-files/Bash_aliases)
 alias texclean='rm -f *.toc *.aux *.log *.cp *.fn *.tp *.vr *.pg *.ky'
-alias clean='echo -n "Really clean this directory (y/n) [n]? ";
-    read yorn;
-    if test "$yorn" = "y"; then
-       rm -f \#* *~ .*~ *.bak .*.bak  *.tmp .*.tmp core a.out;
-       echo "Cleaned.";
-    else
-       echo "Not cleaned.";
-    fi'
-alias pu='pushd'
-alias po='popd'
 
 # Enable color
 if [[ "`uname`" != "SunOS" ]]; then # avoid on s-shell
@@ -22,21 +12,12 @@ if [[ "`uname`" != "SunOS" ]]; then # avoid on s-shell
 fi
 
 # ls aliases
-alias ll='ls -lh'
-alias la='ls -alh'
-alias lA='ls -Alh'
-
-# some more ls aliases
-#alias ll='ls -alF'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -AlhF'
+alias l='ls -CF'
 
 # nada printer aliases
 alias oops='lprm -'
 alias lpview='echo The command you are looking for is called pkview >2!; pkview'
-
-# Add an "alert" alias for long running commands.  Use like so: 'sleep 10; alert'
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Misc hacks
 alias nano='nano -w'
@@ -46,9 +27,10 @@ alias sl='sl -e'
 # Handy shorts
 alias e='echo'
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias trm='rm *~'
 alias cls='clear'
-function lsd { cd $*; ls -aF; }
 function suspend-and-lock { sudo echo && gnome-screensaver-command --lock && sudo pm-suspend; }
 alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
