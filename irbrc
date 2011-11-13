@@ -11,3 +11,9 @@ if Dir.pwd != File.expand_path("~")
     load local_irbrc
   end
 end
+
+# Print history
+# from http://railscasts.com/episodes/191-mechanize
+def history(lines = 10)
+  puts Readline::HISTORY.entries[(-2-lines)..-2].join("\n")
+end
