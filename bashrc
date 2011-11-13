@@ -153,8 +153,8 @@ fi
 # Load RVM into shell session
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Local settings.
-if [ -f ~/.bash_local ]; then
-    . ~/.bash_local
+# Load local settings, if present
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
 fi
 
