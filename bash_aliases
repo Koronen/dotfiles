@@ -80,5 +80,6 @@ function rsg {
   fi
 }
 alias rdbm="bundle exec rake db:migrate"
+alias rdtc="bundle exec rake db:test:clone"
 alias rcc="bundle exec rake cucumber"
 alias rrc="bundle exec rake spec"
