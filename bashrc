@@ -130,8 +130,8 @@ fi
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+    . "$HOME/.bash_aliases"
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -154,7 +154,6 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Load local settings, if present
-if [ -f ~/.bashrc.local ]; then
-    . ~/.bashrc.local
+if [ -f "$HOME/.bashrc.local" ]; then
+    . "$HOME/.bashrc.local"
 fi
-
