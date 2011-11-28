@@ -212,4 +212,6 @@ autocmd FileType ruby setlocal makeprg=ruby\ -w\ $* errorformat=
             \%-Z%\tfrom\ %f:%l,
             \%-Z%p^,
             \%-G%.%#
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+au BufRead,BufNewFile {*.json} set ft=javascript
 
