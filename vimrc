@@ -5,9 +5,6 @@
 "              If you're a more advanced user, building your own .vimrc based
 "              on this file is still a good idea.
 
-" Let Pathogen do its infecting
-call pathogen#infect()
-
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
@@ -16,6 +13,9 @@ endif
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
+
+" Let Pathogen do its infecting
+call pathogen#infect()
 
 "------------------------------------------------------------
 " Features {{{1
@@ -171,6 +171,7 @@ noremap <C-Right> :bnext<CR>
 map <Tab> >gv
 map <S-Tab> <gv
 
+" Command-T
 map <C-T> :CommandT<CR>
 
 "------------------------------------------------------------
