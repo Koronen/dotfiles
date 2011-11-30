@@ -5,6 +5,9 @@
 "              If you're a more advanced user, building your own .vimrc based
 "              on this file is still a good idea.
 
+" Let Pathogen do its infecting
+call pathogen#infect()
+
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
