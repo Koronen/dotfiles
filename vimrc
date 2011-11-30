@@ -168,6 +168,8 @@ noremap <C-Right> :bnext<CR>
 map <Tab> >gv
 map <S-Tab> <gv
 
+map <C-T> :CommandT<CR>
+
 "------------------------------------------------------------
 " Custom settings {{{1
 "

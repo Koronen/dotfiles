@@ -1,2 +1,6 @@
+vim/doc/*
 vim/.netrwhist
+vim/plugin/*
 vim/syntax/pentadactyl.vim
+vim/ruby/*
+vim/.VimballRecord
