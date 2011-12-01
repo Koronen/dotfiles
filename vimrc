@@ -172,7 +172,9 @@ map <Tab> >gv
 map <S-Tab> <gv
 
 " Command-T
+let g:CommandTMaxHeight=20
 map <C-T> :CommandT<CR>
+imap <C-T> <Esc>:CommandT<CR>
 
 "------------------------------------------------------------
 " Custom settings {{{1
