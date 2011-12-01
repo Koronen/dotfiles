@@ -6,9 +6,9 @@ proper credit where due.
 
 ## Installation
 
-  git clone https://github.com/Koronen/dotfiles ~/.dotfiles
-  cd ~/.dotfiles
-  ./install
+    git clone https://github.com/Koronen/dotfiles ~/.dotfiles
+    cd ~/.dotfiles
+    ./install
 
 ## License
 
