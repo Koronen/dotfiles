@@ -38,3 +38,7 @@
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	ignore = untracked
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+	ignore = untracked
