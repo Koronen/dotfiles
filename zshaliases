@@ -1,0 +1,9 @@
+alias gdh='git diff'
+compdef _git gdh=git-diff
+
+alias zrc='source ~/.zshrc'
+
+# Load local aliases, if present
+if [ -f "$HOME/.zshaliases.local" ]; then
+    source "$HOME/.zshaliases.local"
+fi

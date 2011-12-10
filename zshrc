@@ -28,7 +28,10 @@ plugins=(bundler gem git rails3 ruby)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# Load aliases, if present
+if [ -f "$HOME/.zshaliases" ]; then
+    source "$HOME/.zshaliases"
+fi
 
 # Load local settings, if present
 if [ -f "$HOME/.zshrc.local" ]; then
