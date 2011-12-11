@@ -191,7 +191,7 @@ set fileformat=unix
 "set title
 
 " Set a custom color scheme
-"colorscheme desert
+colorscheme solarized
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
