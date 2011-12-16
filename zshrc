@@ -24,13 +24,18 @@ DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler gem git rails3 ruby)
+plugins=(bundler gem git mercurial rails3 ruby svn)
 
 source $ZSH/oh-my-zsh.sh
 
 # Load aliases, if present
 if [ -f "$HOME/.zshaliases" ]; then
     source "$HOME/.zshaliases"
+fi
+
+# Load prompt, if present
+if [ -f "$HOME/.zshprompt" ]; then
+    source "$HOME/.zshprompt"
 fi
 
 # Load local settings, if present

@@ -139,6 +139,8 @@ check_file "screenrc" ".screenrc"
 check_file "ssh/config" ".ssh/config"
 check_dir  "vim" ".vim"
 check_file "vimrc" ".vimrc"
+check_file "zshaliases" ".zshaliases"
 check_file "zshenv" ".zshenv"
+check_file "zshprompt" ".zshprompt"
 check_file "zshrc" ".zshrc"
 

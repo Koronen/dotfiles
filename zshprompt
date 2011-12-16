@@ -1,0 +1,80 @@
+##################
+# Theme settings #
+##################
+
+ZSH_PROMPT_BASE_COLOR="%{$reset_color%}"
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" git:"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_DIRTY=""
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg_no_bold[green]%}+"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg_no_bold[yellow]%}!"
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg_no_bold[red]%}-"
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg_no_bold[magenta]%}>"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_no_bold[cyan]%}#"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_no_bold[blue]%}?"
+
+ZSH_THEME_SVN_PROMPT_PREFIX=" svn:"
+ZSH_THEME_SVN_PROMPT_DIRTY="%{$fg_no_bold[red]%}!"
+ZSH_THEME_SVN_PROMPT_CLEAN=""
+ZSH_THEME_SVN_PROMPT_SUFFIX="%{$reset_color%}"
+
+ZSH_THEME_RVM_PROMPT_PREFIX=" ruby:"
+ZSH_THEME_RVM_PROMPT_SUFFIX="%{$reset_color%}"
+
+ZSH_THEME_RBENV_PROMPT_PREFIX=" ruby:"
+ZSH_THEME_RBENV_PROMPT_SUFFIX="%{$reset_color%}"
+
+#############
+# Functions #
+#############
+
+function _last_cmd_status_string {
+  case $LAST_CMD_STATUS in
+    (0)
+      echo -n "0"
+      ;;
+    (*)
+      echo -n "%{$fg_no_bold[red]%}${LAST_CMD_STATUS}%{$reset_color%}"
+  esac
+}
+
+function _prompt_char {
+    git branch > /dev/null 2>&1 && echo '±' && return
+    hg root > /dev/null 2>&1 && echo '☿' && return
+    svn info > /dev/null 2>&1 && echo '§' && return
+    if [ $UID -eq 0 ]; then echo '#'; else echo '$'; fi
+}
+
+function rvm_prompt_info {
+  ruby_version=$($rvm_bin_path/rvm-prompt 2> /dev/null) || return
+  echo "$ZSH_THEME_RVM_PROMPT_PREFIX$ruby_version$ZSH_THEME_RVM_PROMPT_SUFFIX"
+}
+
+function rbenv_prompt_info {
+  ruby_version=$(rbenv version-name 2> /dev/null) || return
+  echo "$ZSH_THEME_RBENV_PROMPT_PREFIX$ruby_version$ZSH_THEME_RBENV_PROMPT_SUFFIX"
+}
+
+##########
+# Prompt #
+##########
+
+# Build the PROMPT
+function _prompt {
+  print "$(_last_cmd_status_string)|%n@%m$(_prompt_char) "
+}
+
+# Build the RPROMPT
+function _rprompt {
+  print "%~$(rvm_prompt_info)$(rbenv_prompt_info)$(git_prompt_info)$(git_prompt_status)$(svn_prompt_info)%{$reset_color%}"
+}
+
+# Set the prompt
+function precmd {
+  LAST_CMD_STATUS=$?
+  RPROMPT=$(_rprompt)
+  PROMPT=$(_prompt)
+}
