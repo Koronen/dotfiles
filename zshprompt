@@ -31,17 +31,7 @@ ZSH_THEME_RBENV_PROMPT_SUFFIX="%{$reset_color%}"
 # Functions #
 #############
 
-function _last_cmd_status_string {
-  case $LAST_CMD_STATUS in
-    (0)
-      echo -n "0"
-      ;;
-    (*)
-      echo -n "%{$fg_no_bold[red]%}${LAST_CMD_STATUS}%{$reset_color%}"
-  esac
-}
-
-function _prompt_char {
+function prompt_char {
     git branch > /dev/null 2>&1 && echo '±' && return
     hg root > /dev/null 2>&1 && echo '☿' && return
     svn info > /dev/null 2>&1 && echo '§' && return
@@ -62,19 +52,6 @@ function rbenv_prompt_info {
 # Prompt #
 ##########
 
-# Build the PROMPT
-function _prompt {
-  print "$(_last_cmd_status_string)|%n@%m$(_prompt_char) "
-}
-
-# Build the RPROMPT
-function _rprompt {
-  print "%~$(rvm_prompt_info)$(rbenv_prompt_info)$(git_prompt_info)$(git_prompt_status)$(svn_prompt_info)%{$reset_color%}"
-}
-
-# Set the prompt
-function precmd {
-  LAST_CMD_STATUS=$?
-  RPROMPT=$(_rprompt)
-  PROMPT=$(_prompt)
-}
+local return_code="%(?.%?.%{$fg[red]%}%?%{$reset_color%})"
+PROMPT='${return_code}|%n@%m$(prompt_char) '
+RPROMPT='%~$(rvm_prompt_info)$(rbenv_prompt_info)$(git_prompt_info)$(git_prompt_status)$(svn_prompt_info)%{$reset_color%}'
