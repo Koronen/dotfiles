@@ -9,14 +9,11 @@
 
 [alias]
 	tree = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	unstage = reset HEAD --
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
 	last = log -1 HEAD
 	recent = log -10 --oneline --graph
-	visual = !gitk
+	visual = !gitg
+	master = checkout master
+	production = checkout production
 
 [core]
 	excludesfile = ~/.gitignore
