@@ -28,6 +28,10 @@ plugins=(bundler gem git mercurial rails3 ruby svn)
 
 source $ZSH/oh-my-zsh.sh
 
+# Set term idle titles
+ZSH_THEME_TERM_TAB_TITLE_IDLE="%7>..>%m%>>: %15<..<%~%<<" #host..: ..command
+ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~" #user@host: command
+
 # Load aliases, if present
 if [ -f "$HOME/.zshaliases" ]; then
     source "$HOME/.zshaliases"
