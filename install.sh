@@ -32,6 +32,10 @@ function print_status {
         color="\033[01;30m" #gray
         spaces="     "
         ;;
+    'notice')
+        color="\033[01;37m" #white
+        spaces="   "
+        ;;
   esac
 
   echo -e "${white}[${color}$1${spaces}${white}]${reset} $2"
@@ -126,6 +130,7 @@ check_dir  "awesome" ".awesome"
 check_file "bash_aliases" ".bash_aliases"
 check_file "bash_profile" ".bash_profile"
 check_file "bashrc" ".bashrc"
+check_file "ls-colors-solarized/dircolors" ".dircolors"
 check_file "gemrc" ".gemrc"
 check_file "gitconfig" ".gitconfig"
 check_file "gitignore" ".gitignore"
@@ -143,4 +148,9 @@ check_file "zshaliases" ".zshaliases"
 check_file "zshenv" ".zshenv"
 check_file "zshprompt" ".zshprompt"
 check_file "zshrc" ".zshrc"
+
+echo
+print_status "notice" "In order for the solarized colorscheme to work properly,"
+print_status "notice" "please load the palette into your terminal emulator."
+print_status "notice" " * https://github.com/sigurdga/gnome-terminal-colors-solarized"
 

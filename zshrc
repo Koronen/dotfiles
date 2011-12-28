@@ -32,17 +32,22 @@ source $ZSH/oh-my-zsh.sh
 ZSH_THEME_TERM_TAB_TITLE_IDLE="%7>..>%m%>>: %15<..<%~%<<" #host..: ..command
 ZSH_THEME_TERM_TITLE_IDLE="%n@%m: %~" #user@host: command
 
-# Load aliases, if present
+# Load dircolors
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+# Load aliases
 if [ -f "$HOME/.zshaliases" ]; then
     source "$HOME/.zshaliases"
 fi
 
-# Load prompt, if present
+# Load prompt
 if [ -f "$HOME/.zshprompt" ]; then
     source "$HOME/.zshprompt"
 fi
 
-# Load local settings, if present
+# Load local settings
 if [ -f "$HOME/.zshrc.local" ]; then
     source "$HOME/.zshrc.local"
 fi
