@@ -108,6 +108,9 @@ set visualbell
 " is unset, this does nothing.
 set t_vb=
 
+" Use 16-color palette
+set t_Co=16
+
 " Enable use of the mouse for all modes
 "set mouse=a
 
@@ -123,7 +126,6 @@ set notimeout ttimeout ttimeoutlen=200
 
 " Use <F2> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F2>
-
 
 "------------------------------------------------------------
 " Indentation options {{{1
@@ -188,7 +190,7 @@ set encoding=utf-8
 set fileformat=unix
 
 " Change the title bar to show the file that is edited
-"set title
+set title
 
 " Set a custom color scheme
 colorscheme solarized
@@ -205,6 +207,11 @@ set ttyfast
 
 " Show matching brackets
 set showmatch
+
+" Highlight current row and column
+au WinLeave * setlocal nocursorline nocursorcolumn
+au WinEnter * setlocal cursorline cursorcolumn
+set cursorline cursorcolumn
 
 "------------------------------------------------------------
 " Language specific settings {{{1
