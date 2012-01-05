@@ -6,18 +6,15 @@ Host *.csc.kth.se *.csc.kth.se. *.nada.kth.se *.nada.kth.se. *.speech.kth.se  *.
 Host s-shell s
 	HostName	s-shell.csc.kth.se
 	User		koronen
-	GSSAPIAuthentication yes
-	GSSAPIKeyExchange yes
-	GSSAPIDelegateCredentials yes
 
-Host u-shell u3 u
+Host u-shell u
 	HostName	u-shell.csc.kth.se
 	User		koronen
-	GSSAPIAuthentication yes
-	GSSAPIKeyExchange yes
-	GSSAPIDelegateCredentials yes
 
 Host cirno c
 	HostName	cirno.se
 	User        koronen
 
+Host clusterfluff cf.bj
+	HostName	clusterfluff.ben-and-jerrys.stacken.kth.se
+	User        koronen
