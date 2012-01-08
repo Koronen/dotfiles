@@ -50,6 +50,12 @@ endif
 " saving, and swap files will keep you safe if your computer crashes.
 set hidden
 
+" Note that not everyone likes working this way (with the hidden option).
+" Alternatives include using tabs or split windows instead of re-using the same
+" window for multiple buffers, and/or:
+" set confirm
+" set autowriteall
+
 " Better command-line completion
 set wildmenu
 
@@ -159,7 +165,7 @@ map Y y$
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
-nnoremap <C-L> :nohl<CR><C-L>
+" nnoremap <C-L> :nohl<CR><C-L>
 
 " List buffers with <F5>, and allow switching by using the corresponding
 " number
@@ -173,10 +179,24 @@ noremap <C-Right> :bnext<CR>
 map <Tab> >gv
 map <S-Tab> <gv
 
+" Navigate splits
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+" Jump to beginning/end of line
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+
 " Command-T
 let g:CommandTMaxHeight=20
 map <C-T> :CommandT<CR>
 imap <C-T> <Esc>:CommandT<CR>
+
+" NERDtree
+map <F4> :NERDTreeToggle<CR>
+imap <F4> <Esc>:NERDTreeToggle<CR>
 
 "------------------------------------------------------------
 " Custom settings {{{1
@@ -213,6 +233,9 @@ au WinLeave * setlocal nocursorline nocursorcolumn
 au WinEnter * setlocal cursorline cursorcolumn
 set cursorline cursorcolumn
 
+" Map leader
+let mapleader = ","
+
 "------------------------------------------------------------
 " Language specific settings {{{1
 "
@@ -229,4 +252,3 @@ autocmd FileType ruby setlocal makeprg=ruby\ -w\ $* errorformat=
             \%-G%.%#
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufRead,BufNewFile {*.json} set ft=javascript
-
