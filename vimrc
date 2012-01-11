@@ -252,3 +252,11 @@ autocmd FileType ruby setlocal makeprg=ruby\ -w\ $* errorformat=
             \%-G%.%#
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufRead,BufNewFile {*.json} set ft=javascript
+
+"------------------------------------------------------------
+" Local settings {{{1
+"
+" Source a local configuration file if available
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
