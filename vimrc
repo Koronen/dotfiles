@@ -221,8 +221,10 @@ set ttyfast
 set showmatch
 
 " Highlight current row and column
-au WinLeave * setlocal nocursorline nocursorcolumn
-au WinEnter * setlocal cursorline cursorcolumn
+if has("autocmd")
+  au WinLeave * setlocal nocursorline nocursorcolumn
+  au WinEnter * setlocal cursorline cursorcolumn
+endif
 set cursorline cursorcolumn
 
 " Map leader
@@ -232,18 +234,19 @@ let mapleader = ","
 " Language specific settings {{{1
 "
 " Language specific settings.
-autocmd FileType ruby setlocal formatoptions=ql tabstop=2 shiftwidth=2 smarttab expandtab
-autocmd FileType ruby setlocal makeprg=ruby\ -w\ $* errorformat=
-            \%+E%f:%l:\ parse\ error,
-            \%W%f:%l:\ warning:\ %m,
-            \%E%f:%l:in\ %*[^:]:\ %m,
-            \%E%f:%l:\ %m,
-            \%-C%\tfrom\ %f:%l:in\ %.%#,
-            \%-Z%\tfrom\ %f:%l,
-            \%-Z%p^,
-            \%-G%.%#
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-au BufRead,BufNewFile {*.json} set ft=javascript
+
+if has("autocmd")
+  " Options for languages strict about whitespace
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Options for languages with whitespace conventions
+  autocmd FileType ruby setlocal formatoptions=ql tabstop=2 shiftwidth=2 smarttab expandtab
+   
+  " Manually set filetype for certain files
+  autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+  autocmd BufRead,BufNewFile {*.json} set ft=javascript
+endif
 
 "------------------------------------------------------------
 " Local settings {{{1
