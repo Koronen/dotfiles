@@ -65,3 +65,7 @@
 	path = vim/bundle/vim-pasta
 	url = git://github.com/sickill/vim-pasta.git
 	ignore = untracked
+[submodule "vim/bundle/vim-pathogen"]
+	path = vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+	ignore = untracked

@@ -15,6 +15,7 @@ endif
 runtime! debian.vim
 
 " Let Pathogen do its infecting
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 "------------------------------------------------------------
