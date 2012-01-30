@@ -18,3 +18,8 @@ Host cirno c
 Host clusterfluff cf.bj
 	HostName	clusterfluff.ben-and-jerrys.stacken.kth.se
 	User        koronen
+
+Host tfs
+	HostName	83.179.10.188
+	Port	443
+	User	koronen
