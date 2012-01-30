@@ -181,13 +181,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
 " Jump to beginning/end of line
-cnoremap <C-A> <Home>
-cnoremap <C-E> <End>
-
-" Command-T
-let g:CommandTMaxHeight=20
-map <C-T> :CommandT<CR>
-imap <C-T> <Esc>:CommandT<CR>
+noremap <C-A> <Home>
+inoremap <C-A> <Home>
+noremap <C-E> <End>
+inoremap <C-E> <End>
 
 " NERDtree
 map <F4> :NERDTreeToggle<CR>
