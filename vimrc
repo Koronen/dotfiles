@@ -244,7 +244,7 @@ if has("autocmd")
   autocmd FileType ruby setlocal formatoptions=ql tabstop=2 shiftwidth=2 smarttab expandtab
    
   " Manually set filetype for certain files
-  autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+  autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
   autocmd BufRead,BufNewFile {*.json} set ft=javascript
 endif
 
