@@ -8,13 +8,12 @@
 	diff = auto
 
 [alias]
-	tree = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	last = log -1 HEAD
-	recent = log -10 --oneline --graph
+	tree = log --graph  --oneline --decorate --abbrev-commit --date=short
+	recent = log --graph  --oneline --decorate --abbrev-commit --date=short -10
+	last = log --stat --summary -1
 	visual = !gitg
 	master = checkout master
 	production = checkout production
 
 [core]
 	excludesfile = ~/.gitignore
-
