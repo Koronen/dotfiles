@@ -14,6 +14,7 @@ set showtabline=multitab
 noremap <C-a> <C-v><C-a>
 noremap <C-c> <C-v><C-c>
 noremap <C-s> <C-v><C-s>
+noremap <C-t> <C-v><C-t>
 
 inoremap <C-a> <C-v><C-a>
 inoremap <C-c> <C-v><C-c>
