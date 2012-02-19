@@ -23,3 +23,7 @@ Host tfs
 	HostName	83.179.10.188
 	Port	443
 	User	koronen
+
+Host metaspexet
+	HostName	metaspexet.se
+	User	metaspexet
