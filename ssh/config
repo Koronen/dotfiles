@@ -1,7 +1,7 @@
 Host *.csc.kth.se *.csc.kth.se. *.nada.kth.se *.nada.kth.se. *.speech.kth.se  *.speech.kth.se. *.pdc.kth.se *.pdc.kth.se.
-	GSSAPIAuthentication yes
-	GSSAPIKeyExchange yes
-	GSSAPIDelegateCredentials yes
+	GSSAPIAuthentication		yes
+	GSSAPIKeyExchange		yes
+	GSSAPIDelegateCredentials	yes
 
 Host s-shell s
 	HostName	s-shell.csc.kth.se
@@ -13,17 +13,20 @@ Host u-shell u
 
 Host cirno c
 	HostName	cirno.se
-	User        koronen
+	User		koronen
 
 Host clusterfluff cf.bj
 	HostName	clusterfluff.ben-and-jerrys.stacken.kth.se
-	User        koronen
+	User		koronen
 
 Host tfs
 	HostName	83.179.10.188
-	Port	443
-	User	koronen
+	Port		443
+	User		koronen
 
 Host metaspexet
 	HostName	metaspexet.se
-	User	metaspexet
+	User		metaspexet
+
+Host helicoidea
+	Port	52222
