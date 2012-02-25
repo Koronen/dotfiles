@@ -10,6 +10,13 @@ proper credit where due.
     cd ~/.dotfiles
     ./install
 
+## Solarized
+
+In order for the solarized colorscheme to work properly,
+please load the palette into your terminal emulator.
+
+ * [gnome-terminal-colors-solarized](https://github.com/sigurdga/gnome-terminal-colors-solarized)
+
 ## License
 
 Copyright (C) 2011 by Victor Koronen

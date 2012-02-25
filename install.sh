@@ -149,9 +149,3 @@ check_file "zshaliases" ".zshaliases"
 check_file "zshenv" ".zshenv"
 check_file "zshprompt" ".zshprompt"
 check_file "zshrc" ".zshrc"
-
-echo
-print_status "notice" "In order for the solarized colorscheme to work properly,"
-print_status "notice" "please load the palette into your terminal emulator."
-print_status "notice" " * https://github.com/sigurdga/gnome-terminal-colors-solarized"
-
