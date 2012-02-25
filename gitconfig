@@ -8,8 +8,8 @@
 	diff = auto
 
 [alias]
-	tree = log --graph  --oneline --decorate --abbrev-commit --date=short
-	recent = log --graph  --oneline --decorate --abbrev-commit --date=short -10
+	tree = log --graph  --oneline --decorate
+	recent = log --graph  --oneline --decorate -10
 	last = log --stat --summary -1
 	visual = !gitg
 	master = checkout master
