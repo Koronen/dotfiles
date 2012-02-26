@@ -26,14 +26,13 @@ install: submodules
 	mkdir -p .config/terminator; ln -sf ../../.dotfiles/terminator/config .config/terminator/config; \
 	test ! -d .vim && ln -sf .dotfiles/vim .vim; \
 	ln -sf .dotfiles/vimrc .vimrc; \
-	ln -sf .dotfiles/zshaliases .zshaliases; \
+	test ! -d .zsh.d && ln -sf .dotfiles/zsh.d .zsh.d; \
 	ln -sf .dotfiles/zshenv .zshenv; \
-	ln -sf .dotfiles/zshprompt .zshprompt; \
 	ln -sf .dotfiles/zshrc .zshrc;
 
 copy: submodules
 	cd ~; \
-	rm -f .bash.d; cp .dotfiles/bash.d .bash.d; \
+	rm -f .bash.d; cp -r .dotfiles/bash.d .bash.d; \
 	rm -f .bash_profile; cp .dotfiles/bash_profile .bash_profile; \
 	rm -f .bashrc; cp .dotfiles/bashrc .bashrc; \
 	rm -f .dircolors; cp .dotfiles/dircolors .dircolors; \
@@ -49,10 +48,9 @@ copy: submodules
 	rm -f .screenrc; cp .dotfiles/screenrc .screenrc; \
 	rm -f .ssh/config; cp .dotfiles/ssh/config .ssh/config; \
 	rm -f .config/terminator/config; cp .dotfiles/terminator/config .config/terminator/config; \
-	rm -f .vim; cp .dotfiles/vim .vim; \
+	rm -f .vim; cp -r .dotfiles/vim .vim; \
 	rm -f .vimrc; cp .dotfiles/vimrc .vimrc; \
-	rm -f .zshaliases; cp .dotfiles/zshaliases .zshaliases; \
+	rm -f .zsh.d; cp -r .dotfiles/zsh.d .zsh.d; \
 	rm -f .zshenv; cp .dotfiles/zshenv .zshenv; \
-	rm -f .zshprompt; cp .dotfiles/zshprompt .zshprompt; \
 	rm -f .zshrc; cp .dotfiles/zshrc .zshrc;
 

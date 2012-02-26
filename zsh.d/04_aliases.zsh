@@ -14,8 +14,3 @@ alias ....='cd ../../..'
 alias trm='rm *~'
 alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
 alias kthinit='kinit koronen@NADA.KTH.SE'
-
-# Load local aliases, if present
-if [ -f "$HOME/.zshaliases.local" ]; then
-    source "$HOME/.zshaliases.local"
-fi

@@ -127,7 +127,7 @@ function check_dir {
 
 # Install listed files
 check_dir  "awesome" ".awesome"
-check_file "bash_aliases" ".bash_aliases"
+check_dir  "bash.d" ".bash.d"
 check_file "bash_profile" ".bash_profile"
 check_file "bashrc" ".bashrc"
 check_file "dircolors" ".dircolors"
@@ -145,7 +145,6 @@ check_file "ssh/config" ".ssh/config"
 check_file "terminator/config" ".config/terminator/config"
 check_dir  "vim" ".vim"
 check_file "vimrc" ".vimrc"
-check_file "zshaliases" ".zshaliases"
+check_dir  "zsh.d" ".zsh.d"
 check_file "zshenv" ".zshenv"
-check_file "zshprompt" ".zshprompt"
 check_file "zshrc" ".zshrc"
