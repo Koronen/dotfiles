@@ -8,7 +8,7 @@ submodules:
 
 install: submodules
 	cd ~; \
-	test ! -d .bash && ln -sf .dotfiles/bash .bash; \
+	test ! -d .bash.d && ln -sf .dotfiles/bash.d .bash.d; \
 	ln -sf .dotfiles/bash_profile .bash_profile; \
 	ln -sf .dotfiles/bashrc .bashrc; \
 	ln -sf .dotfiles/dircolors .dircolors; \
@@ -33,7 +33,7 @@ install: submodules
 
 copy: submodules
 	cd ~; \
-	rm -f .bash; cp .dotfiles/bash .bash; \
+	rm -f .bash.d; cp .dotfiles/bash.d .bash.d; \
 	rm -f .bash_profile; cp .dotfiles/bash_profile .bash_profile; \
 	rm -f .bashrc; cp .dotfiles/bashrc .bashrc; \
 	rm -f .dircolors; cp .dotfiles/dircolors .dircolors; \
