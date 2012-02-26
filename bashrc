@@ -7,7 +7,7 @@
 if [[ -n $PS1 ]] ; then
 
 # Load config parts
-for f in .bash/*.bash; do
+for f in $HOME/.bash.d/*.bash; do
     . "$f";
 done
 
