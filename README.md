@@ -19,7 +19,7 @@ please load the palette into your terminal emulator.
 
 ## License
 
-Copyright (C) 2011 by Victor Koronen
+Copyright (C) 2011-2012 by Victor Koronen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
