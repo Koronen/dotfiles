@@ -17,3 +17,8 @@ function rbenv_prompt_info {
   ruby_version=$(rbenv version-name 2> /dev/null) || return
   echo "$ZSH_THEME_RBENV_PROMPT_PREFIX$ruby_version$ZSH_THEME_RBENV_PROMPT_SUFFIX"
 }
+
+function gh {
+  cd ~/git/github/$@;
+}
+compctl -/ -W ~/git/github gh
