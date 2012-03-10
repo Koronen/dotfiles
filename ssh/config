@@ -4,12 +4,18 @@ Host *.csc.kth.se *.csc.kth.se. *.nada.kth.se *.nada.kth.se. *.speech.kth.se  *.
 	GSSAPIDelegateCredentials	yes
 
 Host s-shell s
-	HostName	s-shell.csc.kth.se
-	User		koronen
+	HostName			s-shell.csc.kth.se
+	GSSAPIAuthentication		yes
+	GSSAPIKeyExchange		yes
+	GSSAPIDelegateCredentials	yes
+	User				koronen
 
 Host u-shell u
-	HostName	u-shell.csc.kth.se
-	User		koronen
+	HostName			u-shell.csc.kth.se
+	GSSAPIAuthentication		yes
+	GSSAPIKeyExchange		yes
+	GSSAPIDelegateCredentials	yes
+	User				koronen
 
 Host cirno c
 	HostName	cirno.se
