@@ -8,9 +8,9 @@
 	diff = auto
 
 [alias]
-	tree = log --graph  --oneline --decorate
-	recent = log --graph  --oneline --decorate -10
-	last = log --stat --summary -1
+	tree = log --graph --oneline --decorate
+	recent = log --no-merges --pretty=short -n 5
+	last = log --stat --summary -n 1
 	visual = !gitg
 	master = checkout master
 	production = checkout production
