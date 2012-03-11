@@ -151,7 +151,7 @@ set expandtab
 
 " Highlight tabs
 set list
-set listchars=tab:>\
+set listchars=tab:>\ 
 
 " Set text width
 set textwidth=79
