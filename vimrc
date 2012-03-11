@@ -40,6 +40,7 @@ if has("syntax")
   syntax on
 endif
 
+
 "------------------------------------------------------------
 " Must have options {{{1
 "
@@ -71,6 +72,7 @@ set hlsearch
 " such, it may be a good idea to disable them and use the securemodelines
 " script, <http://www.vim.org/scripts/script.php?script_id=1876>.
 " set nomodeline
+
 
 "------------------------------------------------------------
 " Usability options {{{1
@@ -131,8 +133,9 @@ set number
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
-" Use <F2> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F2>
+" Use <F11> to toggle between 'paste' and 'nopaste'
+set pastetoggle=<F11>
+
 
 "------------------------------------------------------------
 " Indentation options {{{1
@@ -146,13 +149,21 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Highlight tabs
 set list
-set listchars=tab:▸\ 
+set listchars=tab:>\
+
+" Set text width
+set textwidth=79
+
 
 "------------------------------------------------------------
 " Mappings {{{1
 "
 " Useful mappings
+
+" Map leader
+let mapleader = ","
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
@@ -160,11 +171,7 @@ map Y y$
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
-" nnoremap <C-L> :nohl<CR><C-L>
-
-" List buffers with <F5>, and allow switching by using the corresponding
-" number
-noremap <F5> :buffers<CR>:buffer<Space>
+"nnoremap <C-L> :nohl<CR><C-L>
 
 " Ctrl+Left/right switches between buffers
 noremap <C-Left> :bprevious<CR>
@@ -190,13 +197,14 @@ inoremap <C-E> <End>
 map <F4> :NERDTreeToggle<CR>
 imap <F4> <Esc>:NERDTreeToggle<CR>
 
+
 "------------------------------------------------------------
 " Custom settings {{{1
 "
 " Your own custom settings.
 
 " Use Unicode and Unix linebreaks
-" "let &termencoding = &encoding
+"let &termencoding = &encoding
 set termencoding=utf-8
 set encoding=utf-8
 set fileformat=unix
@@ -227,8 +235,6 @@ if has("autocmd")
 endif
 set cursorline cursorcolumn
 
-" Map leader
-let mapleader = ","
 
 "------------------------------------------------------------
 " Language specific settings {{{1
@@ -242,11 +248,12 @@ if has("autocmd")
 
   " Options for languages with whitespace conventions
   autocmd FileType ruby setlocal formatoptions=ql tabstop=2 shiftwidth=2 smarttab expandtab
-   
+
   " Manually set filetype for certain files
   autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
   autocmd BufRead,BufNewFile {*.json} set ft=javascript
 endif
+
 
 "------------------------------------------------------------
 " Local settings {{{1
