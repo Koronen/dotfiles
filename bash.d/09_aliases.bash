@@ -27,6 +27,7 @@ alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgra
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias brc='. ~/.bashrc'
 alias lockscreen='gnome-screensaver-command --lock'
+alias open='gnome-open'
 
 # Git aliases
 alias ga="git add"
