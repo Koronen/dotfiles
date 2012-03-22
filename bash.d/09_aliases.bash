@@ -28,6 +28,7 @@ alias kthinit='kinit koronen@NADA.KTH.SE'
 alias brc='. ~/.bashrc'
 alias lockscreen='gnome-screensaver-command --lock'
 alias open='gnome-open'
+alias tails='tail -f'
 
 # Git aliases
 alias ga="git add"
