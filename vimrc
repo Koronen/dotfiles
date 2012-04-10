@@ -144,7 +144,7 @@ set pastetoggle=<F2>
 
 " Indentation settings for using 4 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-"set tabstop=8
+set tabstop=8
 set softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -155,7 +155,7 @@ set listchars=tab:>\
 
 " Set text width
 set textwidth=79
-
+set colorcolumn=80
 
 "------------------------------------------------------------
 " Mappings {{{1
@@ -230,10 +230,10 @@ set showmatch
 
 " Highlight current row and column
 if has("autocmd")
-  au WinLeave * setlocal nocursorline nocursorcolumn
-  au WinEnter * setlocal cursorline cursorcolumn
+  au WinLeave * setlocal nocursorline
+  au WinEnter * setlocal cursorline
 endif
-set cursorline cursorcolumn
+set cursorline
 
 
 "------------------------------------------------------------
@@ -243,8 +243,8 @@ set cursorline cursorcolumn
 
 if has("autocmd")
   " Options for languages strict about whitespace
-  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType make setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+  autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
   " Options for languages with whitespace conventions
   autocmd FileType ruby setlocal formatoptions=ql tabstop=2 shiftwidth=2 smarttab expandtab
