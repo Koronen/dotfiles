@@ -1,23 +1,25 @@
-[user]
-	name = Victor Koronen
-	email = koronen@kth.se
+[alias]
+	tree = log --graph --oneline --decorate
+	recent = log --no-merges --pretty=medium -n 5
+	last = show HEAD
+	master = checkout master
+	production = checkout production
+
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
 
 [color]
 	branch = auto
 	status = auto
 	diff = auto
 
-[alias]
-	tree = log --graph --oneline --decorate
-	recent = log --no-merges --pretty=short -n 5
-	last = log --stat --summary -n 1
-	visual = !gitg
-	master = checkout master
-	production = checkout production
-
 [core]
 	excludesfile = ~/.gitignore
 
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
+[github]
+	user = Koronen
+
+[user]
+	name = Victor Koronen
+	email = koronen@kth.se
