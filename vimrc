@@ -253,6 +253,7 @@ if has("autocmd")
   " Manually set filetype for certain files
   autocmd BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Thorfile,Vagrantfile,config.ru} set ft=ruby
   autocmd BufRead,BufNewFile {*.json} set ft=javascript
+  autocmd BufRead,BufNewFile {*.bib} set ft=tex
 endif
 
 
