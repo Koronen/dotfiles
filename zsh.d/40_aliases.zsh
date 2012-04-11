@@ -1,6 +1,9 @@
 alias gdh='git diff HEAD'
 compdef _git gdh=git-diff
 
+alias glr='git pull --rebase'
+compdef _git glr=git-pull
+
 alias zrc='source ~/.zshrc'
 
 # ls aliases
