@@ -1,6 +1,4 @@
-.PHONY: default submodules install copy
-
-default: submodules
+default: install
 
 submodules:
 	git submodule init
@@ -24,33 +22,10 @@ install: submodules
 	ln -sf .dotfiles/screenrc .screenrc; \
 	mkdir -p .ssh; ln -sf ../.dotfiles/ssh/config .ssh/config; \
 	mkdir -p .config/terminator; ln -sf ../../.dotfiles/terminator/config .config/terminator/config; \
+	ln -sf .dotfiles/tmux.conf .tmux.conf; \
 	test ! -d .vim && ln -sf .dotfiles/vim .vim; \
 	ln -sf .dotfiles/vimrc .vimrc; \
 	test ! -d .zsh.d && ln -sf .dotfiles/zsh.d .zsh.d; \
 	ln -sf .dotfiles/zshenv .zshenv; \
 	ln -sf .dotfiles/zshrc .zshrc;
-
-copy: submodules
-	cd ~; \
-	rm -f .bash.d; cp -r .dotfiles/bash.d .bash.d; \
-	rm -f .bash_profile; cp .dotfiles/bash_profile .bash_profile; \
-	rm -f .bashrc; cp .dotfiles/bashrc .bashrc; \
-	rm -f .dircolors; cp .dotfiles/dircolors .dircolors; \
-	rm -f .gemrc; cp .dotfiles/gemrc .gemrc; \
-	rm -f .gitconfig; cp .dotfiles/gitconfig .gitconfig; \
-	rm -f .gitignore; cp .dotfiles/gitignore .gitignore; \
-	rm -f .inputrc; cp .dotfiles/inputrc .inputrc; \
-	rm -f .irbrc; cp .dotfiles/irbrc .irbrc; \
-	rm -f .oh-my-zsh; cp -r .dotfiles/oh-my-zsh .oh-my-zsh; \
-	rm -f .pentadactylrc; cp .dotfiles/pentadactylrc .pentadactylrc; \
-	rm -f .profile; cp .dotfiles/profile .profile; \
-	rm -f .rvmrc; cp .dotfiles/rvmrc .rvmrc; \
-	rm -f .screenrc; cp .dotfiles/screenrc .screenrc; \
-	rm -f .ssh/config; cp .dotfiles/ssh/config .ssh/config; \
-	rm -f .config/terminator/config; cp .dotfiles/terminator/config .config/terminator/config; \
-	rm -f .vim; cp -r .dotfiles/vim .vim; \
-	rm -f .vimrc; cp .dotfiles/vimrc .vimrc; \
-	rm -f .zsh.d; cp -r .dotfiles/zsh.d .zsh.d; \
-	rm -f .zshenv; cp .dotfiles/zshenv .zshenv; \
-	rm -f .zshrc; cp .dotfiles/zshrc .zshrc;
 
