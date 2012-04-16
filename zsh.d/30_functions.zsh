@@ -1,5 +1,19 @@
+# sed with extended regex flag differs on OS X and Linux.
+# This is a bit annoying, so I created this little function.
+# It chooses the appropriate flag depending on the current OS.
+rsed() {
+    case $(uname) in
+        (Darwin)
+            sed -E $1
+            ;;
+        (Linux)
+            sed -r $1
+            ;;
+    esac
+}
+
 # collapse long paths (/foo/bar/baz/blargh to /f/b/b/blargh)
-function collapse_path { pwd | sed -e "s|$HOME|~|" | sed -r 's|([^/])[^/]*/|\1/|g' }
+function collapse_path { pwd | sed -e "s|$HOME|~|" | rsed 's|([^/])[^/]*/|\1/|g' }
 
 function prompt_char {
     git branch > /dev/null 2>&1 && echo '±' && return
