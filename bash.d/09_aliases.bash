@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Enable color
-if [[ "`uname`" != "SunOS" ]]; then # avoid on s-shell
+# Enable color on GNU/Linux systems
+if [[ "`uname`" == "Linux" ]]; then
   alias ls='ls --color=auto'
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
