@@ -6,6 +6,7 @@ submodules:
 
 install: submodules
 	cd ~; \
+	ln -sf .dotfiles/ackrc .ackrc; \
 	test ! -d .bash.d && ln -sf .dotfiles/bash.d .bash.d; \
 	ln -sf .dotfiles/bash_profile .bash_profile; \
 	ln -sf .dotfiles/bashrc .bashrc; \

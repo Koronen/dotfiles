@@ -1,0 +1,9 @@
+# Use smart case
+--smart-case
+
+# Always sort the files
+--sort-files
+
+# .haml and .rake files are Ruby
+--type-add
+ruby=.haml,.rake
