@@ -19,3 +19,4 @@ alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgra
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias open='gnome-open'
 alias tails='tail -f'
+alias ack='ack-grep'
