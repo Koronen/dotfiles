@@ -12,6 +12,7 @@ install: submodules
 	ln -sf .dotfiles/bashrc .bashrc; \
 	ln -sf .dotfiles/dircolors .dircolors; \
 	ln -sf .dotfiles/gemrc .gemrc; \
+	ln -sf .dotfiles/gitattributes .gitattributes; \
 	ln -sf .dotfiles/gitconfig .gitconfig; \
 	ln -sf .dotfiles/gitignore .gitignore; \
 	ln -sf .dotfiles/inputrc .inputrc; \

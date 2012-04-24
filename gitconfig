@@ -16,6 +16,13 @@
 
 [core]
 	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+
+[diff "exif"]
+	textconv = exiftool
+
+[diff "strings"]
+	textconv = strings
 
 [github]
 	user = Koronen
