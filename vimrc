@@ -60,6 +60,8 @@ set hidden
 
 " Better command-line completion
 set wildmenu
+set wildignore=*~,*.swp
+set wildignore+=.git/*,.svn/*
 
 " Show partial commands in the last line of the screen
 set showcmd
