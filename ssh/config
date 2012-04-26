@@ -25,6 +25,10 @@ Host clusterfluff cf.bj
 	HostName	clusterfluff.ben-and-jerrys.stacken.kth.se
 	User		koronen
 
+Host kaberry-kaboom kk.bj
+	HostName	kaberry-kaboom.ben-and-jerrys.stacken.kth.se
+	User		koronen
+
 Host tfs
 	HostName	83.179.10.188
 	Port		443
