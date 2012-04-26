@@ -4,6 +4,7 @@
 	last = show HEAD
 	master = checkout master
 	production = checkout production
+	st = status -s
 
 [branch "master"]
 	remote = origin
