@@ -17,6 +17,10 @@ Host u-shell u
 	GSSAPIDelegateCredentials	yes
 	User				koronen
 
+Host it-shell it
+	HostName	shell.it.kth.se
+	User		koronen
+
 Host cirno c
 	HostName	cirno.se
 	User		koronen
