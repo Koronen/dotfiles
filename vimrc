@@ -157,7 +157,9 @@ set listchars=tab:>\
 
 " Set text width
 set textwidth=79
-set colorcolumn=80
+if v:version > 703
+  set colorcolumn=80
+endif
 
 "------------------------------------------------------------
 " Mappings {{{1
