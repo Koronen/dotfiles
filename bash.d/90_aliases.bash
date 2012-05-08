@@ -43,6 +43,8 @@ alias gh="git log -10 --pretty=\"%C(yellow)%h%Creset|%aN|%Cblue%ar%Creset|%s\""
 alias gp="git push"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gst="git status"
+alias gs="git stash"
+alias gsp="git stash pop"
 
 # Rails aliases
 function rsc {
