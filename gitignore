@@ -1,6 +1,7 @@
 *~
 .cap_tasks
 .DS_Store
+.~lock.*
 .rake_tasks
 .rbenv-version
 .rvmrc
