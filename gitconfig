@@ -5,6 +5,7 @@
 	master = checkout master
 	production = checkout production
 	st = status -s
+	uncommit = reset --soft HEAD^
 
 [branch "master"]
 	remote = origin
