@@ -10,10 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Add rbenv to PATH.
-if [[ -d "$HOME/.rbenv/bin" ]]; then
-  PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
+# Load dircolors
+if [[ -x /usr/bin/dircolors ]]; then
+    test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
 fi
 
 # Source local config.
