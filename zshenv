@@ -6,6 +6,12 @@
 #
 
 #
+# Shell
+#
+
+SHELL=`which zsh`
+
+#
 # Browser
 #
 
