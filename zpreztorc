@@ -32,7 +32,14 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'prompt' \
+  'archive' \
+  'command-not-found' \
+  'git' \
+  'rails' \
+  'rsync' \
+  'ruby' \
+  'fasd'
 
 #
 # Editor
