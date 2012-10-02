@@ -1,16 +1,9 @@
 [alias]
 	tree = log --graph --oneline --decorate
-	recent = log --no-merges --pretty=medium -n 5
 	last = show HEAD
 	master = checkout master
-	production = checkout production
-	st = status -s
 	uncommit = reset --soft HEAD^
 	unstage = reset HEAD
-
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
 
 [color]
 	branch = auto
