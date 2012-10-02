@@ -1,11 +1,14 @@
-#!/usr/bin/zsh
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-# Load config parts
-for f in $HOME/.zsh.d/*.zsh; do
-    source "$f";
-done
-
-# Load local settings
-if [ -f "$HOME/.zshrc.local" ]; then
-    source "$HOME/.zshrc.local"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# Customize to your needs...
+
