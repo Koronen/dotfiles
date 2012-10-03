@@ -16,8 +16,10 @@ fi
 # Clone prezto
 test -d "${ZDOTDIR:-$HOME}/.zprezto" || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-# Clone fasd
+# Clone and install fasd
 test -d "$HOME/.fasd" || git clone https://github.com/clvv/fasd.git "$HOME/.fasd"
+mkdir -p $HOME/bin
+(cd $HOME/bin && ln -sf ../.fasd/fasd .)
 
 # Symlink files
 dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore i3/config inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
