@@ -17,7 +17,7 @@ fi
 test -d "${ZDOTDIR:-$HOME}/.zprezto" || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 # Symlink files
-dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
+dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore i3/config inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
 for dotfile in $dotfiles; do
     ln -sf "$dotdir/$dotfile" "$HOME/.$dotfile"
 done
