@@ -2,6 +2,9 @@
 
 set -e
 
+dotdir=`dirname $0`/..
+dotdir=$(cd $dotdir && pwd)
+
 # Check for git dependency
 if [[ ! which git >/dev/null 2>&1 ]]; then
     if [[ ! sudo apt-get install -y git >/dev/null 2>&1 ]]; then
@@ -13,11 +16,11 @@ fi
 # Clone prezto
 test -d "${ZDOTDIR:-$HOME}/.zprezto" || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-# Symlink files and directories
-dotdir=`dirname $0`/..
-dotdir=$(cd $dotdir && pwd)
+# Symlink files
 dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
 for dotfile in $dotfiles; do
     ln -sf "$dotdir/$dotfile" "$HOME/.$dotfile"
 done
-unset dotfiles dotdir
+unset dotfiles
+
+unset dotdir
