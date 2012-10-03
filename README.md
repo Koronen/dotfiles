@@ -8,7 +8,7 @@ proper credit where due.
 
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
     cd ~/.dotfiles
-    ./install
+    ./script/bootstrap
 
 ## Solarized
 
