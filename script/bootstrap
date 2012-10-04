@@ -2,8 +2,8 @@
 
 set -e
 
-dotdir=`dirname $0`/..
-dotdir=$(cd $dotdir && pwd)
+root=`dirname $0`/..
+root=$(cd $root && pwd)
 
 # Check for git dependency
 if ! which git >/dev/null 2>&1; then
@@ -23,11 +23,17 @@ if ! which fasd >/dev/null 2>&1; then
 fi
 
 # Symlink files
-mkdir -p $HOME/.i3
-dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore i3/config inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
+dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
 for dotfile in $dotfiles; do
-    ln -sf "$dotdir/$dotfile" "$HOME/.$dotfile"
+    ln -sf "$root/$dotfile" "$HOME/.$dotfile"
 done
 unset dotfiles
 
-unset dotdir
+# Symlink directories
+dotdirs="i3 vim zsh"
+for dotdir in $dotdirs; do
+    test -d "$HOME/.$dotdir" || ln -sf "$root/$dotdir" "$HOME/.$dotdir"
+done
+unset dotdirs
+
+unset root
