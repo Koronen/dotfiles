@@ -6,8 +6,8 @@ dotdir=`dirname $0`/..
 dotdir=$(cd $dotdir && pwd)
 
 # Check for git dependency
-if [[ ! which git >/dev/null 2>&1 ]]; then
-    if [[ ! sudo apt-get install -y git >/dev/null 2>&1 ]]; then
+if ! which git >/dev/null 2>&1; then
+    if ! sudo apt-get install -y git >/dev/null 2>&1; then
         echo "[-] Missing dependency: git" >&2
         exit 1
     fi
@@ -16,13 +16,14 @@ fi
 # Clone prezto
 test -d "${ZDOTDIR:-$HOME}/.zprezto" || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-# Clone and install fasd
-test -d "$HOME/.fasd" || git clone https://github.com/clvv/fasd.git "$HOME/.fasd"
-mkdir -p $HOME/bin
-(cd $HOME/bin && ln -sf ../.fasd/fasd .)
+# Check for fasd dependency
+if ! which fasd >/dev/null 2>&1; then
+    echo "[-] Missing dependency: fasd" >&2
+    echo "[-] See https://github.com/clvv/fasd for installation instructions." >&2
+fi
 
 # Symlink files
-mkdir $HOME/.i3
+mkdir -p $HOME/.i3
 dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore i3/config inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
 for dotfile in $dotfiles; do
     ln -sf "$dotdir/$dotfile" "$HOME/.$dotfile"
