@@ -1,0 +1,64 @@
+# Load dependencies.
+pmodload 'helper'
+
+function prompt_koronen_pwd {
+  local pwd="${PWD/#$HOME/~}"
+
+  if [[ "$pwd" == (#m)[/~] ]]; then
+    _prompt_koronen_pwd="$MATCH"
+    unset MATCH
+  else
+    _prompt_koronen_pwd="${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}/${pwd:t}"
+  fi
+}
+
+function prompt_koronen_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+
+  # Format PWD.
+  prompt_koronen_pwd
+
+  # Get Git repository information.
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
+}
+
+function prompt_koronen_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+
+  # Add hook for calling git-info before each command.
+  add-zsh-hook precmd prompt_koronen_precmd
+
+  zstyle ':prezto:module:editor:info:completing' format '%B%F{red}...%f%b'
+  zstyle ':prezto:module:git:info:action' format ':%s'
+  zstyle ':prezto:module:git:info:added' format '%F{green}+%f'
+  zstyle ':prezto:module:git:info:ahead' format '%F{blue}^%f'
+  zstyle ':prezto:module:git:info:behind' format '%F{blue}v%f'
+  zstyle ':prezto:module:git:info:branch' format ':%b'
+  zstyle ':prezto:module:git:info:commit' format ':%.7c'
+  zstyle ':prezto:module:git:info:deleted' format '%F{red}-%f'
+  zstyle ':prezto:module:git:info:modified' format '%F{yellow}!%f'
+  zstyle ':prezto:module:git:info:position' format ':%p'
+  zstyle ':prezto:module:git:info:renamed' format '%F{magenta}>%f'
+  zstyle ':prezto:module:git:info:stashed' format '%F{cyan}@%f'
+  zstyle ':prezto:module:git:info:unmerged' format '%F{cyan}#%f'
+  zstyle ':prezto:module:git:info:untracked' format '%F{white}?%f'
+  zstyle ':prezto:module:git:info:keys' format \
+    'ref' ' git$(coalesce "%b" "%p" "%c")%s' \
+    'status' '%A%B%S%a%d%m%r%U%u'
+
+  # Define prompts.
+  PROMPT='%(?:0:%F{red}$?%f)|%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
+  RPROMPT='${_prompt_koronen_pwd}${git_info:+${(e)git_info[ref]}}${git_info[status]} %D{%H:%M:%S}'
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+}
+
+prompt_koronen_setup "$@"
+

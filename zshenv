@@ -61,6 +61,12 @@ typeset -gUT INFOPATH infopath
 #   $cdpath
 # )
 
+# Set the list of directories that zsh searches for functions.
+fpath=(
+  $HOME/.zsh/functions.d/
+  $fpath
+)
+
 # Set the list of directories that info searches for manuals.
 infopath=(
   /usr/local/share/info
