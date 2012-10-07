@@ -36,7 +36,7 @@ __set_prompt() {
 
   # set the prompt
   if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${c_green}$(__username_colored)@$(__hostname_colored)${c_reset}:${c_blue}\w${c_yellow}\$(__git_ps1)${c_reset}\$ "
+    PS1="${debian_chroot:+($debian_chroot)}${c_green}%u@%h${c_reset}:${c_blue}\w${c_yellow}\$(__git_ps1)${c_reset}\$ "
   else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)\$ '
   fi
