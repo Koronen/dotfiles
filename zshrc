@@ -23,7 +23,6 @@ alias kthinit='kinit koronen@NADA.KTH.SE'
 alias tails='tail -f'
 alias ack='ack-grep'
 
-
 # Source local config.
 if [[ -s "${ZDOTDIR:-HOME}/.zshrc.local" ]]; then
   source "${ZDOTDIR:-HOME}/.zshrc.local"
