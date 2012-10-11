@@ -23,7 +23,8 @@ if ! which fasd >/dev/null 2>&1; then
 fi
 
 # Symlink files
-dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc"
+mkdir -p $HOME/.weechat
+dotfiles="ackrc bash_profile bashrc dircolors gemrc gitattributes gitconfig gitignore inputrc irbrc profile screenrc tmux.conf vimrc zshenv zlogin zlogout zpreztorc zshrc weechat/alias.conf weechat/logger.conf weechat/wg.conf"
 for dotfile in $dotfiles; do
     ln -sf "$root/$dotfile" "$HOME/.$dotfile"
 done
