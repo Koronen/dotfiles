@@ -26,3 +26,6 @@
 [user]
 	name = Victor Koronen
 	email = koronen@kth.se
+
+[apply]
+	whitespace = fix
