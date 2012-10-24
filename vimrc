@@ -137,9 +137,6 @@ set number
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
-" Use <F2> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F2>
-
 
 "------------------------------------------------------------
 " Indentation options {{{1
@@ -198,6 +195,13 @@ noremap <C-A> <Home>
 inoremap <C-A> <Home>
 noremap <C-E> <End>
 inoremap <C-E> <End>
+
+" Use F2 to toggle between 'paste' and 'nopaste'
+set pastetoggle=<F2>
+
+" Use F3 to turn on spell checking
+map <F3> :set spell<CR>
+imap <F3> <Esc>:set spell<CR>i
 
 " NERDtree
 map <F4> :NERDTreeToggle<CR>
