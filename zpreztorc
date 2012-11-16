@@ -35,11 +35,12 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'archive' \
   'command-not-found' \
+  'fasd' \
   'git' \
+  'ruby' \
   'rails' \
   'rsync' \
-  'ruby' \
-  'fasd'
+  'node'
 
 #
 # Editor
