@@ -23,6 +23,9 @@ alias kthinit='kinit koronen@NADA.KTH.SE'
 alias tails='tail -f'
 alias ack='ack-grep'
 
+alias pbcopy='xclip -i -sel clip'
+alias pbpaste='xclip -o -sel clip'
+
 # Source local config.
 if [[ -s "${ZDOTDIR:-HOME}/.zshrc.local" ]]; then
   source "${ZDOTDIR:-HOME}/.zshrc.local"
