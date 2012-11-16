@@ -23,7 +23,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias trm='rm *~'
 function suspend-and-lock { sudo echo && gnome-screensaver-command --lock && sudo pm-suspend; }
-alias up='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
+alias up='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias brc='. ~/.bashrc'
 alias lockscreen='gnome-screensaver-command --lock'
