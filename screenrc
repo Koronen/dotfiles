@@ -16,8 +16,5 @@ hardstatus string "%{gk}[ %{G}%H %{g}][ %{=b kW}#%n %t%? [%h]%?%{= kg} ]%=[ %{Y}
 # Execute .bash_profile on startup
 shell -$SHELL
 
-# Use C-z instead of C-a as this makes more sense for Emacs
-#escape ^z^z
-
 # Source local config
 source "${HOME}/.screenrc.local"
