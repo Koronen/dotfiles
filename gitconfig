@@ -5,6 +5,9 @@
 	uncommit = reset --soft HEAD^
 	unstage = reset HEAD
 
+[apply]
+	whitespace = fix
+
 [color]
 	branch = auto
 	status = auto
@@ -20,18 +23,19 @@
 [diff "strings"]
 	textconv = strings
 
+[difftool]
+	prompt = false
+
 [github]
 	user = Koronen
+
+[help]
+	autocorrect = 1
+
+[mergetool]
+	keepBackup = false
 
 [user]
 	name = Victor Koronen
 	email = koronen@kth.se
 
-[apply]
-	whitespace = fix
-[mergetool]
-	keepBackup = false
-[difftool]
-	prompt = false
-[help]
-	autocorrect = 1
