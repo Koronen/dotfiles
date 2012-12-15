@@ -29,3 +29,9 @@
 
 [apply]
 	whitespace = fix
+[mergetool]
+	keepBackup = false
+[difftool]
+	prompt = false
+[help]
+	autocorrect = 1
