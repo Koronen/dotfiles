@@ -34,10 +34,6 @@
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	ignore = untracked
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
-	ignore = untracked
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -73,3 +69,4 @@
 [submodule "vim/bundle/vim-rdoc"]
 	path = vim/bundle/vim-rdoc
 	url = https://github.com/depuracao/vim-rdoc.git
+	ignore = untracked
