@@ -55,8 +55,8 @@ function prompt_koronen_setup {
     'status' '%A%B%S%a%d%m%r%U%u'
 
   # Define prompts.
-  PROMPT='%(?:0:%F{red}$?%f)|%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
-  RPROMPT='${_prompt_koronen_pwd}${git_info:+${(e)git_info[ref]}}${git_info[status]} %D{%H:%M:%S}'
+  PROMPT='%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
+  RPROMPT='%(?::%F{red}ret:$?%f )${_prompt_koronen_pwd}${git_info:+${(e)git_info[ref]}}${git_info[status]}'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
