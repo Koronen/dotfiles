@@ -25,7 +25,7 @@ set termencoding=utf-8 encoding=utf-8 fileformat=unix
 
 " Set colorscheme, background and palette
 colorscheme solarized
-set background=dark
+set background=light
 set t_Co=16
 
 " Default indentation settings
