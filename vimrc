@@ -49,6 +49,7 @@ set autoread " Automatically reload file after external write
 set number " Display line numbers on the left
 set ruler " Display cursor position on status line
 set scrolloff=3 " Keep a couple of lines when scrolling
+set cmdheight=2 " Set the command window height to 2 lines
 set title " Change the title bar to show the file that is edited
 set list " Display unprintable characters (tabs, spaces etc.)
 set listchars=tab:>\ " Highlight trailing tabs
