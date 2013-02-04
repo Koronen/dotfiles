@@ -26,6 +26,12 @@ alias ack='ack-grep'
 alias pbcopy='xclip -i -sel clip'
 alias pbpaste='xclip -o -sel clip'
 
+# Non-interactive rm
+unalias rm
+
+# Allow redirection to overwrite files
+setopt CLOBBER
+
 # Source local config.
 if [[ -s "${ZDOTDIR:-HOME}/.zshrc.local" ]]; then
   source "${ZDOTDIR:-HOME}/.zshrc.local"
