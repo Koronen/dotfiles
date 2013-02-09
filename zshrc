@@ -26,10 +26,13 @@ alias ack='ack-grep'
 alias pbcopy='xclip -i -sel clip'
 alias pbpaste='xclip -o -sel clip'
 
-# Non-interactive rm
+# Update some aliases.
+alias gc='git commit -v'
+
+# Remove some aliases.
 unalias rm
 
-# Allow redirection to overwrite files
+# Allow redirection to overwrite files.
 setopt CLOBBER
 
 # Source local config.
