@@ -36,6 +36,6 @@ unalias rm
 setopt CLOBBER
 
 # Source local config.
-if [[ -s "${ZDOTDIR:-HOME}/.zshrc.local" ]]; then
-  source "${ZDOTDIR:-HOME}/.zshrc.local"
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc.local"
 fi
