@@ -30,7 +30,7 @@ alias pbpaste='xclip -o -sel clip'
 alias gc='git commit -v'
 
 # Remove some aliases.
-unalias rm
+if [[ ! -z "`alias | egrep "^rm="`" ]]; then unalias rm; fi
 
 # Allow redirection to overwrite files.
 setopt CLOBBER
