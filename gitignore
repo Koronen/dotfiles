@@ -5,6 +5,7 @@
 .~lock.*
 .rake_tasks
 .rbenv-version
+.ruby-version
 .rvmrc
 .svn/
 *.swo
