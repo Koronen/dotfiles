@@ -82,6 +82,10 @@ set hlsearch " Highlight matches
 set smartcase " Use smart case matching
 set showmatch " Show matching brackets
 
+" Sane j and k
+nmap j gj
+nmap k gk
+
 " Mapping to toggle search highlight
 nnoremap <C-l> :set hls!<CR>
 inoremap <C-l> :set hls!<CR>
