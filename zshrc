@@ -26,6 +26,8 @@ alias ack='ack-grep'
 alias pbcopy='xclip -i -sel clip'
 alias pbpaste='xclip -o -sel clip'
 
+alias gff='git pull --ff-only'
+
 # Update some aliases.
 alias gc='git commit -v'
 
