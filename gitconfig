@@ -4,6 +4,7 @@
 	master = checkout master
 	uncommit = reset --soft HEAD^
 	unstage = reset HEAD
+	sync = add --all
 
 [apply]
 	whitespace = fix
@@ -38,4 +39,3 @@
 [user]
 	name = Victor Koronen
 	email = koronen@kth.se
-
