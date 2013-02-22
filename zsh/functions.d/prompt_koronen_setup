@@ -1,3 +1,10 @@
+#
+# Koronen's ZSH theme.
+#
+# Authors:
+#   Victor Koronen <koronen@kth.se>
+#
+
 # Load dependencies.
 pmodload 'helper'
 
