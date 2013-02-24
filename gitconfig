@@ -33,9 +33,13 @@
 [help]
 	autocorrect = 16
 
+[include]
+	path = ~/.gitconfig.local
+
 [mergetool]
 	keepBackup = false
 
 [user]
 	name = Victor Koronen
 	email = koronen@kth.se
+
