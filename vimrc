@@ -72,10 +72,11 @@ set showcmd " Show partial commands in the last line of the screen
 " Better command-line completion
 set wildmenu
 set wildmode=list:longest,full
-set wildignore=*~,*.swp,*/tmp/*
-set wildignore+=a.out,*.a,*.o,*.class
-set wildignore+=*.tar,*.gz,*.zip
-set wildignore+=.git/*,.gitkeep,.svn/*,.hg/*
+set wildignore=*~,*.swp,*/tmp/* " Swap files
+set wildignore+=a.out,*.a,*.o,*.class " Compiled binaries
+set wildignore+=*.aux,*.idx,*.ilg,*.ind,*.lof,*.lot,*.out,*.toc " LaTeX compiled files
+set wildignore+=*.tar,*.gz,*.zip " Archives
+set wildignore+=.git/*,.gitkeep,.svn/*,.hg/* " VCS
 
 """ Search and highlight
 set hlsearch " Highlight matches
