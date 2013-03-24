@@ -37,6 +37,9 @@
 [mergetool]
 	keepBackup = false
 
+[push]
+	default = upstream
+
 [user]
 	name = Victor Koronen
 	email = koronen@kth.se
