@@ -122,6 +122,9 @@ endif
 nmap <F4> :NERDTreeToggle<CR>
 imap <F4> <Esc>:NERDTreeToggle<CR>
 
+" Syntastic
+let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+
 " Language specific settings.
 if has("autocmd")
   " Options for languages strict about whitespace
