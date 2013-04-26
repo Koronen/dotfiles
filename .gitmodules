@@ -59,6 +59,9 @@
 [submodule "vim/bundle/vim-pasta"]
 	path = vim/bundle/vim-pasta
 	url = git://github.com/sickill/vim-pasta.git
+[submodule "vim/bundle/puppet-syntax-vim"]
+	path = vim/bundle/puppet-syntax-vim
+	url = https://github.com/puppetlabs/puppet-syntax-vim.git
 [submodule "vim/bundle/vim-rdoc"]
 	path = vim/bundle/vim-rdoc
 	url = https://github.com/depuracao/vim-rdoc.git
