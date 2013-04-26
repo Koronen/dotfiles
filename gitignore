@@ -8,5 +8,7 @@
 .ruby-version
 .rvmrc
 .svn/
+*.swm
+*.swn
 *.swo
 *.swp
