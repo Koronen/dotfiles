@@ -35,6 +35,7 @@ alias gff='git pull --ff-only'
 
 # Update some aliases.
 alias gc='git commit -v'
+alias ls="$aliases[ls] --time-style=long-iso"
 
 # Remove some aliases.
 if [[ ! -z "`alias | egrep "^rm="`" ]]; then unalias rm; fi
