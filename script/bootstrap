@@ -31,7 +31,7 @@ done
 unset dotfiles
 
 # Symlink directories
-dotdirs="bashrc.d i3 vim zsh"
+dotdirs="bashrc.d i3 vim zsh weechat/lua weechat/perl weechat/python weechat/ruby weechat/tcl"
 for dotdir in $dotdirs; do
     test -d "$HOME/.$dotdir" || ln -sf "$root/$dotdir" "$HOME/.$dotdir"
 done
