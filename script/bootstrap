@@ -38,3 +38,6 @@ done
 unset dotdirs
 
 unset root
+
+git submodule init
+git submodule update
