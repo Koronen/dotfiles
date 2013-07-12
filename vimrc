@@ -58,10 +58,7 @@ set splitbelow splitright " Push new splits to bottom/right
 set ttimeoutlen=100 " Minimal wait for key codes
 
 " Set text width
-set textwidth=79
-if v:version > 703
-  set colorcolumn=80
-endif
+set textwidth=80
 
 " Allow backspacing over everything
 set backspace=indent,eol,start
