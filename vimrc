@@ -55,6 +55,7 @@ set list " Display unprintable characters (tabs, spaces etc.)
 set listchars=tab:>\ " Highlight trailing tabs
 set visualbell t_vb= " Disable bells and flashes
 set splitbelow splitright " Push new splits to bottom/right
+set ttimeoutlen=100 " Minimal wait for key codes
 
 " Set text width
 set textwidth=79
