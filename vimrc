@@ -23,10 +23,14 @@ let mapleader = ","
 " Use Unicode and Unix linebreaks
 set termencoding=utf-8 encoding=utf-8 fileformat=unix
 
-" Set colorscheme, background and palette
-colorscheme solarized
-set background=light
-set t_Co=16
+" Set colorscheme and palette
+if &term =~? 'xterm'
+  set t_Co=256
+  colorscheme solarized
+  set background=light
+else
+  colorscheme desert
+endif
 
 " Default indentation settings
 set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
