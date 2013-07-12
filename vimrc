@@ -119,6 +119,9 @@ endif
 " NERDtree
 nmap <F4> :NERDTreeToggle<CR>
 imap <F4> <Esc>:NERDTreeToggle<CR>
+if has("autocmd")
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+endif
 
 " Syntastic
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
