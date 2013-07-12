@@ -60,12 +60,8 @@ set listchars=tab:>\ " Highlight trailing tabs
 set visualbell t_vb= " Disable bells and flashes
 set splitbelow splitright " Push new splits to bottom/right
 set ttimeoutlen=100 " Minimal wait for key codes
-
-" Set text width
-set textwidth=80
-
-" Allow backspacing over everything
-set backspace=indent,eol,start
+set textwidth=80 " Set text width
+set backspace=indent,eol,start " Allow backspacing over everything
 
 """ Statusline
 set laststatus=2 " Always display the status line
