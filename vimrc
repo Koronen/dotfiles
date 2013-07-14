@@ -126,6 +126,9 @@ endif
 " Syntastic
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
 
+" bufferline
+let g:bufferline_echo=0
+
 " Language specific settings.
 if has("autocmd")
   " Options for languages strict about whitespace
