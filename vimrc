@@ -128,6 +128,7 @@ let g:syntastic_cpp_compiler_options = ' -std=c++0x'
 
 " bufferline
 let g:bufferline_echo=0
+let g:bufferline_show_bufnr=0
 
 " Language specific settings.
 if has("autocmd")
