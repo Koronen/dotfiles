@@ -10,12 +10,17 @@ proper credit where due.
     cd ~/.dotfiles
     ./script/bootstrap
 
-## Solarized
+## Solarized colorscheme
 
 In order for the solarized colorscheme to work properly,
 please load the palette into your terminal emulator.
 
  * [gnome-terminal-colors-solarized](https://github.com/sigurdga/gnome-terminal-colors-solarized)
+
+## Powerline fonts
+
+To install the Powerline fonts, please see instructions on the
+[Powerline docs](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation)
 
 ## License
 
