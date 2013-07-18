@@ -1,6 +1,5 @@
 [alias]
 	tree = log --graph --oneline --decorate
-	last = show HEAD
 	master = checkout master
 	uncommit = reset --soft HEAD^
 	unstage = reset HEAD
