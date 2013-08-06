@@ -68,9 +68,9 @@
 [submodule "vim/bundle/vim-rdoc"]
 	path = vim/bundle/vim-rdoc
 	url = https://github.com/depuracao/vim-rdoc.git
-[submodule "vim/bundle/vim-rspec"]
-	path = vim/bundle/vim-rspec
-	url = https://github.com/taq/vim-rspec.git
+[submodule "vim/bundle/rspec.vim"]
+	path = vim/bundle/rspec.vim
+	url = https://github.com/Keithbsmiley/rspec.vim.git
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
