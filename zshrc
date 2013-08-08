@@ -22,7 +22,7 @@ fi
 
 # Add some aliases.
 alias zrc='source ~/.zshrc'
-alias trm='rm *~'
+alias trm='rm -f **/*~'
 alias up='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
 alias kthinit='kinit koronen@NADA.KTH.SE'
 alias tails='tail -f'
