@@ -77,6 +77,7 @@ set wildignore+=*.tar,*.gz,*.zip " Archives
 set wildignore+=.git/*,.gitkeep,.svn/*,.hg/* " VCS
 
 """ Search and highlight
+set incsearch " Search as you type
 set hlsearch " Highlight matches
 set smartcase " Use smart case matching
 set showmatch " Show matching brackets
