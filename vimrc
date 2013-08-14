@@ -30,14 +30,12 @@ if has("autocmd")
   au WinEnter * setlocal cursorline
 endif
 
-""" Buffer read/write
-set hidden " Allow switching from unsaved buffers
-
 """ UI
 set number " Display line numbers on the left
 set cmdheight=2 " Set the command window height to 2 lines
 set title " Change the title bar to show the file that is edited
 set list " Display unprintable characters (tabs, spaces etc.)
+set hidden " Allow switching from unsaved buffers
 set visualbell t_vb= " Disable bells and flashes
 set splitbelow splitright " Push new splits to bottom/right
 set textwidth=80 " Set text width
