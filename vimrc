@@ -5,18 +5,6 @@ set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-if has("filetype")
-  filetype plugin indent on
-endif
-
-" Enable syntax highlighting
-if has("syntax")
-  syntax on
-endif
-
 " Map leader
 let mapleader = ","
 
@@ -35,9 +23,6 @@ endif
 " Default indentation settings
 set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
 
-" Copy indention from previous line if no other rules apply
-set autoindent
-
 " Highlight current row
 set cursorline
 if has("autocmd")
@@ -47,30 +32,19 @@ endif
 
 """ Buffer read/write
 set hidden " Allow switching from unsaved buffers
-set autoread " Automatically reload file after external write
 
 """ UI
 set number " Display line numbers on the left
-set ruler " Display cursor position on status line
-set scrolloff=3 " Keep a couple of lines when scrolling
 set cmdheight=2 " Set the command window height to 2 lines
 set title " Change the title bar to show the file that is edited
 set list " Display unprintable characters (tabs, spaces etc.)
-set listchars=tab:>\ " Highlight trailing tabs
 set visualbell t_vb= " Disable bells and flashes
 set splitbelow splitright " Push new splits to bottom/right
-set ttimeoutlen=100 " Minimal wait for key codes
 set textwidth=80 " Set text width
-set backspace=indent,eol,start " Allow backspacing over everything
-
-""" Statusline
-set laststatus=2 " Always display the status line
-set showcmd " Show partial commands in the last line of the screen
 
 " Better command-line completion
-set wildmenu
 set wildmode=list:longest,full
-set wildignore=*~,*.swp,*/tmp/* " Swap files
+set wildignore=*~,*.swp " Swap files
 set wildignore+=a.out,*.a,*.o,*.class " Compiled binaries
 set wildignore+=*.aux,*.idx,*.ilg,*.ind,*.lof,*.lot,*.out,*.toc " LaTeX compiled files
 set wildignore+=*.tar,*.gz,*.zip " Archives
@@ -89,9 +63,6 @@ nmap k gk
 " Mapping to toggle search highlight
 nnoremap <C-l> :set hls!<CR>
 inoremap <C-l> :set hls!<CR>
-
-" Map Y to act like D and C (to yank until EOL), rather than default (yy)
-map Y y$
 
 " Ctrl+Left/right switches between buffers
 noremap <C-Left> :bprevious<CR>
