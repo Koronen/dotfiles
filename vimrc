@@ -53,6 +53,7 @@ set incsearch " Search as you type
 set hlsearch " Highlight matches
 set smartcase " Use smart case matching
 set showmatch " Show matching brackets
+map <leader><CR> :let @/ = ""<CR>
 
 " Sane j and k
 nmap j gj
