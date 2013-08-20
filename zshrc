@@ -15,11 +15,6 @@ if [[ -x /usr/bin/dircolors ]]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-# Load hub aliasing.
-if which hub > /dev/null; then
-    eval "$(hub alias -s)"
-fi
-
 # Add some aliases.
 alias zrc='source ~/.zshrc'
 alias trm='rm -f **/*~'
