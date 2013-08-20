@@ -69,12 +69,6 @@ nmap <S-Tab> <<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-" Jump to beginning/end of line
-nnoremap <C-A> <Home>
-inoremap <C-A> <Home>
-nnoremap <C-E> <End>
-inoremap <C-E> <End>
-
 " Use F2 to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F2>
 
