@@ -76,8 +76,8 @@ vmap <Tab> >gv
 vmap <S-Tab> <gv
 
 " More comfortable line scrolling mappings
-nnoremap <C-j> <C-e>
-nnoremap <C-k> <C-y>
+nnoremap <C-j> <C-e>gj
+nnoremap <C-k> <C-y>gk
 
 " Use F2 to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F2>
