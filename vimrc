@@ -55,13 +55,19 @@ set smartcase " Use smart case matching
 set showmatch " Show matching brackets
 nmap <silent> <leader>/ :nohlsearch<CR>
 
+" Disable arrow keys
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+
 " Sane j and k
 nmap j gj
 nmap k gk
 
-" Ctrl+Left/right switches between buffers
-noremap <C-Left> :bprevious<CR>
-noremap <C-Right> :bnext<CR>
+" Ctrl+h/l switches between buffers
+noremap <C-h> :bprevious<CR>
+noremap <C-l> :bnext<CR>
 
 " Using Tab and Shift-Tab to (un)indent
 nmap <Tab> >>
