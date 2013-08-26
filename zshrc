@@ -35,6 +35,20 @@ alias ls="$aliases[ls] --time-style=long-iso"
 # Remove some aliases.
 if [[ ! -z "`alias | egrep "^rm="`" ]]; then unalias rm; fi
 
+# Quick cd to git repository root
+function ,,() {
+  d=`pwd`
+  while [ -n "$d" ]; do
+    if [ -d "$d"/.git ]; then
+      cd $d
+      return 0
+    else
+      d=${d%/*}
+    fi
+  done
+  return 1
+}
+
 # Allow redirection to overwrite files.
 setopt CLOBBER
 
