@@ -11,6 +11,10 @@ let mapleader = ","
 " Use Unicode and Unix linebreaks
 set termencoding=utf-8 encoding=utf-8 fileformat=unix
 
+" Don't pollute working directories with swap or backup files
+set directory-=.
+set backupdir-=.
+
 " Set colorscheme and palette
 if &term =~? 'xterm'
   set t_Co=256
