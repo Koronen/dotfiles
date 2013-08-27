@@ -54,6 +54,8 @@ function prompt_koronen_setup {
   zstyle ':vcs_info:*' unstagedstr '!'
   zstyle ':vcs_info:git*+set-message:*' hooks git-stash git-untracked
 
+  zstyle ':vcs_info:hg*' branchformat "%b"
+
   # Define prompts.
   PROMPT='%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
   RPROMPT='%(?::%F{red}ret:$?%f )${vcs_info_msg_0_}${_prompt_koronen_pwd}'
