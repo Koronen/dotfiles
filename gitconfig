@@ -40,7 +40,7 @@
 	keepBackup = false
 
 [push]
-	default = upstream
+	default = current
 
 [user]
 	name = Victor Koronen
