@@ -103,12 +103,6 @@ imap <F4> <Esc>:NERDTreeToggle<CR>
 " CtrlP
 map <C-b> :CtrlPBuffer<CR>
 
-" Language specific settings.
-if has("autocmd")
-  " Manually set filetype for certain files
-  autocmd BufRead,BufNewFile {*.bib} set ft=tex
-endif
-
 " Source a local configuration file if available
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
