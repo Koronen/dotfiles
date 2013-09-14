@@ -2,7 +2,9 @@
 set nocompatible
 
 " Add system installed plugins to runtimepath
-set runtimepath+=/usr/share/vim/addons
+if has("unix")
+  set runtimepath+=/usr/share/vim/addons
+endif
 
 " Let Pathogen do its infecting
 runtime bundle/vim-pathogen/autoload/pathogen.vim
