@@ -77,6 +77,9 @@
 [submodule "vim/bundle/rspec.vim"]
 	path = vim/bundle/rspec.vim
 	url = https://github.com/Keithbsmiley/rspec.vim.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
