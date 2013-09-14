@@ -106,7 +106,6 @@ map <C-b> :CtrlPBuffer<CR>
 " Language specific settings.
 if has("autocmd")
   " Manually set filetype for certain files
-  autocmd BufRead,BufNewFile {*.json} set ft=javascript
   autocmd BufRead,BufNewFile {*.bib} set ft=tex
 endif
 
