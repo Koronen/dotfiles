@@ -105,15 +105,6 @@ map <C-b> :CtrlPBuffer<CR>
 
 " Language specific settings.
 if has("autocmd")
-  " Options for languages strict about whitespace
-  autocmd FileType make setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
-  autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-
-  " Options for languages with whitespace conventions
-  autocmd FileType ruby setlocal formatoptions=ql tabstop=2 shiftwidth=2 smarttab expandtab
-  autocmd FileType {javascript,coffee} setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-  autocmd FileType gitconfig setlocal noexpandtab
-
   " Manually set filetype for certain files
   autocmd BufRead,BufNewFile {*.json} set ft=javascript
   autocmd BufRead,BufNewFile {*.bib} set ft=tex
