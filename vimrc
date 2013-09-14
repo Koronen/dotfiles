@@ -1,6 +1,9 @@
 " Turn off compatability with VI
 set nocompatible
 
+" Add system installed plugins to runtimepath
+set runtimepath+=/usr/share/vim/addons
+
 " Let Pathogen do its infecting
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
