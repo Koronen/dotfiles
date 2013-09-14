@@ -99,22 +99,9 @@ endif
 " NERDtree
 nmap <F4> :NERDTreeToggle<CR>
 imap <F4> <Esc>:NERDTreeToggle<CR>
-if has("autocmd")
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-endif
-
-" Syntastic
-let g:syntastic_cpp_compiler_options = ' -std=c++0x'
-
-" bufferline
-let g:bufferline_echo=0
-let g:bufferline_show_bufnr=0
 
 " CtrlP
 map <C-b> :CtrlPBuffer<CR>
-
-" SuperTab
-let g:SuperTabDefaultCompletionType = "context"
 
 " Language specific settings.
 if has("autocmd")
