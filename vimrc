@@ -113,6 +113,9 @@ let g:bufferline_show_bufnr=0
 " CtrlP
 map <C-b> :CtrlPBuffer<CR>
 
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context"
+
 " Language specific settings.
 if has("autocmd")
   " Options for languages strict about whitespace
