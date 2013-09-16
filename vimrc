@@ -2,7 +2,7 @@
 set nocompatible
 
 " Add system installed plugins to runtimepath
-if has("unix")
+if isdirectory("/usr/share/vim/addons")
   set runtimepath+=/usr/share/vim/addons
 endif
 
