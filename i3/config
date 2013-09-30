@@ -138,3 +138,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+bindsym XF86ScreenSaver exec i3lock
+bindsym XF86Sleep exec "i3lock && dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend"
