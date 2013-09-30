@@ -139,5 +139,10 @@ bar {
         status_command i3status
 }
 
+bindsym $mod+n move container to output left
+bindsym $mod+Shift+n move workspace to output left
+bindsym $mod+m move container to output right
+bindsym $mod+Shift+m move workspace to output right
+
 bindsym XF86ScreenSaver exec i3lock
 bindsym XF86Sleep exec "i3lock && dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend"
