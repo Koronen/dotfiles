@@ -139,6 +139,9 @@ bar {
         status_command i3status
 }
 
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+minus move scratchpad
+
 bindsym $mod+n move container to output left
 bindsym $mod+Shift+n move workspace to output left
 bindsym $mod+m move container to output right
