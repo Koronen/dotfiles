@@ -89,3 +89,6 @@
 [submodule "vim/bundle/tcomment_vim"]
 	path = vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "vim/bundle/golden-ratio"]
+	path = vim/bundle/golden-ratio
+	url = https://github.com/roman/golden-ratio.git
