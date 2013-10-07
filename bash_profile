@@ -1,5 +1,3 @@
-# ~/.bash_profile: executed by bash(1) for login shells
-
 # Add user's private bin to PATH, if present
 if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
