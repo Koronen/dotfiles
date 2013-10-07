@@ -6,9 +6,11 @@ proper credit where due.
 
 ## Installation
 
+    sudo apt-get install -y git
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
     cd ~/.dotfiles
     ./script/bootstrap
+    ./script/install
 
 ## Solarized colorscheme
 
@@ -24,7 +26,7 @@ To install the Powerline fonts, please see instructions on the
 
 ## License
 
-Copyright (C) 2011-2012 by Victor Koronen
+Copyright (C) 2011-2013 by Victor Koronen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
