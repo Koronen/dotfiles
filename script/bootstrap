@@ -8,4 +8,5 @@ if ! which fasd >/dev/null 2>&1; then
     echo "[-] See https://github.com/clvv/fasd for installation instructions." >&2
 fi
 
-git submodule update --init
+git submodule init
+git submodule update --recursive
