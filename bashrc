@@ -1,17 +1,8 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-# If not running interactively, don't do anything
-#[ -z "$PS1" ] && return
 if [[ -n $PS1 ]] ; then
-
-# Load config parts
-for f in $HOME/.bashrc.d/*.bash; do
-    . "$f";
-done
-
-# '[ -z $PS1 ] && return' substitute
+    # Load config parts
+    for f in $HOME/.bashrc.d/*.bash; do
+        . "$f";
+    done
 fi
 
 # Load RVM into shell session, if present
