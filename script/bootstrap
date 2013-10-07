@@ -2,14 +2,6 @@
 
 set -e
 
-# Check for git dependency
-if ! which git >/dev/null 2>&1; then
-    if ! sudo apt-get install -y git >/dev/null 2>&1; then
-        echo "[-] Missing dependency: git" >&2
-        exit 1
-    fi
-fi
-
 # Clone prezto
 test -d "${ZDOTDIR:-$HOME}/.zprezto" || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
