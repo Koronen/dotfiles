@@ -16,11 +16,7 @@ function link {
 }
 
 for dotfile in `ls $dirdir --hide script --hide private --hide README.md`; do
-    if [ -f "$dotdir/$dotfile" ]; then
-        link "$dotdir/$dotfile" "$HOME/.$dotfile"
-    elif [ -d "$dotdir/$dotfile" ]; then
-        link "$dotdir/$dotfile" "$HOME/.$dotfile"
-    fi
+    link "$dotdir/$dotfile" "$HOME/.$dotfile"
 done
 
 unset dotdir
