@@ -9,15 +9,7 @@
 # Shell
 #
 
-SHELL=`which zsh`
-
-#
-# Browser
-#
-
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
+export SHELL=`which zsh`
 
 #
 # Editors
@@ -56,11 +48,6 @@ fi
 typeset -gU cdpath fpath mailpath manpath path
 typeset -gUT INFOPATH infopath
 
-# Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
-
 # Set the list of directories that zsh searches for functions.
 fpath=(
   $HOME/.zsh/functions.d/
@@ -81,11 +68,6 @@ manpath=(
   $manpath
 )
 
-for path_file in /etc/manpaths.d/*(.N); do
-  manpath+=($(<$path_file))
-done
-unset path_file
-
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
@@ -93,11 +75,6 @@ path=(
   /{bin,sbin}
   $path
 )
-
-for path_file in /etc/paths.d/*(.N); do
-  path+=($(<$path_file))
-done
-unset path_file
 
 #
 # Temporary Files
@@ -109,4 +86,3 @@ if [[ -d "$TMPDIR" ]]; then
     mkdir -p "$TMPPREFIX"
   fi
 fi
-
