@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+dotdir=`dirname $0`/..
+dotdir=$(cd $dotdir && pwd)
+
+function link {
+    if [ ! -L "$2" ]; then
+        ln -s "$1" "$2"
+    else
+        if [ "`readlink $2`" != "$1" ]; then
+            echo "[skip] $2" >&2
+        fi
+    fi
+}
+
+for dotfile in `ls $dirdir --hide script --hide private --hide README.md`; do
+    if [ -f "$dotdir/$dotfile" ]; then
+        link "$dotdir/$dotfile" "$HOME/.$dotfile"
+    elif [ -d "$dotdir/$dotfile" ]; then
+        link "$dotdir/$dotfile" "$HOME/.$dotfile"
+    fi
+done
+
+unset dotdir
