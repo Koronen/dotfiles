@@ -41,7 +41,7 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' keymap 'emacs'
+zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Auto convert .... to ../..
 zstyle ':prezto:module:editor' dot-expansion 'yes'
@@ -56,14 +56,11 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:prompt' theme 'koronen'
 
 #
-# SSH-Agent
+# SSH
 #
 
-# Enable ssh-agent forwarding.
-zstyle ':prezto:module:ssh-agent' forwarding 'yes'
-
-# Set ssh-agent identities to load.
-zstyle ':prezto:module:ssh-agent' identities 'id_rsa'
+# Set the SSH identities to load into the agent.
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
 #
 # Terminal

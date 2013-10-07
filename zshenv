@@ -24,8 +24,26 @@ export PAGER='less'
 #
 
 if [[ -z "$LANG" ]]; then
-  eval "$(locale)"
+  export LANG='en_US.UTF-8'
 fi
+
+#
+# Paths
+#
+
+typeset -gU cdpath fpath mailpath path
+
+# Set the list of directories that zsh searches for functions.
+fpath=(
+  $HOME/.zsh/functions.d/
+  $fpath
+)
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  /usr/local/{bin,sbin}
+  $path
+)
 
 #
 # Less
@@ -42,47 +60,16 @@ if (( $+commands[lesspipe.sh] )); then
 fi
 
 #
-# Paths
-#
-
-typeset -gU cdpath fpath mailpath manpath path
-typeset -gUT INFOPATH infopath
-
-# Set the list of directories that zsh searches for functions.
-fpath=(
-  $HOME/.zsh/functions.d/
-  $fpath
-)
-
-# Set the list of directories that info searches for manuals.
-infopath=(
-  /usr/local/share/info
-  /usr/share/info
-  $infopath
-)
-
-# Set the list of directories that man searches for manuals.
-manpath=(
-  /usr/local/share/man
-  /usr/share/man
-  $manpath
-)
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  /usr/{bin,sbin}
-  /{bin,sbin}
-  $path
-)
-
-#
 # Temporary Files
 #
 
-if [[ -d "$TMPDIR" ]]; then
-  export TMPPREFIX="${TMPDIR%/}/zsh"
-  if [[ ! -d "$TMPPREFIX" ]]; then
-    mkdir -p "$TMPPREFIX"
-  fi
+if [[ ! -d "$TMPDIR" ]]; then
+  export TMPDIR="/tmp/$USER"
+  mkdir -p -m 700 "$TMPDIR"
 fi
+
+TMPPREFIX="${TMPDIR%/}/zsh"
+if [[ ! -d "$TMPPREFIX" ]]; then
+  mkdir -p "$TMPPREFIX"
+fi
+
