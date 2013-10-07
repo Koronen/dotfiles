@@ -5,13 +5,10 @@ startup_message off
 defscrollback 1024
 
 # An alternative hardstatus to display a bar at the bottom listing the
-# window names and highlighting the current window name in blue. 
+# window names and highlighting the current window name in blue.
 hardstatus on
 hardstatus alwayslastline
-#hardstatus string "screen %n (%t)%? [%h]%?" # Current screen number and name
-#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a " # Simple window list
-#hardstatus string "%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %Y-%m-%d %c:%s ]%{W}" # Styled window list /w hostname, load and time
-hardstatus string "%{gk}[ %{G}%H %{g}][ %{=b kW}#%n %t%? [%h]%?%{= kg} ]%=[ %{Y}%l%{g} ][ %{= kC}%Y-%m-%d %c:%s %{g}]%{W}" # Styled window name /w hostname, load and time
+hardstatus string "%{gk}[ %{G}%H %{g}][ %{=b kW}#%n %t%? [%h]%?%{= kg} ]%=[ %{Y}%l%{g} ][ %{= kC}%Y-%m-%d %c:%s %{g}]%{W}"
 
 # Execute .bash_profile on startup
 shell -$SHELL
