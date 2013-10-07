@@ -2,9 +2,6 @@
 
 set -e
 
-# Clone prezto
-test -d "${ZDOTDIR:-$HOME}/.zprezto" || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
 # Check for fasd dependency
 if ! which fasd >/dev/null 2>&1; then
     echo "[-] Missing dependency: fasd" >&2
