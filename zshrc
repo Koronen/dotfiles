@@ -26,6 +26,7 @@ alias ack='ack-grep'
 alias pbcopy='xclip -i -sel clip'
 alias pbpaste='xclip -o -sel clip'
 
+alias gbd='git diff $(git merge-base master HEAD)..HEAD'
 alias gff='git pull --ff-only'
 
 # Update some aliases.
