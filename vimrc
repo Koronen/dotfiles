@@ -103,6 +103,17 @@ imap <F4> <Esc>:NERDTreeToggle<CR>
 " CtrlP
 map <C-b> :CtrlPBuffer<CR>
 
+" Trim trailing whitespace
+function! TrimTrailingWhitespace()
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  let @/=_s
+  call cursor(l, c)
+endfunction
+noremap <silent> <leader><space> :call TrimTrailingWhitespace()<CR>
+
 """ Abbreviations
 abbreviate pry! require 'pry'; binding.pry
 
