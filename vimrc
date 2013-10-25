@@ -62,7 +62,7 @@ set incsearch " Search as you type
 set hlsearch " Highlight matches
 set smartcase " Use smart case matching
 set showmatch " Show matching brackets
-nmap <silent> <leader>/ :nohlsearch<CR>
+nnoremap <silent> <space> :nohlsearch<CR>
 
 " Disable arrow keys
 noremap <Left> <Nop>
