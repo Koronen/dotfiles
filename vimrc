@@ -103,6 +103,9 @@ imap <F4> <Esc>:NERDTreeToggle<CR>
 " CtrlP
 map <C-b> :CtrlPBuffer<CR>
 
+""" Abbreviations
+abbreviate pry! require 'pry'; binding.pry
+
 " Source a local configuration file if available
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
