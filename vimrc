@@ -11,13 +11,12 @@ let mapleader = ","
 
 set termencoding=utf-8 encoding=utf-8 fileformat=unix
 
-set directory-=.
-set backupdir-=.
+set directory-=. backupdir-=.
 
 if &term =~? 'xterm'
   set t_Co=256
-  colorscheme solarized
   set background=light
+  colorscheme solarized
 else
   colorscheme desert
 endif
