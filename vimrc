@@ -46,7 +46,6 @@ set wildignore+=*.aux,*.idx,*.ilg,*.ind,*.lof,*.lot,*.out,*.toc
 set wildignore+=*.tar,*.gz,*.zip
 set wildignore+=.git/*,.gitkeep,.svn/*,.hg/*
 
-set incsearch
 set hlsearch
 set smartcase
 set showmatch
