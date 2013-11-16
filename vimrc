@@ -38,6 +38,7 @@ set hidden
 set visualbell t_vb=
 set splitbelow splitright
 set textwidth=80
+set nojoinspaces
 
 set wildmode=list:longest,full
 set wildignore=*~,*.swp
