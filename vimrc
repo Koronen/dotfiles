@@ -51,6 +51,8 @@ set smartcase
 set showmatch
 nnoremap <silent> <space> :nohlsearch<CR>
 
+nnoremap Q <Nop>
+
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 noremap <Up> <Nop>
