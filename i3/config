@@ -141,3 +141,4 @@ bindsym XF86AudioRaiseVolume exec "amixer set Master 3+"
 bindsym XF86ScreenSaver exec i3lock
 bindsym XF86Sleep exec "i3lock && dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend"
 bindsym XF86Display exec "autorandr --change --force"
+bindsym Shift+XF86Display exec "xrandr --output VGA1 --auto && xrandr --output VGA1 --right-of LVDS1"
