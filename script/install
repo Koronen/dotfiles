@@ -20,3 +20,5 @@ for dotfile in `ls $dirdir --hide script --hide private --hide README.md`; do
 done
 
 unset dotdir
+
+vim +Helptags +qa

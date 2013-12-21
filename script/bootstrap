@@ -9,5 +9,3 @@ fi
 
 git submodule init
 git submodule update --recursive
-
-vim +Helptags +qa
