@@ -29,6 +29,8 @@ alias pbpaste='xclip -o -sel clip'
 
 alias gbd='git diff $(git merge-base master HEAD)..HEAD'
 alias gff='git pull --ff-only'
+alias glh='git graph'
+alias glH='git graph --all'
 
 # Update some aliases.
 alias gc='git commit -v'
