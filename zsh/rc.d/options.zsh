@@ -1,5 +1,9 @@
 # Docs: <http://zsh.sourceforge.net/Doc/Release/Options.html>
 
+HISTFILE="$HOME/.zhistory"
+HISTSIZE=10000
+SAVEHIST=10000
+
 setopt AUTO_PUSHD
 setopt EXTENDED_GLOB
 setopt HIST_FIND_NO_DUPS
