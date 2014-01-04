@@ -7,6 +7,10 @@ source $HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=($HOME/.zsh/bundle/zsh-completions/src $fpath)
 autoload -Uz compinit && compinit -i
 
+fpath=($HOME/.zsh/functions.d $fpath)
+autoload -Uz promptinit && promptinit
+prompt koronen
+
 # Add some aliases.
 alias zrc='source ~/.zshrc'
 alias trm='rm -f **/*~'
