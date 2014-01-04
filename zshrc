@@ -3,6 +3,8 @@ if [[ -x /usr/bin/dircolors ]]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
 fi
 
+source $HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Add some aliases.
 alias zrc='source ~/.zshrc'
 alias trm='rm -f **/*~'
