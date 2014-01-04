@@ -13,10 +13,11 @@ prompt koronen
 
 source $HOME/.aliases.sh
 
-# Allow redirection to overwrite files.
-setopt CLOBBER
+for rcfile in $HOME/.zsh/rc.d/*.zsh; do
+    source $rcfile;
+done
 
 # Source local config.
 if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zshrc.local"
+    source "${ZDOTDIR:-$HOME}/.zshrc.local"
 fi
