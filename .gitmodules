@@ -101,3 +101,6 @@
 [submodule "zsh/bundle/zsh-syntax-highlighting"]
 	path = zsh/bundle/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/bundle/zsh-completions"]
+	path = zsh/bundle/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git

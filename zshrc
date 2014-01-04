@@ -4,6 +4,8 @@ if [[ -x /usr/bin/dircolors ]]; then
 fi
 
 source $HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath=($HOME/.zsh/bundle/zsh-completions/src $fpath)
+autoload -Uz compinit && compinit -i
 
 # Add some aliases.
 alias zrc='source ~/.zshrc'
