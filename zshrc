@@ -11,25 +11,7 @@ fpath=($HOME/.zsh/functions.d $fpath)
 autoload -Uz promptinit && promptinit
 prompt koronen
 
-# Add some aliases.
-alias zrc='source ~/.zshrc'
-alias trm='rm -f **/*~'
-alias up='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
-alias kthinit='kinit koronen@NADA.KTH.SE'
-alias tails='tail -f'
-alias ack='ack-grep'
-alias dbus-suspend='dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
-
-alias pbcopy='xclip -i -sel clip'
-alias pbpaste='xclip -o -sel clip'
-
-alias gbd='git diff $(git merge-base master HEAD)..HEAD'
-alias gff='git pull --ff-only'
-alias glh='git graph'
-alias glH='git graph --all'
-
-# Update some aliases.
-alias gc='git commit -v'
+source $HOME/.aliases.sh
 
 # Allow redirection to overwrite files.
 setopt CLOBBER
