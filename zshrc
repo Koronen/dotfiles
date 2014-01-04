@@ -1,3 +1,12 @@
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+
+bindkey -e
+
+if [[ -s '/etc/zsh_command_not_found' ]]; then
+    source '/etc/zsh_command_not_found'
+fi
+
 # Load dircolors.
 if [[ -x /usr/bin/dircolors ]]; then
     test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
