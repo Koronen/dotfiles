@@ -59,6 +59,6 @@ alias gws='git status --short'
 alias gwR='git reset --hard'
 
 # ls
-alias l='ls -CF'
-alias la='ls -alhF'
-alias ll='ls -AlhF'
+alias ls='ls --color=auto --time-style=long-iso'
+alias la='ls -aFhl'
+alias ll='ls -AFhl'
