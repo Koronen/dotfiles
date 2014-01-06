@@ -92,8 +92,9 @@
 [submodule "vim/bundle/golden-ratio"]
 	path = vim/bundle/golden-ratio
 	url = https://github.com/roman/golden-ratio.git
-
-# Zsh: Prezto
-[submodule "zprezto"]
-	path = zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "zsh/bundle/zsh-syntax-highlighting"]
+	path = zsh/bundle/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/bundle/zsh-completions"]
+	path = zsh/bundle/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git

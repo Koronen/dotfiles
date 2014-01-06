@@ -1,14 +1,4 @@
-#
-# Koronen's ZSH theme.
-#
-# Authors:
-#   Victor Koronen <koronen@kth.se>
-#
-
-# Load dependencies.
-pmodload 'helper'
-
-function prompt_koronen_pwd {
+function prompt_koronen_pwd () {
   local pwd="${PWD/#$HOME/~}"
 
   if [[ "$pwd" == (#m)[/~] ]]; then
@@ -19,30 +9,19 @@ function prompt_koronen_pwd {
   fi
 }
 
-function prompt_koronen_precmd {
-  setopt LOCAL_OPTIONS
-  unsetopt XTRACE KSH_ARRAYS
-
-  # Format PWD.
+function prompt_koronen_precmd () {
   prompt_koronen_pwd
-
-  # Load vcs information.
   vcs_info
 }
 
-function prompt_koronen_setup {
-  setopt LOCAL_OPTIONS
-  unsetopt XTRACE KSH_ARRAYS
-  prompt_opts=(cr percent subst)
+function prompt_koronen_setup () {
+  prompt_opts=(percent subst)
 
-  # Load required functions.
   autoload -Uz add-zsh-hook
   autoload -Uz vcs_info
 
-  # Add hook to be called before each command.
   add-zsh-hook precmd prompt_koronen_precmd
 
-  # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable bzr git hg svn
   zstyle ':vcs_info:*' formats '%s:%b%c%u%m '
   zstyle ':vcs_info:*' actionformats "%s:%b%c%u:%a%m "
@@ -56,25 +35,20 @@ function prompt_koronen_setup {
 
   zstyle ':vcs_info:hg*' branchformat "%b"
 
-  # Define prompts.
   PROMPT='%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
   RPROMPT='%(?::%F{red}ret:$?%f )${vcs_info_msg_0_}${_prompt_koronen_pwd}'
-  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
-function +vi-git-untracked() {
-  # Check for untracked files or updated submodules since vcs_info does not.
+function +vi-git-untracked () {
   if [[ -n $(command git ls-files --other --exclude-standard 2> /dev/null) ]]; then
     hook_com[unstaged]+='?'
   fi
 }
 
-function +vi-git-stash() {
-  # Check for any stashed changes since vcs_info does not.
+function +vi-git-stash () {
   if [[ -s ${hook_com[base]}/.git/refs/stash ]]; then
     hook_com[misc]+="@"
   fi
 }
 
 prompt_koronen_setup "$@"
-
