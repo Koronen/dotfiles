@@ -22,11 +22,11 @@ please load the palette into your terminal emulator.
 ## Powerline fonts
 
 To install the Powerline fonts, please see instructions on the
-[Powerline docs](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation)
+[Powerline docs](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation).
 
 ## License
 
-Copyright (C) 2011-2013 by Victor Koronen
+Copyright (C) 2011-2014 by Victor Koronen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
