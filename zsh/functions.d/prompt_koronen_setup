@@ -1,4 +1,4 @@
-function prompt_koronen_pwd {
+function prompt_koronen_pwd () {
   local pwd="${PWD/#$HOME/~}"
 
   if [[ "$pwd" == (#m)[/~] ]]; then
@@ -9,12 +9,14 @@ function prompt_koronen_pwd {
   fi
 }
 
-function prompt_koronen_precmd {
+function prompt_koronen_precmd () {
   prompt_koronen_pwd
   vcs_info
 }
 
-function prompt_koronen_setup {
+function prompt_koronen_setup () {
+  prompt_opts=(percent subst)
+
   autoload -Uz add-zsh-hook
   autoload -Uz vcs_info
 
@@ -35,17 +37,18 @@ function prompt_koronen_setup {
 
   PROMPT='%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
   RPROMPT='%(?::%F{red}ret:$?%f )${vcs_info_msg_0_}${_prompt_koronen_pwd}'
-  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
-function +vi-git-untracked() {
+function +vi-git-untracked () {
   if [[ -n $(command git ls-files --other --exclude-standard 2> /dev/null) ]]; then
     hook_com[unstaged]+='?'
   fi
 }
 
-function +vi-git-stash() {
+function +vi-git-stash () {
   if [[ -s ${hook_com[base]}/.git/refs/stash ]]; then
     hook_com[misc]+="@"
   fi
 }
+
+prompt_koronen_setup "$@"
