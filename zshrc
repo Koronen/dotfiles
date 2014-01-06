@@ -3,10 +3,8 @@ zle -N self-insert url-quote-magic
 
 bindkey -e
 
-source $HOME/.aliases.sh
-
 for rcfile in $HOME/.zsh/rc.d/*.zsh; do
-    source $rcfile;
+    source "$rcfile"
 done
 
 if [[ -r "$HOME/.zshrc.local" ]]; then
