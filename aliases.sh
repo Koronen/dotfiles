@@ -12,16 +12,22 @@ alias rbbe='bundle exec'
 alias g='git'
 
 # Branch (b)
+alias gb='git branch'
+alias gbc='git checkout -b'
 alias gbl='git branch -v'
 alias gbL='git branch -av'
+alias gbx='git branch -d'
+alias gbX='git branch -D'
 
 # Commit (c)
 alias gc='git commit --verbose'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
+alias gcF='git commit --amend --verbose'
 alias gcs='git show'
 
 # Fetch (f)
+alias gf='git fetch'
 alias gfc='git clone'
 alias gff='git pull --ff-only'
 alias gfm='git pull'
@@ -29,6 +35,7 @@ alias gfr='git pull --rebase'
 
 # Index (i)
 alias gia='git add'
+alias giA='git add --patch'
 alias gid='git diff --no-ext-diff --cached'
 
 # Log (l)
@@ -37,27 +44,35 @@ alias glh='git graph'
 alias glH='git graph --all'
 
 # Merge (m)
+alias gm='git merge'
 alias gmt='git mergetool'
 
 # Push (p)
 alias gp='git push'
+alias gpc='git push --set-upstream origin `git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///"`'
 alias gpf='git push --force'
-alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
 
 # Rebase (r)
+alias gr='git rebase'
+alias gra='git rebase --abort'
 alias grc='git rebase --continue'
+alias gri='git rebase --interactive'
+alias grs='git rebase --skip'
 
 # Remote (R)
+alias gR='git remote'
 alias gRp='git remote prune'
 
 # Stash (s)
 alias gs='git stash'
 alias gsp='git stash pop'
+alias gsx='git stash drop'
 
 # Working Copy (w)
 alias gwd='git diff --no-ext-diff'
-alias gws='git status --short'
 alias gwR='git reset --hard'
+alias gws='git status --short'
+alias gwS='git status'
 
 # ls
 alias ls='ls --color=auto --time-style=long-iso'
