@@ -90,6 +90,8 @@ function! TrimTrailingWhitespace()
 endfunction
 noremap <silent> <leader><space> :call TrimTrailingWhitespace()<CR>
 
+nnoremap <leader>gg :Ggrep<Space>
+
 abbreviate pry! require 'pry'; binding.pry
 
 if filereadable(expand("~/.vimrc.local"))
