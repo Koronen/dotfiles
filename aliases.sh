@@ -25,6 +25,7 @@ alias gcs='git show'
 alias gfc='git clone'
 alias gff='git pull --ff-only'
 alias gfm='git pull'
+alias gfr='git pull --rebase'
 
 # Index (i)
 alias gia='git add'
