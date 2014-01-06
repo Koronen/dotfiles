@@ -4,3 +4,4 @@ for bundle in `find vim/bundle -mindepth 1 -maxdepth 1 -type d`; do
     (cd $bundle && git pull origin master)
 done
 
+vim +Helptags +qa
