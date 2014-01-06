@@ -1,5 +1,4 @@
 [alias]
-	graph = log --graph --oneline --decorate
 	master = checkout master
 	uncommit = reset --soft HEAD^
 	unstage = reset HEAD

@@ -39,9 +39,10 @@ alias giA='git add --patch'
 alias gid='git diff --no-ext-diff --cached'
 
 # Log (l)
-alias glg='git log --topo-order --all --graph --pretty="format:%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n"'
-alias glh='git graph'
-alias glH='git graph --all'
+alias gl='git log'
+alias glg='git log --graph --oneline --decorate --all'
+alias glG='git log --graph --oneline --decorate'
+alias glp='git log --patch'
 
 # Merge (m)
 alias gm='git merge'
