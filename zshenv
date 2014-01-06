@@ -4,9 +4,9 @@ export VISUAL='view'
 export PAGER='less'
 
 if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
+    export LANG='en_US.UTF-8'
 fi
 
-if [[ -s "${ZDOTDIR:-$HOME}/.zshenv.local" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zshenv.local"
+if [[ -r "$HOME/.zshenv.local" ]]; then
+    source "$HOME/.zshenv.local"
 fi

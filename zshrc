@@ -9,6 +9,6 @@ for rcfile in $HOME/.zsh/rc.d/*.zsh; do
     source $rcfile;
 done
 
-if [[ -s "$HOME/.zshrc.local" ]]; then
+if [[ -r "$HOME/.zshrc.local" ]]; then
     source "$HOME/.zshrc.local"
 fi
