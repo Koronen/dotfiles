@@ -1,3 +1,3 @@
-fpath=($HOME/.zsh/functions.d $fpath)
+fpath=($HOME/.zsh/functions $fpath)
 autoload -Uz promptinit && promptinit
 prompt koronen
