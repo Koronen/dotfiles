@@ -1,6 +1,7 @@
 alias ..='cd ..'
 alias ack='ack-grep'
 alias dbus-suspend='dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
+alias pag='ps aux | grep -i'
 alias trm='rm -f **/*~'
 alias up='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
 
