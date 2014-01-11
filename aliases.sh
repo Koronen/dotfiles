@@ -77,6 +77,15 @@ alias gws='git status --short'
 alias gwS='git status'
 
 # ls
-alias ls='ls --color=auto --time-style=long-iso'
+if [[ "`uname`" != "SunOS" ]]; then
+    alias ls='ls --color=auto --time-style=long-iso'
+fi
 alias la='ls -aFhl'
 alias ll='ls -AFhl'
+
+# grep
+if [[ "`uname`" != "SunOS" ]]; then
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
