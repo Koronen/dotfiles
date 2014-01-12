@@ -1,13 +1,10 @@
+# General
 alias ..='cd ..'
 alias ack='ack-grep'
 alias dbus-suspend='dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
 alias pag='ps aux | grep -i'
 alias trm='rm -f **/*~'
 alias up='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
-
-# Ruby
-alias rbb='bundle'
-alias rbbe='bundle exec'
 
 # Git
 alias g='git'
@@ -76,6 +73,13 @@ alias gwR='git reset --hard'
 alias gws='git status --short'
 alias gwS='git status'
 
+# grep
+if [[ "`uname`" != "SunOS" ]]; then
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
+
 # ls
 if [[ "`uname`" != "SunOS" ]]; then
     alias ls='ls --color=auto --time-style=long-iso'
@@ -83,9 +87,6 @@ fi
 alias la='ls -aFhl'
 alias ll='ls -AFhl'
 
-# grep
-if [[ "`uname`" != "SunOS" ]]; then
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
-fi
+# Ruby
+alias rbb='bundle'
+alias rbbe='bundle exec'
