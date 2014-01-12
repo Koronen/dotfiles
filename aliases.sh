@@ -60,6 +60,7 @@ alias grs='git rebase --skip'
 
 # Remote (R)
 alias gR='git remote'
+alias gRl='git remote --verbose'
 alias gRp='git remote prune'
 
 # Stash (s)
