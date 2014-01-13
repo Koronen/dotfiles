@@ -26,6 +26,7 @@ alias gcs='git show'
 
 # Fetch (f)
 alias gf='git fetch'
+alias gfa='git fetch --all'
 alias gfc='git clone'
 alias gff='git pull --ff-only'
 alias gfm='git pull'
