@@ -82,6 +82,11 @@ if [[ "`uname`" != "SunOS" ]]; then
   alias egrep='egrep --color=auto'
 fi
 
+# Heroku
+alias hu='heroku'
+alias huc='heroku config'
+alias hur='heroku run'
+
 # ls
 if [[ "`uname`" != "SunOS" ]]; then
     alias ls='ls --color=auto --time-style=long-iso'
