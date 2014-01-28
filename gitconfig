@@ -45,3 +45,5 @@
 	name = Victor Koronen
 	email = koronen@kth.se
 
+[web]
+	browser = google-chrome
