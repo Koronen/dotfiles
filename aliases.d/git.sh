@@ -1,12 +1,3 @@
-# General
-alias ..='cd ..'
-alias ack='ack-grep'
-alias dbus-suspend='dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
-alias pag='ps aux | grep -i'
-alias trm='rm -f **/*~'
-alias up='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
-
-# Git
 alias g='git'
 
 # Branch (b)
@@ -74,34 +65,3 @@ alias gwd='git diff --no-ext-diff'
 alias gwR='git reset --hard'
 alias gws='git status --short'
 alias gwS='git status'
-
-# grep
-if [[ "`uname`" != "SunOS" ]]; then
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
-fi
-
-# Heroku
-alias hu='heroku'
-alias huc='heroku config'
-alias hur='heroku run'
-
-# ls
-if [[ "`uname`" != "SunOS" ]]; then
-    alias ls='ls --color=auto --time-style=long-iso'
-fi
-alias la='ls -aFhl'
-alias ll='ls -AFhl'
-
-# Ruby
-alias rbb='bundle'
-alias rbbe='bundle exec'
-
-# Ruby on Rails
-alias rorc='bundle exec rails console'
-alias rordm='bundle exec rake db:migrate'
-alias rors='bundle exec rails server'
-
-# vim
-alias v='vim'

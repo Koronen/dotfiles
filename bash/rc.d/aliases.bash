@@ -1,1 +1,1 @@
-source $HOME/.aliases.sh
+source "$HOME/.aliases"
