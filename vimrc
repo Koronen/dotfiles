@@ -80,15 +80,15 @@ imap <F4> <Esc>:NERDTreeToggle<CR>
 
 map <C-b> :CtrlPBuffer<CR>
 
-function! TrimTrailingWhitespace()
+function! PreservingSearchAndCursor(command)
   let _s=@/
   let l = line(".")
   let c = col(".")
-  %s/\s\+$//e
+  execute a:command
   let @/=_s
   call cursor(l, c)
 endfunction
-noremap <silent> <leader><space> :call TrimTrailingWhitespace()<CR>
+noremap <silent> <leader><space> :call PreservingSearchAndCursor("%s/\\s\\+$//e")<CR>
 
 nnoremap <leader>gg :Ggrep<Space>
 
