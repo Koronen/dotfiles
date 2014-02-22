@@ -75,9 +75,6 @@ if has("autocmd")
   autocmd InsertLeave * set nopaste
 endif
 
-nmap <F4> :NERDTreeToggle<CR>
-imap <F4> <Esc>:NERDTreeToggle<CR>
-
 map <C-b> :CtrlPBuffer<CR>
 
 function! PreservingSearchAndCursor(command)
