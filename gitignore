@@ -1,15 +1,9 @@
 *~
 ._*
-.cap_tasks
 .DS_Store
 .~lock.*
-.rake_tasks
-.rbenv-version
 .ruby-version
-.rvmrc
 .svn/
-*.swm
-*.swn
-*.swo
-*.swp
+*.sw?
 tags
+Thumbs.db
