@@ -61,9 +61,6 @@ nnoremap <Down> <Nop>
 nmap j gj
 nmap k gk
 
-noremap <C-h> :bprevious<CR>
-noremap <C-l> :bnext<CR>
-
 nmap <Tab> >>
 nmap <S-Tab> <<
 vmap <Tab> >gv
