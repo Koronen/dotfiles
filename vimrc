@@ -53,11 +53,6 @@ nnoremap <silent> <space> :nohlsearch<CR>
 
 nnoremap Q <Nop>
 
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-
 nmap j gj
 nmap k gk
 
