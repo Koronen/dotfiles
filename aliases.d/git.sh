@@ -61,6 +61,7 @@ alias gRp='git remote prune'
 
 # Stash (s)
 alias gs='git stash'
+alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gsx='git stash drop'
 
