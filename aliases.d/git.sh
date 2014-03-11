@@ -30,6 +30,7 @@ alias gfr='git pull --rebase'
 alias gia='git add'
 alias giA='git add --patch'
 alias gid='git diff --no-ext-diff --cached'
+alias giD='git diff --no-ext-diff --cached --word-diff'
 
 # Log (l)
 alias gl='git log'
@@ -65,6 +66,7 @@ alias gsx='git stash drop'
 
 # Working Copy (w)
 alias gwd='git diff --no-ext-diff'
+alias gwD='git diff --no-ext-diff --word-diff'
 alias gwR='git reset --hard'
 alias gws='git status --short'
 alias gwS='git status'
