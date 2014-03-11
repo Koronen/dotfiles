@@ -127,6 +127,10 @@ bar {
         status_command i3status
 }
 
+assign [class="^Google-chrome$"] 1
+assign [class="^Skype$"] 9
+assign [class="^Spotify$"] 10
+
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
 
