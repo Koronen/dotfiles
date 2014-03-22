@@ -57,7 +57,13 @@ alias grs='git rebase --skip'
 # Remote (R)
 alias gR='git remote'
 alias gRl='git remote --verbose'
-alias gRp='git remote prune'
+function gRp {
+  if [[ $# > 0 ]]; then
+    git remote prune $@
+  else
+    git remote prune origin
+  fi
+}
 
 # Stash (s)
 alias gs='git stash'
