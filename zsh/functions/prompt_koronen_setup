@@ -9,8 +9,18 @@ function prompt_koronen_pwd () {
   fi
 }
 
+function prompt_koronen_pair () {
+  local pair=$(command git config --local user.pair)
+  if [ -n "$pair" ]; then
+    _prompt_koronen_pair="pair:$pair "
+  else
+    _prompt_koronen_pair=""
+  fi
+}
+
 function prompt_koronen_precmd () {
   prompt_koronen_pwd
+  prompt_koronen_pair
   vcs_info
 }
 
@@ -36,7 +46,7 @@ function prompt_koronen_setup () {
   zstyle ':vcs_info:hg*' branchformat "%b"
 
   PROMPT='%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
-  RPROMPT='%(?::%F{red}ret:$?%f )${vcs_info_msg_0_}${_prompt_koronen_pwd}'
+  RPROMPT='%(?::%F{red}ret:$?%f )${_prompt_koronen_pair}${vcs_info_msg_0_}${_prompt_koronen_pwd}'
 }
 
 function +vi-git-untracked () {
