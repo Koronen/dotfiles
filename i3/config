@@ -90,7 +90,6 @@ bar {
 }
 
 # Workspace assignments
-assign [class="^Google-chrome$"] 1
 assign [class="^Skype$"] 9
 assign [class="^Spotify$"] 10
 
