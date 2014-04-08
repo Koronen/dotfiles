@@ -1,5 +1,0 @@
-alias hu='heroku'
-alias huc='heroku config'
-alias hudm='heroku run rake db:migrate'
-alias hul='heroku logs'
-alias hur='heroku run'

@@ -1,5 +1,4 @@
 alias rbb='bundle'
 alias rbbe='bundle exec'
-alias rbbl='bundle list'
 alias rbbo='bundle open'
 alias rbrs='bundle exec rspec'
