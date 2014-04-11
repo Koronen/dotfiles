@@ -47,6 +47,7 @@ set wildignore+=*.tar,*.gz,*.zip
 set wildignore+=.git/*,.gitkeep,.svn/*,.hg/*
 
 set hlsearch
+set ignorecase
 set smartcase
 set showmatch
 nnoremap <silent> <space> :nohlsearch<CR>
