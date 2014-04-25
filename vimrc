@@ -53,6 +53,7 @@ set showmatch
 nnoremap <silent> <space> :nohlsearch<CR>
 
 nnoremap Q <Nop>
+nnoremap K <Nop>
 
 nmap j gj
 nmap k gk
