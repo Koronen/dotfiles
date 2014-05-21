@@ -48,6 +48,13 @@ alias gmt='git mergetool'
 alias gp='git push'
 alias gpc='git push --set-upstream origin `git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///"`'
 alias gpf='git push --force'
+function gpx {
+  if [[ $# > 1 ]]; then
+    echo git push --delete $@
+  else
+    echo git push --delete origin $@
+  fi
+}
 
 # Rebase (r)
 alias gr='git rebase'
