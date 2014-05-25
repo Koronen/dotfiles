@@ -12,16 +12,16 @@ proper credit where due.
     ./script/bootstrap
     ./script/install
 
-## FASD
+### FASD
 
 To enable quick file and directory access, please [install FASD](https://github.com/clvv/fasd).
 
-## Powerline fonts
+### Powerline fonts
 
 To install the Powerline fonts, please see instructions on the
 [Powerline docs](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation).
 
-## Solarized colorscheme
+### Solarized colorscheme
 
 In order for the solarized colorscheme to work properly,
 please load the palette into your terminal emulator.
