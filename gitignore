@@ -2,7 +2,6 @@
 ._*
 .DS_Store
 .~lock.*
-.ruby-version
 .svn/
 *.sw?
 tags
