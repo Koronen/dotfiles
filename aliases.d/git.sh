@@ -50,9 +50,9 @@ alias gpc='git push --set-upstream origin `git symbolic-ref HEAD 2> /dev/null | 
 alias gpf='git push --force'
 function gpx {
   if [[ $# > 1 ]]; then
-    echo git push --delete $@
+    git push --delete $@
   else
-    echo git push --delete origin $@
+    git push --delete origin $@
   fi
 }
 
