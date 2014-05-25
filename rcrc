@@ -1,0 +1,2 @@
+EXCLUDES="private README.md script"
+SYMLINK_DIRS="aliases.d bash gittemplate i3 vim zsh"

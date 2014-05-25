@@ -2,7 +2,6 @@
 
 set -e
 
-git submodule init
-git submodule update --recursive
+DOTDIR=${DOTDIR:-$(readlink -f $(dirname $0)/..)}
 
-vim +Helptags +qa
+[ -e $HOME/.rcrc ] || ln -s $DOTDIR/rcrc $HOME/.rcrc
