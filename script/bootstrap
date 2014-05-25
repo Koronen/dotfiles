@@ -2,11 +2,6 @@
 
 set -e
 
-if ! which fasd >/dev/null 2>&1; then
-    echo "[-] Missing dependency: fasd" >&2
-    echo "[-] See https://github.com/clvv/fasd for installation instructions." >&2
-fi
-
 git submodule init
 git submodule update --recursive
 
