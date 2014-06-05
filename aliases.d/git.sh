@@ -55,6 +55,9 @@ function gpx {
     git push --delete origin $@
   fi
 }
+if type compdef &>/dev/null; then
+  compdef _git gpx=git-push
+fi
 
 # Rebase (r)
 alias gr='git rebase'
