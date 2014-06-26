@@ -1,6 +1,9 @@
-# Add user's private bin to PATH, if present
+# Add user's private bin directories to PATH, if present
 if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
+fi
+if [ -d "$HOME/.bin" ]; then
+    PATH="$HOME/.bin:$PATH"
 fi
 
 # Load local settings, if present

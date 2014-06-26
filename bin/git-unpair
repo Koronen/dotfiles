@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Bail out if not currently pairing
+if ! git config --local user.pair > /dev/null; then
+    exit 0
+fi
+
+# Restore local solo name
+solo_name="`git config --local user.soloname`"
+if [ -n "$solo_name" ]; then
+    git config --local user.name "$solo_name"
+    git config --local --unset user.soloname
+else
+    git config --local --unset user.name
+fi
+
+# Restore local solo email
+solo_email="`git config --local user.soloemail`"
+if [ -n "$solo_email" ]; then
+    git config --local user.email "$solo_email"
+    git config --local --unset user.soloemail
+else
+    git config --local --unset user.email
+fi
+
+# Unset pair flag
+git config --local --unset user.pair
+
+# Display current config
+echo "Committing as \"$(git config user.name) <$(git config user.email)>\""
