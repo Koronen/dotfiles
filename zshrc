@@ -1,6 +1,10 @@
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
 
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
 bindkey -e
 bindkey '^[[Z' reverse-menu-complete
 
