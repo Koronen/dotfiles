@@ -54,6 +54,7 @@ nnoremap <silent> <space> :nohlsearch<CR>
 
 nnoremap Q <Nop>
 nnoremap K <Nop>
+vnoremap K <Nop>
 
 nmap j gj
 nmap k gk
