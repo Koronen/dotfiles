@@ -1,8 +1,8 @@
-export SHELL=`which zsh`
 export EDITOR='vim'
-export VISUAL='view'
-export PAGER='less'
 export GPG_TTY=`tty`
+export PAGER='less'
+export SHELL=`which zsh`
+export VISUAL='view'
 
 if [[ -z "$LANG" ]]; then
     export LANG='en_US.UTF-8'

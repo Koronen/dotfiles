@@ -1,4 +1,5 @@
-export SHELL=`which bash`
 export EDITOR='vim'
-export VISUAL='view'
+export GPG_TTY=`tty`
 export PAGER='less'
+export SHELL=`which bash`
+export VISUAL='view'
