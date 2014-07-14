@@ -13,8 +13,7 @@ set termencoding=utf-8 encoding=utf-8 fileformat=unix
 
 set directory-=. backupdir-=.
 
-if &term =~? 'xterm'
-  set t_Co=256
+if &t_Co >= 256
   set background=light
   colorscheme solarized
 else

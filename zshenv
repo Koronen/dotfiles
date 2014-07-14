@@ -4,6 +4,10 @@ export PAGER='less'
 export SHELL=`which zsh`
 export VISUAL='view'
 
+if [[ "$COLORTERM" == "gnome-terminal" ]]; then
+    export TERM="xterm-256color"
+fi
+
 if [[ -z "$LANG" ]]; then
     export LANG='en_US.UTF-8'
 fi
