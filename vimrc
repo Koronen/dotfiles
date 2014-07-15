@@ -64,6 +64,11 @@ nmap <S-Tab> <<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+nnoremap * *zzzv
+nnoremap # #zzzv
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 set pastetoggle=<F2>
 
 if has("autocmd")
