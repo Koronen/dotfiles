@@ -9,10 +9,6 @@ call pathogen#infect()
 
 let mapleader = ","
 
-set termencoding=utf-8 encoding=utf-8 fileformat=unix
-
-set directory-=. backupdir-=.
-
 if &t_Co >= 256
   set background=light
   colorscheme solarized
@@ -20,36 +16,45 @@ else
   colorscheme desert
 endif
 
-set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
-
 set cursorline
 if has("autocmd")
   au WinLeave * setlocal nocursorline
   au WinEnter * setlocal cursorline
 endif
 
-set number
+set backupdir-=.
 set cmdheight=2
-set title
-set list
-set hidden
-set visualbell t_vb=
-set splitbelow splitright
-set textwidth=80
 set colorcolumn=+1
-set nojoinspaces
-
-set wildmode=list:longest,full
-set wildignore=*~,*.swp
-set wildignore+=a.out,*.a,*.o,*.class
-set wildignore+=*.aux,*.idx,*.ilg,*.ind,*.lof,*.lot,*.out,*.toc
-set wildignore+=*.tar,*.gz,*.zip
-set wildignore+=.git/*,.gitkeep,.svn/*,.hg/*
-
+set directory-=.
+set encoding=utf-8
+set expandtab
+set fileformat=unix
+set hidden
 set hlsearch
 set ignorecase
-set smartcase
+set list
+set nojoinspaces
+set number
+set pastetoggle=<F2>
+set shiftwidth=4
 set showmatch
+set smartcase
+set softtabstop=4
+set splitbelow
+set splitright
+set t_vb=
+set tabstop=8
+set termencoding=utf-8
+set textwidth=80
+set title
+set visualbell
+set wildignore+=*.aux,*.idx,*.ilg,*.ind,*.lof,*.lot,*.out,*.toc
+set wildignore+=*.tar,*.gz,*.zip
+set wildignore+=*~,*.swp
+set wildignore+=.git/*,.gitkeep,.svn/*,.hg/*
+set wildignore+=a.out,*.a,*.o,*.class
+set wildmode=list:longest,full
+
 nnoremap <silent> <space> :nohlsearch<CR>
 
 nnoremap Q <Nop>
@@ -68,8 +73,6 @@ nnoremap * *zzzv
 nnoremap # #zzzv
 nnoremap n nzzzv
 nnoremap N Nzzzv
-
-set pastetoggle=<F2>
 
 if has("autocmd")
   autocmd InsertLeave * set nopaste
