@@ -47,6 +47,7 @@ set tabstop=8
 set termencoding=utf-8
 set textwidth=80
 set title
+set updatetime=750
 set visualbell
 set wildignore+=*.aux,*.idx,*.ilg,*.ind,*.lof,*.lot,*.out,*.toc
 set wildignore+=*.tar,*.gz,*.zip
