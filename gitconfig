@@ -23,6 +23,9 @@
 [difftool]
 	prompt = false
 
+[fetch]
+	prune = true
+
 [github]
 	user = Koronen
 
