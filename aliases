@@ -13,3 +13,7 @@ fi
 for aliasfile in $HOME/.aliases.d/*.sh; do
     source "$aliasfile"
 done
+
+if [[ -f "$HOME/.aliases.local" ]]; then
+    source "$HOME/.aliases.local"
+fi
