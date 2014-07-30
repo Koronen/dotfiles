@@ -6,6 +6,7 @@ alias g='git'
 # Branch (b)
 alias gb='git branch'
 alias gbc='git checkout -b'
+alias gbd='git diff $(git merge-base origin/HEAD HEAD)..HEAD'
 alias gbl='git branch -v'
 alias gbL='git branch -av'
 alias gbw='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
