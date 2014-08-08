@@ -1,4 +1,6 @@
 alias debi='sudo apt-get install'
 alias debI='sudo dpkg -i'
+alias debl='dpkg -L'
+alias debL='dpkg -c'
 alias debu='sudo apt-get update && sudo apt-get upgrade'
 alias debU='sudo apt-get update && sudo apt-get dist-upgrade'
