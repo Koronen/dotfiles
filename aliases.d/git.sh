@@ -19,7 +19,7 @@ alias gc='git commit --verbose'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
 alias gcF='git commit --amend --verbose'
-alias gcs='git show'
+alias gcs='git show --show-signature'
 
 # Fetch (f)
 alias gf='git fetch'
@@ -39,7 +39,7 @@ alias giD='git diff --no-ext-diff --cached --word-diff'
 alias gl='git log'
 alias glg='git log --graph --oneline --decorate --all'
 alias glG='git log --graph --oneline --decorate'
-alias glp='git log --patch'
+alias glp='git log --patch --show-signature'
 
 # Merge (m)
 alias gm='git merge'
