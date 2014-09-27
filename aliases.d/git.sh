@@ -37,8 +37,8 @@ alias giD='git diff --no-ext-diff --cached --word-diff'
 
 # Log (l)
 alias gl='git log'
-alias glg='git log --graph --oneline --decorate --all'
-alias glG='git log --graph --oneline --decorate'
+alias glg='git log --graph --oneline --decorate'
+alias glG='git log --graph --oneline --decorate --all'
 alias glp='git log --patch --show-signature'
 
 # Merge (m)
