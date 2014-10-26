@@ -77,6 +77,9 @@ function gRp {
     git remote prune origin
   fi
 }
+if type compdef &>/dev/null; then
+  compdef _git gRp=git-remote
+fi
 
 # Stash (s)
 alias gs='git stash'
