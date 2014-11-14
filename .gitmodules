@@ -94,3 +94,6 @@
 [submodule "vim/bundle/vim-mkdir"]
 	path = vim/bundle/vim-mkdir
 	url = https://github.com/pbrisbin/vim-mkdir.git
+[submodule "vim/bundle/vim-rspec"]
+	path = vim/bundle/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec.git
