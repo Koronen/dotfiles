@@ -3,9 +3,9 @@ zle -N self-insert url-quote-magic
 
 autoload -z edit-command-line
 zle -N edit-command-line
-bindkey "^X^E" edit-command-line
 
 bindkey -e
+bindkey "^X^E" edit-command-line
 bindkey '^[[Z' reverse-menu-complete
 
 for rcfile in $HOME/.zsh/rc.d/*.zsh; do
