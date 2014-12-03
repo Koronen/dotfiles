@@ -93,6 +93,11 @@ noremap <silent> <leader><space> :call PreservingSearchAndCursor("%s/\\s\\+$//e"
 
 nnoremap <leader>gg :Ggrep<Space>
 
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 abbreviate pry! require 'pry'; binding.pry
 
 if filereadable(expand("~/.vimrc.local"))
