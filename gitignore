@@ -1,5 +1,6 @@
 *~
 ._*
+.bundle/
 .DS_Store
 .~lock.*
 .svn/
