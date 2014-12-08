@@ -6,3 +6,4 @@
 *.sw?
 tags
 Thumbs.db
+.vagrant/
