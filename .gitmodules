@@ -100,3 +100,6 @@
 [submodule "vim/bundle/vim-projectionist"]
 	path = vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
+[submodule "zsh/bundle/zsh-history-substring-search"]
+	path = zsh/bundle/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
