@@ -43,6 +43,7 @@
 
 [mergetool]
 	keepBackup = false
+	prompt = false
 
 [push]
 	default = current
