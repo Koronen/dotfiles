@@ -11,9 +11,9 @@ if which xdg-open > /dev/null; then
 fi
 
 for aliasfile in $HOME/.aliases.d/*.sh; do
-    source "$aliasfile"
+    . "$aliasfile"
 done
 
-if [[ -f "$HOME/.aliases.local" ]]; then
-    source "$HOME/.aliases.local"
+if [ -f "$HOME/.aliases.local" ]; then
+    . "$HOME/.aliases.local"
 fi

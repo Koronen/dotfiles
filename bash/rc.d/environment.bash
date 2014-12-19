@@ -1,8 +1,8 @@
 export EDITOR='vim'
-export GPG_TTY=`tty`
+export GPG_TTY=$(tty)
 export LESS='-FRX'
 export PAGER='less'
-export SHELL=`which bash`
+export SHELL=$(which bash)
 export VISUAL='view'
 
 if [[ "$COLORTERM" == "gnome-terminal" ]]; then

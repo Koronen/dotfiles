@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -e
-
-DOTDIR=${DOTDIR:-$(readlink -f $(dirname $0)/..)}
-
-[ -e $HOME/.rcrc ] || ln -s $DOTDIR/rcrc $HOME/.rcrc

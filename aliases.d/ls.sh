@@ -1,4 +1,4 @@
-if [[ "`uname`" == "Linux" ]]; then
+if [ "$(uname)" = "Linux" ]; then
     alias ls='ls --color=auto --time-style=long-iso'
 fi
 alias la='ls -aFhl'

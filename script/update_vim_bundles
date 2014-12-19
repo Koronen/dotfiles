@@ -2,13 +2,13 @@
 
 set -e
 
-for bundle in `find ~/.vim/bundle -mindepth 1 -maxdepth 1 -type d`; do
+for bundle in $(find ~/.vim/bundle -mindepth 1 -maxdepth 1 -type d); do
     echo "Updating \"$bundle\"..."
-    cd $bundle
-    old_head=`git rev-parse HEAD`
+    cd "$bundle"
+    old_head=$(git rev-parse HEAD)
     git fetch origin
     git checkout -q origin/master
-    git diff ${old_head}..HEAD --stat
+    git diff "${old_head}..HEAD" --stat
 done
 
 vim +Helptags +qa

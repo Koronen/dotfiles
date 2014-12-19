@@ -49,14 +49,14 @@ alias gmt='git mergetool'
 alias gp='git push'
 alias gpc='git push --set-upstream origin `git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///"`'
 alias gpf='git push --force'
-function gpx {
-  if [[ $# > 1 ]]; then
-    git push --delete $@
+gpx() {
+  if [ $# -gt 1 ]; then
+    git push --delete "$@"
   else
-    git push --delete origin $@
+    git push --delete origin "$@"
   fi
 }
-if type compdef &>/dev/null; then
+if type compdef >/dev/null; then
   compdef _git gpx=git-push
 fi
 
@@ -70,14 +70,14 @@ alias grs='git rebase --skip'
 # Remote (R)
 alias gR='git remote'
 alias gRl='git remote --verbose'
-function gRp {
-  if [[ $# > 0 ]]; then
-    git remote prune $@
+gRp() {
+  if [ $# -gt 0 ]; then
+    git remote prune "$@"
   else
-    git remote prune origin
+    git remote prune origin "$@"
   fi
 }
-if type compdef &>/dev/null; then
+if type compdef >/dev/null; then
   compdef _git gRp=git-remote
 fi
 

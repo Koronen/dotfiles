@@ -8,13 +8,13 @@ bindkey -e
 bindkey "^X^E" edit-command-line
 bindkey '^[[Z' reverse-menu-complete
 
-source $HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.zsh/bundle/zsh-history-substring-search/zsh-history-substring-search.zsh
+source "$HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.zsh/bundle/zsh-history-substring-search/zsh-history-substring-search.zsh"
 
 for rcfile in $HOME/.zsh/rc.d/*.zsh; do
     source "$rcfile"
 done
 
-if [[ -r "$HOME/.zshrc.local" ]]; then
+if [ -r "$HOME/.zshrc.local" ]; then
     source "$HOME/.zshrc.local"
 fi
