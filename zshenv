@@ -13,6 +13,8 @@ if [ -z "$LANG" ]; then
     export LANG='en_US.UTF-8'
 fi
 
+path=(.git/safe/../../bin $path)
+
 if [ -r "$HOME/.zshenv.local" ]; then
     source "$HOME/.zshenv.local"
 fi
