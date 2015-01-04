@@ -103,3 +103,6 @@
 [submodule "zsh/bundle/zsh-history-substring-search"]
 	path = zsh/bundle/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "vim/bundle/vim-bracketed-paste"]
+	path = vim/bundle/vim-bracketed-paste
+	url = https://github.com/ConradIrwin/vim-bracketed-paste.git
