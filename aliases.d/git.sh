@@ -56,7 +56,7 @@ gpx() {
     git push --delete origin "$@"
   fi
 }
-if type compdef >/dev/null; then
+if type compdef > /dev/null 2>&1; then
   compdef _git gpx=git-push
 fi
 
@@ -77,7 +77,7 @@ gRp() {
     git remote prune origin "$@"
   fi
 }
-if type compdef >/dev/null; then
+if type compdef > /dev/null 2>&1; then
   compdef _git gRp=git-remote
 fi
 
