@@ -88,6 +88,13 @@ alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gsx='git stash drop'
 
+# Submodule (S)
+alias gS='git submodule'
+alias gSa='git submodule add'
+alias gSi='git submodule init'
+alias gSI='git submodule update --init --recursive'
+alias gSu='git submodule foreach git pull'
+
 # Working Copy (w)
 alias gwd='git diff --no-ext-diff'
 alias gwD='git diff --no-ext-diff --word-diff'
