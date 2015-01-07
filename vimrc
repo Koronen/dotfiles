@@ -22,7 +22,6 @@ if has("autocmd")
   au WinEnter * setlocal cursorline
 endif
 
-set backupdir-=.
 set cmdheight=2
 set colorcolumn=+1
 set directory-=.
@@ -34,6 +33,7 @@ set hlsearch
 set ignorecase
 set list
 set nojoinspaces
+set noswapfile
 set number
 set pastetoggle=<F2>
 set shiftwidth=4
