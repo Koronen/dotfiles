@@ -76,9 +76,6 @@
 [submodule "zsh/bundle/zsh-completions"]
 	path = zsh/bundle/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
-[submodule "vim/bundle/vim-gnupg"]
-	path = vim/bundle/vim-gnupg
-	url = https://github.com/jamessan/vim-gnupg.git
 [submodule "vim/bundle/vim-commentary"]
 	path = vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
