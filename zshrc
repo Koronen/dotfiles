@@ -15,6 +15,8 @@ for rcfile in $HOME/.zsh/rc.d/*.zsh; do
     source "$rcfile"
 done
 
+path=(.git/safe/../../bin $path)
+
 if [ -r "$HOME/.zshrc.local" ]; then
     source "$HOME/.zshrc.local"
 fi
