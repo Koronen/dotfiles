@@ -3,5 +3,5 @@
 set -e
 
 if which vim > /dev/null; then
-    vim +Helptags +qa
+    vim +PlugInstall +qall
 fi

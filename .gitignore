@@ -1,3 +1,5 @@
 private/
-vim/.netrwhist
 vim/.VimballRecord
+vim/.netrwhist
+vim/autoload/plug.vim
+vim/bundle/
