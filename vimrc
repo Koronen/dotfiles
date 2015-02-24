@@ -1,5 +1,3 @@
-set nocompatible
-
 if isdirectory("/usr/share/vim/addons")
   set runtimepath+=/usr/share/vim/addons
 endif
