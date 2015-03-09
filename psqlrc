@@ -1,7 +1,5 @@
+\pset null '(null)'
 \set COMP_KEYWORD_CASE upper
 \set HISTCONTROL ignoredups
 \set ON_ERROR_ROLLBACK interactive
-
-\pset null '(null)'
-
 \x auto
