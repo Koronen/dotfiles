@@ -2,4 +2,5 @@
 \set COMP_KEYWORD_CASE upper
 \set HISTCONTROL ignoredups
 \set ON_ERROR_ROLLBACK interactive
+\timing
 \x auto
