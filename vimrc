@@ -76,6 +76,7 @@ set smartcase
 set softtabstop=4
 set splitbelow
 set splitright
+set synmaxcol=300
 set t_vb=
 set tabstop=8
 set termencoding=utf-8
