@@ -1,4 +1,6 @@
-function prompt_koronen_pwd () {
+# vim: set ft=zsh:
+
+prompt_koronen_pwd () {
   local pwd="${PWD/#$HOME/~}"
 
   if [[ "$pwd" == (#m)[/~] ]]; then
@@ -9,12 +11,12 @@ function prompt_koronen_pwd () {
   fi
 }
 
-function prompt_koronen_precmd () {
+prompt_koronen_precmd () {
   prompt_koronen_pwd
   vcs_info
 }
 
-function prompt_koronen_setup () {
+prompt_koronen_setup () {
   prompt_opts=(percent subst)
 
   autoload -Uz add-zsh-hook
@@ -35,17 +37,17 @@ function prompt_koronen_setup () {
 
   zstyle ':vcs_info:hg*' branchformat "%b"
 
-  PROMPT='%(!.%F{red}%n%f.%n)@%m%(!.#.$) '
+  PROMPT='%(!.#.$) '
   RPROMPT='%(?::%F{red}ret:$?%f )${vcs_info_msg_0_}${_prompt_koronen_pwd}'
 }
 
-function +vi-git-untracked () {
++vi-git-untracked () {
   if [[ -n $(command git ls-files --other --exclude-standard 2> /dev/null) ]]; then
     hook_com[unstaged]+='?'
   fi
 }
 
-function +vi-git-stash () {
++vi-git-stash () {
   if [[ -s ${hook_com[base]}/.git/refs/stash ]]; then
     hook_com[misc]+="@"
   fi
