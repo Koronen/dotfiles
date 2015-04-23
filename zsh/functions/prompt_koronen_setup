@@ -11,8 +11,17 @@ prompt_koronen_pwd () {
   fi
 }
 
+prompt_koronen_host () {
+  if [[ -n "$SSH_CONNECTION" ]]; then
+    _prompt_koronen_host="%m"
+  else
+    _prompt_koronen_host=""
+  fi
+}
+
 prompt_koronen_precmd () {
   prompt_koronen_pwd
+  prompt_koronen_host
   vcs_info
 }
 
@@ -37,7 +46,7 @@ prompt_koronen_setup () {
 
   zstyle ':vcs_info:hg*' branchformat "%b"
 
-  PROMPT='%(!.#.$) '
+  PROMPT='${_prompt_koronen_host}%(!.#.$) '
   RPROMPT='%(?::%F{red}ret:$?%f )${vcs_info_msg_0_}${_prompt_koronen_pwd}'
 }
 
