@@ -48,6 +48,9 @@
 [push]
 	default = current
 
+[rebase]
+	autosquash = true
+
 [user]
 	name = Victor Koronen
 	email = koronen@kth.se
