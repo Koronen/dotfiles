@@ -5,6 +5,7 @@ alias ack='ack-grep'
 alias dbus-suspend='dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
 alias df='df -h'
 alias pag='ps aux | grep -i'
+alias path="echo \$PATH | tr -s ':' '\n'"
 alias trm='rm -f **/*~'
 if which xdg-open > /dev/null; then
     alias open='xdg-open'
