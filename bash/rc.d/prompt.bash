@@ -1,5 +1,5 @@
-if __git_ps1 > /dev/null 2>&1; then
-    PS1='\u@\h:\w$(__git_ps1)\$ '
-else
-    PS1='\u@\h:\w\$ '
-fi
+PS1=''
+[[ -n "$SSH_CONNECTION" ]] && PS1+='\h:'
+PS1+='\w'
+__git_ps1 > /dev/null 2>&1 && PS1+='$(__git_ps1)'
+PS1+='\$ '
