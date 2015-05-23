@@ -1,13 +1,6 @@
-# Use smart case
 --smart-case
-
-# Always sort the files
 --sort-files
-
-# Add a coffeescript type
---type-set
-coffee=.coffee
-
-# .haml and .rake files are Ruby
 --type-add
 ruby=.haml,.rake
+--type-set
+coffee=.coffee
