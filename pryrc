@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 begin
   require 'pry-debugger'
 
@@ -8,4 +10,9 @@ begin
   Pry.commands.alias_command 'b', 'break'
 rescue LoadError
   # Ignore
+end
+
+Pry.config.prompt_name = File.basename(Dir.pwd)
+if env = [ENV['RAILS_ENV'], ENV['RACK_ENV']].compact.first
+  Pry.config.prompt_name += "-#{env}"
 end
