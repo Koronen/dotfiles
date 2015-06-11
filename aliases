@@ -6,10 +6,10 @@ alias dbus-suspend='dbus-send --system --print-reply --dest=org.freedesktop.UPow
 alias df='df -h'
 alias pag='ps aux | grep -i'
 alias path="echo \$PATH | tr -s ':' '\n'"
-alias trm='rm -f **/*~'
 if which xdg-open > /dev/null; then
     alias open='xdg-open'
 fi
+alias trm='rm -f **/*~'
 
 for aliasfile in $HOME/.aliases.d/*.sh; do
     . "$aliasfile"
