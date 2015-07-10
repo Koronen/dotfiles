@@ -1,4 +1,4 @@
-if [ "$(uname)" = "Linux" ]; then
+if ls --color=auto --time-style=long-iso > /dev/null 2>&1; then
     alias ls='ls --color=auto --time-style=long-iso'
 fi
 
