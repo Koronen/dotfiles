@@ -1,0 +1,2 @@
+EXCLUDES="README.md"
+SYMLINK_DIRS="aliases.d bash gittemplate i3 vim zsh"
