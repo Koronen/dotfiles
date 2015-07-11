@@ -1,4 +1,8 @@
-function RubyRefactorQuotes()
+if v:version < 700
+  finish
+endif
+
+function! RubyRefactorQuotes()
   for lineno in range(a:firstline, a:lastline)
     let line = getline(lineno)
     if line !~ '\"[^\"]*#{.*"'
