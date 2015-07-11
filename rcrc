@@ -1,3 +1,4 @@
 DOTFILES_DIRS="$HOME/.dotfiles $HOME/.dotfiles-private"
 EXCLUDES="README.md"
 SYMLINK_DIRS="aliases.d bash bin gittemplate i3 mutt ssh vim weechat zsh"
+TAGS="ruby"

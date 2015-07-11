@@ -1,3 +1,3 @@
 DOTFILES_DIRS="$HOME/.dotfiles"
-EXCLUDES="README.md ackrc ctags gemrc hgrc i3 irbrc pryrc psqlrc railsrc rspec tmux.conf"
+EXCLUDES="README.md ackrc ctags hgrc i3 psqlrc tmux.conf"
 SYMLINK_DIRS="aliases.d bash gittemplate vim zsh"
