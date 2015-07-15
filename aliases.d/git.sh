@@ -17,8 +17,8 @@ alias gbX='git branch -D'
 # Commit (c)
 alias gc='git commit --verbose'
 alias gco='git checkout'
-alias gcf='git commit --amend --reuse-message HEAD'
-alias gcF='git commit --amend --verbose'
+alias gcf='git commit --amend --date "$(date +%Y-%m-%dT%H:%M:%S)" --reuse-message HEAD'
+alias gcF='git commit --amend --date "$(date +%Y-%m-%dT%H:%M:%S)" --verbose'
 alias gcs='git show --show-signature'
 
 # Fetch (f)
