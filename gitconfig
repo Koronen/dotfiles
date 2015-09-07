@@ -1,8 +1,6 @@
 [alias]
-	master = checkout master
 	uncommit = reset --soft HEAD^
 	unstage = reset HEAD
-	sync = add --all
 
 [apply]
 	whitespace = fix
@@ -17,9 +15,6 @@
 [diff "exif"]
 	textconv = exiftool
 
-[diff "strings"]
-	textconv = strings
-
 [difftool]
 	prompt = false
 
@@ -28,9 +23,6 @@
 
 [github]
 	user = Koronen
-
-[help]
-	autocorrect = 16
 
 [hub]
 	protocol = https
