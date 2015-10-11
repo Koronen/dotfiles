@@ -103,7 +103,7 @@ bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer
 bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 bindsym XF86Display exec "autorandr --change --force"
-bindsym Shift+XF86Display exec "xrandr --output VGA1 --auto && xrandr --output VGA1 --right-of LVDS1"
+bindsym Shift+XF86Display exec "xrandr --output VGA1 --auto --right-of LVDS1"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86ScreenSaver exec "i3lock --dpms"
