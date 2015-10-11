@@ -1,2 +1,3 @@
 EXCLUDES="README.md"
 SYMLINK_DIRS="aliases.d bash gittemplate vim zsh"
+TAGS="git"
