@@ -107,11 +107,6 @@ nmap <S-Tab> <<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-nnoremap * *zzzv
-nnoremap # #zzzv
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
 if has("autocmd")
   autocmd InsertLeave * set nopaste
 endif
