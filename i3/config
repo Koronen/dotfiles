@@ -91,10 +91,6 @@ bar {
         status_command i3status
 }
 
-# Workspace assignments
-assign [class="^Skype$"] 9
-assign [class="^Spotify$"] 10
-
 # Floating
 for_window [class="Workrave"] floating enable
 
