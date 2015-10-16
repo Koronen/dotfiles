@@ -48,7 +48,8 @@ alias gmt='git mergetool'
 # Push (p)
 alias gp='git push'
 alias gpc='git push --set-upstream origin `git symbolic-ref HEAD 2> /dev/null | sed -e "s/refs\/heads\///"`'
-alias gpf='git push --force'
+alias gpf='git push --force-with-lease'
+alias gpF='git push --force'
 gpx() {
   if [ $# -gt 1 ]; then
     git push --delete "$@"
