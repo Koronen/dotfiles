@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-set -e
-
-if which vim > /dev/null; then
-    vim +PlugInstall +qall
-fi
