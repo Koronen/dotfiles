@@ -2,46 +2,9 @@ if isdirectory("/usr/share/vim/addons")
   set runtimepath+=/usr/share/vim/addons
 endif
 
-call plug#begin('~/.vim/bundle')
-Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
-Plug 'bling/vim-bufferline'
-Plug 'bogado/file-line'
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'ervandew/supertab'
-Plug 'kana/vim-textobj-user'
-Plug 'kchmck/vim-coffee-script'
-Plug 'kylef/apiblueprint.vim'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'pangloss/vim-javascript'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'puppetlabs/puppet-syntax-vim'
-Plug 'roman/golden-ratio'
-Plug 'scrooloose/syntastic'
-Plug 'slim-template/vim-slim'
-Plug 'teoljungberg/vim-grep'
-Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rsi'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'vim-ruby/vim-ruby'
-call plug#end()
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 let mapleader = ","
 
