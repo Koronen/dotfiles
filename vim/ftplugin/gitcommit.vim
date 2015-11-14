@@ -1,2 +1,3 @@
-setlocal spell
 setlocal complete+=kspell
+setlocal noro
+setlocal spell
