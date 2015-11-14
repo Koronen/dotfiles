@@ -19,7 +19,7 @@ Readme](https://github.com/thoughtbot/rcm#Installation).
 Then run the following commands to finish the installation.
 
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
-    RCRC=~/.dotfiles/rcrc rcup
+    RCRC="~/.dotfiles/host-$(hostname -s)/rcrc" rcup
 
 ### FASD
 
