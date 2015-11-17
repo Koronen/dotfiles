@@ -26,7 +26,6 @@ alias gf='git fetch'
 alias gfa='git fetch --all'
 alias gfc='git clone'
 alias gff='git pull --ff-only'
-alias gfm='git pull'
 alias gfr='git pull --rebase'
 
 # Index (i)
@@ -71,21 +70,10 @@ alias grs='git rebase --skip'
 # Remote (R)
 alias gR='git remote'
 alias gRl='git remote --verbose'
-gRp() {
-  if [ $# -gt 0 ]; then
-    git remote prune "$@"
-  else
-    git remote prune origin "$@"
-  fi
-}
-if type compdef > /dev/null 2>&1; then
-  compdef _git gRp=git-remote
-fi
 
 # Stash (s)
 alias gs='git stash'
 alias gsd='git stash show --patch --stat'
-alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gsx='git stash drop'
 
