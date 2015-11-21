@@ -4,6 +4,8 @@
 .DS_Store
 .~lock.*
 .svn/
+*.sublime-project
+*.sublime-workspace
 *.sw?
 tags
 Thumbs.db
