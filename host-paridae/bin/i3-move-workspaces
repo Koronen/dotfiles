@@ -1,0 +1,53 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
+
+import json
+import os
+import sys
+
+def print_usage(argv):
+    usage_string = "Usage: {0} CONFIG_FILE".format(os.path.basename(argv[0]))
+    print(usage_string, file=sys.stderr)
+
+def parse_config_file(file_path):
+    workspace_output = {}
+    with open(file_path) as f:
+        for line in f.readlines():
+            output_workspaces = line.split()
+            output = output_workspaces.pop(0)
+            for workspace in output_workspaces:
+                workspace_output[workspace] = output
+    return workspace_output
+
+def i3_get_workspaces():
+    workspaces_json = os.popen("i3-msg -t get_workspaces").read()
+    return json.loads(workspaces_json)
+
+def build_i3_cmd(config, workspaces):
+    i3_cmds = []
+
+    for w in workspaces:
+        name = w['name']
+        i3_cmds.append("workspace {0}".format(name))
+        i3_cmds.append("move workspace to {0}".format(config[name]))
+
+    focused_workspace = next(x['name'] for x in workspaces if x['focused'])
+    i3_cmds.append("workspace {0}".format(focused_workspace))
+
+    return "; ".join(i3_cmds)
+
+def main(argv):
+    if len(argv) < 2:
+        print_usage(argv)
+        sys.exit(1)
+
+    outputs_config = parse_config_file(argv[1])
+    i3_workspaces = i3_get_workspaces()
+
+    i3_cmd = build_i3_cmd(outputs_config, i3_workspaces)
+    cmd = "i3-msg -q \"{0}\"".format(i3_cmd)
+    os.popen(cmd)
+
+if __name__ == '__main__':
+    main(sys.argv)
