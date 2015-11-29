@@ -1,23 +1,24 @@
 #!/usr/bin/env python
 
-from __future__ import print_function
-
 import json
 import os
 import sys
 
-def print_usage(argv):
-    usage_string = "Usage: {0} CONFIG_FILE".format(os.path.basename(argv[0]))
-    print(usage_string, file=sys.stderr)
-
-def parse_config_file(file_path):
+def parse_args(argv, outputs):
     workspace_output = {}
-    with open(file_path) as f:
-        for line in f.readlines():
-            output_workspaces = line.split()
-            output = output_workspaces.pop(0)
-            for workspace in output_workspaces:
-                workspace_output[workspace] = output
+    workspaces = set()
+
+    for arg in argv:
+        if arg in outputs:
+            for workspace in workspaces:
+                workspace_output[workspace] = arg
+            workspaces.clear()
+        else:
+            workspaces.add(arg)
+
+    if len(workspaces) != 0:
+        raise StandardError("workspaces listed without output")
+
     return workspace_output
 
 def i3_get_workspaces():
@@ -41,13 +42,11 @@ def build_i3_cmd(config, workspaces):
 
     return "; ".join(i3_cmds)
 
+# Usage: i3-move-workspaces WORKSPACE1 [WORKSPACE2, ...] OUTPUT1 [WORKSPACE3 OUTPUT2]
 def main(argv):
-    if len(argv) < 2:
-        print_usage(argv)
-        sys.exit(1)
-
-    outputs_config = parse_config_file(argv[1])
     i3_workspaces = i3_get_workspaces()
+    i3_outputs = set(w['output'] for w in i3_workspaces)
+    outputs_config = parse_args(argv[1:], i3_outputs)
 
     i3_cmd = build_i3_cmd(outputs_config, i3_workspaces)
     cmd = "i3-msg -q \"{0}\"".format(i3_cmd)
