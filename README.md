@@ -35,7 +35,8 @@ To install the Powerline fonts, please see instructions on the
 In order for the solarized colorscheme to work properly,
 please load the palette into your terminal emulator.
 
- * [gnome-terminal-colors-solarized](https://github.com/sigurdga/gnome-terminal-colors-solarized)
+* [gnome-terminal-colors-solarized](https://github.com/sigurdga/gnome-terminal-colors-solarized)
+* [Iterm2-color-schemes](http://iterm2colorschemes.com/)
 
 ## License
 
