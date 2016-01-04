@@ -1,6 +1,3 @@
-fpath=($HOME/.zsh/bundle/zsh-completions/src $fpath)
-autoload -Uz compinit && compinit -i
-
 # Use caching to make completion for cammands such as dpkg and apt usable.
 zstyle ':completion::complete:*' use-cache on
 
