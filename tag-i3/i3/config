@@ -13,6 +13,7 @@ bindsym $mod+Shift+r restart
 # Start/kill programs
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+p exec passmenu
 bindsym $mod+Shift+q kill
 
 # Focus/move container
