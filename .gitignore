@@ -3,3 +3,4 @@ vim/.VimballRecord
 vim/.netrwhist
 vim/autoload/plug.vim*
 vim/bundle/
+zsh/functions/_docker-compose
