@@ -27,6 +27,7 @@ set directory-=.
 set encoding=utf-8
 set expandtab
 set fileformat=unix
+set foldlevelstart=99
 set hidden
 set hlsearch
 set ignorecase
