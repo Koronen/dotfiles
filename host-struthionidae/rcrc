@@ -1,0 +1,5 @@
+DOTFILES_DIRS="$HOME/.dotfiles $HOME/.dotfiles-private"
+EXCLUDES="README.md"
+SYMLINK_DIRS="aliases.d bash gittemplate vim zsh"
+TAGS="docker git i3 pass ruby"
+UNDOTTED="bin"
