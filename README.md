@@ -21,14 +21,19 @@ Then run the following commands to finish the installation.
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
     RCRC="~/.dotfiles/host-$(hostname -s)/rcrc" rcup
 
-### FASD
+### Z
 
-To enable quick file and directory access, please [install FASD](https://github.com/clvv/fasd).
+To enable quick file and directory access, please [install z](https://github.com/rupa/z#readme).
+
+    git clone https://github.com/rupa/z.git ~/src/z
 
 ### Powerline fonts
 
-To install the Powerline fonts, please see instructions on the
-[Powerline docs](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation).
+To install the Powerline fonts, please see instructions in the
+[Powerline fonts README](https://github.com/powerline/fonts#readme).
+
+    git clone https://github.com/powerline/fonts.git ~/src/powerline-fonts
+    ~/src/powerline-fonts/install.sh
 
 ### Solarized colorscheme
 
@@ -40,7 +45,7 @@ please load the palette into your terminal emulator.
 
 ## License
 
-Copyright (C) 2011-2015 by Victor Koronen
+Copyright (C) 2011-2016 by Victor Koronen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
