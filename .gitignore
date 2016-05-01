@@ -1,6 +1,5 @@
-private/
-vim/.VimballRecord
-vim/.netrwhist
-vim/autoload/plug.vim.old
-vim/bundle/
-zsh/functions/_docker-compose
+/vim/.VimballRecord
+/vim/.netrwhist
+/vim/autoload/plug.vim.old
+/vim/bundle/
+/zsh/functions/_docker-compose
