@@ -2,8 +2,5 @@
 
 set -e
 
-(
-    cd "$(dirname $0)/../.."
-    git submodule init --quiet
-    git submodule update --recursive
-)
+git submodule init --quiet
+git submodule update --recursive
