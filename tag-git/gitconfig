@@ -21,9 +21,6 @@
 [fetch]
 	prune = true
 
-[github]
-	user = Koronen
-
 [hub]
 	protocol = https
 
