@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+
+wget -O "tag-docker/bin/codeclimate" \
+    "https://raw.githubusercontent.com/codeclimate/codeclimate/master/codeclimate-wrapper"
+wget -O "tag-pass/bin/passmenu" \
+    "https://git.zx2c4.com/password-store/plain/contrib/dmenu/passmenu"
+wget -O "vim/autoload/plug.vim" \
+    "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+wget -O "zsh/functions/_hub" \
+    "https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion"
