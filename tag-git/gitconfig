@@ -15,6 +15,9 @@
 [diff "exif"]
 	textconv = exiftool
 
+[diff]
+	algorithm = patience
+
 [difftool]
 	prompt = false
 
