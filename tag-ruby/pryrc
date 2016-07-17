@@ -16,3 +16,11 @@ Pry.config.prompt_name = File.basename(Dir.pwd)
 if env = [ENV['RAILS_ENV'], ENV['RACK_ENV']].compact.first
   Pry.config.prompt_name += "-#{env}"
 end
+
+begin
+  gem 'awesome_print', '~> 1.1'
+  require 'awesome_print'
+  AwesomePrint.pry!
+rescue Gem::LoadError
+  # Ignore.
+end
