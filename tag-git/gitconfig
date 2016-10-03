@@ -17,6 +17,7 @@
 
 [diff]
 	algorithm = patience
+	mnemonicprefix = true
 	renames = copies
 
 [difftool]
