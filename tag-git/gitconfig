@@ -17,6 +17,7 @@
 
 [diff]
 	algorithm = patience
+	renames = copies
 
 [difftool]
 	prompt = false
