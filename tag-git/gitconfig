@@ -24,6 +24,7 @@
 	prompt = false
 
 [fetch]
+	fsckObjects = true
 	prune = true
 
 [hub]
@@ -44,6 +45,12 @@
 
 [rebase]
 	autosquash = true
+
+[receive]
+	fsckObjects = true
+
+[transfer]
+	fsckObjects = true
 
 [user]
 	name = Victor Koronen
