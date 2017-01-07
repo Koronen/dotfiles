@@ -1,3 +1,7 @@
+if command -v gpg2 > /dev/null; then
+    alias gpg=gpg2
+fi
+
 gpg-decrypt() {
     src="$1"
     dest=$(basename -s .gpg "$src")
