@@ -36,6 +36,9 @@
 [init]
 	templatedir = ~/.gittemplate
 
+[log]
+	mailmap = true
+
 [mergetool]
 	keepBackup = false
 	prompt = false
