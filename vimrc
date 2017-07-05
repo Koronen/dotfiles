@@ -10,9 +10,7 @@ let mapleader = ","
 
 if &t_Co >= 256
   set background=light
-  colorscheme solarized
-else
-  colorscheme desert
+  silent! colorscheme solarized
 endif
 
 set cursorline
