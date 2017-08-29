@@ -6,6 +6,7 @@ docker pull spotify/docker-gc:latest
 docker run --rm \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /etc/docker-gc-exclude:/etc/docker-gc-exclude:ro \
+    -v /etc/docker-gc-exclude-containers:/etc/docker-gc-exclude-containers:ro \
     spotify/docker-gc
 
 echo "Removing orphaned volumes..."
