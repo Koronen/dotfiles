@@ -1,12 +1,9 @@
 ---
-AllCops:
-  TargetRubyVersion: 2.3
+Layout/DotPosition:
+  EnforcedStyle: trailing
 
 Style/BlockDelimiters:
   EnforcedStyle: semantic
-
-Style/DotPosition:
-  EnforcedStyle: trailing
 
 Style/SignalException:
   EnforcedStyle: semantic
