@@ -1,0 +1,4 @@
+DOTFILES_DIRS="$HOME/.dotfiles"
+EXCLUDES="README.md"
+SYMLINK_DIRS="aliases.d bash gittemplate vim zsh"
+TAGS="git ruby"
