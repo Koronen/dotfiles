@@ -11,5 +11,5 @@ gpg-decrypt() {
 gpg-encrypt() {
     src="$1"
     dest="$1.gpg"
-    gpg --encrypt --recipient B0FF78CD0CB41DB1 --output "$dest" "$src"
+    gpg --encrypt --default-recipient-self --output "$dest" "$src"
 }
