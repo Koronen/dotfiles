@@ -90,3 +90,9 @@ alias gwD='git diff --no-ext-diff --word-diff'
 alias gwR='git reset --hard'
 alias gws='git status --short'
 alias gwS='git status'
+
+# Working tree (W)
+alias gW='git worktree'
+alias gWl='git worktree list'
+alias gWa='git worktree add'
+alias gWw='git worktree prune'
