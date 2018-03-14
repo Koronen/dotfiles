@@ -92,6 +92,7 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+abbreviate irb! binding.irb
 abbreviate pry! require 'pry'; binding.pry
 
 if filereadable(expand("~/.vimrc.local"))
