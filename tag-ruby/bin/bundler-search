@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+# shellcheck disable=SC2046 disable=SC2068
+ag $@ -- $(bundle list --paths)

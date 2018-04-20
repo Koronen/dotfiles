@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler'
+require 'set'
+
+gem_paths_by_name = Bundler.load.specs.each_with_object({}) do |spec, acc|
+  acc[spec.name] = spec.full_gem_path
+end
+
+ag_paths = []
+ag_options_and_pattern = []
+
+argv = ARGV.dup
+arg = argv.pop
+while gem_paths_by_name.key?(arg)
+  ag_paths << gem_paths_by_name.fetch(arg)
+  arg = argv.pop
+end
+
+ag_paths = gem_paths_by_name.values if ag_paths.empty?
+ag_options_and_pattern.concat(argv)
+ag_options_and_pattern << arg if arg && arg != '--'
+
+fail 'Empty pattern and options' if ag_options_and_pattern.empty?
+
+command = ['ag', *ag_options_and_pattern, *ag_paths]
+system(*command)
