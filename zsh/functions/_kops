@@ -1,0 +1,6 @@
+#compdef kops
+
+if command -v kops > /dev/null; then
+    source <(kops completion zsh)
+    _complete kops 2>/dev/null
+fi
