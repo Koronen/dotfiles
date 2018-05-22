@@ -3,7 +3,5 @@
 set -e
 
 if command -v docker-compose > /dev/null; then
-    if [ ! -r ~/.zsh/functions/_docker-compose ]; then
-        curl -L "https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose" > ~/.zsh/functions/_docker-compose
-    fi
+    curl -Ls "https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose" > ~/.zsh/functions/_docker-compose
 fi
