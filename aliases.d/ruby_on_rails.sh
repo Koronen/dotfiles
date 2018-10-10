@@ -14,6 +14,14 @@ rordm() {
     fi
 }
 
+rordr() {
+    if [ -x bin/rake ]; then
+        bin/rake db:rollback "$@"
+    else
+        bundle exec rake db:rollback "$@"
+    fi
+}
+
 rorro() {
     if [ -x bin/rake ]; then
         bin/rake routes "$@"
