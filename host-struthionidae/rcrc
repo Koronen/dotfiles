@@ -1,5 +1,6 @@
 DOTFILES_DIRS="$HOME/.dotfiles $HOME/.dotfiles-private"
 EXCLUDES="README.md"
+HOSTNAME="struthionidae"
 SYMLINK_DIRS="aliases.d bash gittemplate vim zsh"
 TAGS="docker git gpg i3 pass ruby"
 UNDOTTED="bin"
