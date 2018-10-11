@@ -7,5 +7,3 @@ wget -O tag-pass/bin/passmenu \
 sed -i -e 's/dmenu "$@"/dmenu -i -p "pass" "$@"/' tag-pass/bin/passmenu
 wget -O "vim/autoload/plug.vim" \
     "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-wget -O "zsh/functions/_hub" \
-    "https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion"

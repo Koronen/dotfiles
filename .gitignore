@@ -3,3 +3,4 @@
 /vim/autoload/plug.vim.old
 /vim/bundle/
 /zsh/functions/_docker-compose
+/zsh/functions/_hub
