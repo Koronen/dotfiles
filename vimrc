@@ -95,6 +95,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 abbreviate irb! binding.irb
 abbreviate pry! require 'pry'; binding.pry
 
+augroup filetypedetect
+  autocmd BufReadPost *.tfstate setlocal filetype=json
+augroup end
+
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
