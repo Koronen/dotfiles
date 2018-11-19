@@ -30,9 +30,6 @@
 [hub]
 	protocol = https
 
-[include]
-	path = ~/.gitconfig.local
-
 [init]
 	templatedir = ~/.gittemplate
 
@@ -61,3 +58,6 @@
 
 [web]
 	browser = xdg-open
+
+[include]
+	path = ~/.gitconfig.local
