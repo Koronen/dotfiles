@@ -1,4 +1,5 @@
 export EDITOR='vim'
+export ERL_AFLAGS='-kernel shell_history enabled'
 export GPG_TTY=$(tty)
 export LESS='-FRX'
 export PAGER='less'
