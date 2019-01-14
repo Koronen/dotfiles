@@ -17,6 +17,7 @@
 
 [diff]
 	algorithm = patience
+	colorMoved = default
 	mnemonicprefix = true
 	renames = copies
 
