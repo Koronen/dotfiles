@@ -57,6 +57,7 @@ set wildmode=list:longest,full
 
 nnoremap <silent> <space> :nohlsearch<CR>
 
+noremap <F1> <Nop>
 nnoremap Q <Nop>
 nnoremap K <Nop>
 vnoremap K <Nop>
