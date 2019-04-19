@@ -93,6 +93,11 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+nmap ]a <Plug>(ale_next)
+nmap [a <Plug>(ale_previous)
+nmap ]A <Plug>(ale_last)
+nmap [A <Plug>(ale_first)
+
 abbreviate irb! binding.irb
 abbreviate pry! require 'pry'; binding.pry
 
