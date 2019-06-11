@@ -1,3 +1,0 @@
-EXCLUDES="README.md ackrc ctags psqlrc tmux.conf"
-SYMLINK_DIRS="aliases.d bash gittemplate vim zsh"
-TAGS="git"
