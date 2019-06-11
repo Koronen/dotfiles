@@ -12,11 +12,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'roman/golden-ratio'
-if v:version >= 800
-  Plug 'w0rp/ale'
-else
-  Plug 'scrooloose/syntastic'
-endif
+Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'teoljungberg/vim-grep'
 Plug 'thoughtbot/vim-rspec'
