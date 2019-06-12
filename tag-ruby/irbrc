@@ -17,5 +17,43 @@ begin
 rescue Gem::LoadError # rubocop:disable Lint/HandleExceptions
 end
 
+def numerical_summary(numbers)
+  sorted_numbers = numbers.sort
+
+  count = numbers.size
+  sum = numbers.inject(0, &:+)
+  avg = 1.0 * sum / count if count.positive?
+
+  var = if count > 1
+          numbers.map { |n| (n - avg) * (n - avg) }.inject(0, &:+) / (count - 1)
+        else
+          0
+        end
+
+  percentile = lambda do |a, p|
+    return nil if a.empty?
+    return a.first if a.size == 1
+    return a.last if p == 100
+
+    rank = p / 100.0 * (a.size - 1)
+    lower, upper = a[rank.floor, 2]
+    lower + (upper - lower) * (rank - rank.floor)
+  end
+
+  {
+    count: count,
+    sum: sum,
+    min: sorted_numbers.first,
+    max: sorted_numbers.last,
+    avg: avg,
+    p25: percentile[sorted_numbers, 25],
+    p50: percentile[sorted_numbers, 50],
+    p75: percentile[sorted_numbers, 75],
+    p95: percentile[sorted_numbers, 95],
+    var: var,
+    stddev: Math.sqrt(var)
+  }
+end
+
 local_irbrc_path = '.git/safe/../../.irbrc'
 load local_irbrc_path if File.exist?(local_irbrc_path)
