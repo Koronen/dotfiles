@@ -5,5 +5,3 @@ set -e
 wget -O tag-pass/bin/passmenu \
     https://git.zx2c4.com/password-store/plain/contrib/dmenu/passmenu
 sed -i -e 's/dmenu "$@"/dmenu -i -p "pass" "$@"/' tag-pass/bin/passmenu
-wget -O "vim/autoload/plug.vim" \
-    "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"

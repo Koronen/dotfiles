@@ -1,6 +1,5 @@
 /vim/.VimballRecord
 /vim/.netrwhist
-/vim/autoload/plug.vim.old
-/vim/bundle/
+/vim/pack/
 /zsh/functions/_docker-compose
 /zsh/functions/_hub
