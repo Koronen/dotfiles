@@ -55,7 +55,7 @@
 
 [user]
 	name = Victor Koronen
-	email = koronen@kth.se
+	email = git@victorkoronen.se
 
 [web]
 	browser = xdg-open
