@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+# frozen_string_literal: true
 
 begin
   gem 'pry-byebug'
@@ -9,12 +9,11 @@ begin
   Pry.commands.alias_command 'n', 'next'
   Pry.commands.alias_command 'f', 'finish'
   Pry.commands.alias_command 'b', 'break'
-rescue Gem::LoadError
-  # Ignore
+rescue Gem::LoadError # rubocop:disable Lint/HandleExceptions
 end
 
 Pry.config.prompt_name = File.basename(Dir.pwd)
-if env = [ENV['RAILS_ENV'], ENV['RACK_ENV']].compact.first
+if (env = [ENV['RAILS_ENV'], ENV['RACK_ENV']].compact.first)
   Pry.config.prompt_name += "-#{env}"
 end
 
@@ -22,6 +21,5 @@ begin
   gem 'awesome_print', '~> 1.1'
   require 'awesome_print'
   AwesomePrint.pry!
-rescue Gem::LoadError
-  # Ignore.
+rescue Gem::LoadError # rubocop:disable Lint/HandleExceptions
 end
