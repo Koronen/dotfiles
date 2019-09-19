@@ -5,6 +5,7 @@ export LESS='-FRX'
 export PAGER='less'
 export SHELL=$(which zsh)
 export VISUAL='view'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=13'
 
 if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
