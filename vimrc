@@ -100,6 +100,9 @@ nmap [a <Plug>(ale_previous)
 nmap ]A <Plug>(ale_last)
 nmap [A <Plug>(ale_first)
 
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 abbreviate irb! binding.irb
 abbreviate pry! require 'pry'; binding.pry
 
