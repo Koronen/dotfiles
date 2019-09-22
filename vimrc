@@ -43,6 +43,7 @@ set splitright
 set synmaxcol=300
 set t_vb=
 set tabstop=8
+set tags+=.git/tags
 set termencoding=utf-8
 set textwidth=80
 set title
