@@ -13,14 +13,9 @@ if &t_Co >= 256
   silent! colorscheme solarized
 endif
 
-set cursorline
-if has("autocmd")
-  au WinLeave * setlocal nocursorline
-  au WinEnter * setlocal cursorline
-endif
-
 set cmdheight=2
 set colorcolumn=+1
+set cursorline
 set directory-=.
 set encoding=utf-8
 set expandtab
@@ -71,10 +66,6 @@ nmap <S-Tab> <<
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-if has("autocmd")
-  autocmd InsertLeave * set nopaste
-endif
-
 map <C-b> :CtrlPBuffer<CR>
 
 function! PreservingSearchAndCursor(command)
@@ -109,6 +100,12 @@ abbreviate pry! require 'pry'; binding.pry
 
 augroup filetypedetect
   autocmd BufReadPost *.tfstate setlocal filetype=json
+augroup end
+
+augroup vimrc
+  autocmd InsertLeave * set nopaste
+  autocmd WinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
 augroup end
 
 if filereadable(expand("~/.vimrc.local"))
