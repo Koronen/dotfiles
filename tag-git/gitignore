@@ -10,3 +10,4 @@
 tags
 Thumbs.db
 .vagrant/
+.vscode/
