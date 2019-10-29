@@ -110,6 +110,11 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86ScreenSaver exec "i3lock --dpms"
 bindsym XF86Sleep exec "i3lock --dpms && systemctl suspend"
+bindsym XF86Tools exec gnome-control-center
+bindsym XF86LaunchA exec "autorandr --change --force"
+bindsym XF86Explorer exec "nautilus --new-window"
+
+# Alternate media keys
 bindsym $mod+F2 exec "amixer set Master 3%-"
 bindsym $mod+F3 exec "amixer set Master 3%+"
 bindsym $mod+F11 exec "i3lock --dpms"
