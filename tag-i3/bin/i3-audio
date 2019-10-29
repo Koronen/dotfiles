@@ -5,6 +5,12 @@ set -e
 sink=$(pactl list short sinks | grep OneLink | cut -f1 | grep . || pactl list short sinks | head -n1 | cut -f1)
 
 case $1 in
+    mic-mute)
+        source=$(pactl list short sources | grep -v .monitor | cut -f1)
+        if [ -n "$source" ]; then
+            pactl set-source-mute "$source" toggle
+        fi
+        ;;
     mute)
         pactl set-sink-mute "$sink" toggle
         ;;
@@ -27,7 +33,7 @@ case $1 in
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
         ;;
     *)
-        echo "Usage: $0 mute|lower-volume|raise-volume|play|stop|previous|next"
+        echo "Usage: $0 mic-mute|mute|lower-volume|raise-volume|play|stop|previous|next"
         exit 1
         ;;
 esac

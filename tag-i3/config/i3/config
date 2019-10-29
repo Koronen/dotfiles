@@ -97,6 +97,7 @@ bar {
 for_window [class="Workrave"] floating enable
 
 # Media keys
+bindsym XF86AudioMicMute exec "i3-audio mic-mute"
 bindsym XF86AudioMute exec "i3-audio mute"
 bindsym XF86AudioLowerVolume exec "i3-audio lower-volume"
 bindsym XF86AudioRaiseVolume exec "i3-audio raise-volume"
