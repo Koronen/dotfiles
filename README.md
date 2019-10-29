@@ -32,20 +32,18 @@ To enable quick file and directory access, please [install z](https://github.com
 To install the Powerline fonts, please see instructions in the
 [Powerline fonts README](https://github.com/powerline/fonts#readme).
 
-    git clone https://github.com/powerline/fonts.git ~/src/powerline-fonts
-    ~/src/powerline-fonts/install.sh
+    sudo apt-get install fonts-powerline
 
 ### Solarized colorscheme
 
 In order for the solarized colorscheme to work properly,
 please load the palette into your terminal emulator.
 
-* [gnome-terminal-colors-solarized](https://github.com/sigurdga/gnome-terminal-colors-solarized)
 * [Iterm2-color-schemes](http://iterm2colorschemes.com/)
 
 ## License
 
-Copyright (C) 2011-2016 by Victor Koronen
+Copyright (C) 2011-2019 by Victor Koronen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
