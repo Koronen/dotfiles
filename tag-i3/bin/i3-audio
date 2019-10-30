@@ -2,11 +2,11 @@
 
 set -e
 
-sink=$(pactl list short sinks | grep OneLink | cut -f1 | grep . || pactl list short sinks | head -n1 | cut -f1)
+sink=$(pactl list short sinks | grep OneLink | head -n1 | cut -f1 | grep . || pactl list short sinks | head -n1 | cut -f1)
 
 case $1 in
     mic-mute)
-        source=$(pactl list short sources | grep -v .monitor | cut -f1)
+        source=$(pactl list short sources | grep -v .monitor | head -n1 | cut -f1)
         if [ -n "$source" ]; then
             pactl set-source-mute "$source" toggle
         fi
