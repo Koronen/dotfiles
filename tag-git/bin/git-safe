@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+set -e
+
+toplevel=$(git rev-parse --show-toplevel)
+
+mkdir -p "$toplevel/.git/safe"
