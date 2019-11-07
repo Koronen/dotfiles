@@ -3,16 +3,22 @@
 alias ..='cd ..'
 alias df='df -h'
 alias pag='ps aux | head -n1; ps aux | grep -i'
-alias path="echo \$PATH | tr -s ':' '\n'"
+alias path="echo \$PATH | tr -s ':' '\\n'"
 if command -v xdg-open > /dev/null 2>&1; then
     alias open='xdg-open'
 fi
 alias trm='rm -f **/*~'
 
-for aliasfile in $HOME/.aliases.d/*.sh; do
+mkcd() {
+    mkdir -p "$@" && cd "$_" || return
+}
+
+for aliasfile in "$HOME/.aliases.d"/*.sh; do
+    # shellcheck disable=SC1090
     . "$aliasfile"
 done
 
 if [ -f "$HOME/.aliases.local" ]; then
+    # shellcheck source=/home/koronen/.aliases.local
     . "$HOME/.aliases.local"
 fi
