@@ -2,8 +2,6 @@
 
 set -e
 
-mkdir -p "$HOME/.vim/pack/minpac/opt"
-
 if [ ! -d "$HOME/.vim/pack/minpac/opt/minpac" ]; then
     git clone https://github.com/k-takata/minpac.git \
         "$HOME/.vim/pack/minpac/opt/minpac"
