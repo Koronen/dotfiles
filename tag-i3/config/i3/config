@@ -112,14 +112,14 @@ bindsym XF86LaunchA exec "autorandr --change --force"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86ScreenSaver exec i3-lock
-bindsym XF86Sleep exec "i3-lock && systemctl suspend"
+bindsym XF86Sleep exec i3-sleep
 bindsym XF86Tools exec gnome-control-center
 
 # Alternate media keys
 bindsym $mod+F2 exec "i3-audio lower-volume"
 bindsym $mod+F3 exec "i3-audio raise-volume"
 bindsym $mod+F11 exec i3-lock
-bindsym $mod+F12 exec "i3-lock && systemctl suspend"
+bindsym $mod+F12 exec i3-sleep
 bindsym $mod+Down exec "i3-audio play"
 bindsym $mod+Up exec "i3-audio stop"
 bindsym $mod+Left exec "i3-audio next"
