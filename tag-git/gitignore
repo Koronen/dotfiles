@@ -12,6 +12,7 @@
 *.sublime-workspace
 *.sw?
 tags
+.tool-versions
 Thumbs.db
 .vagrant/
 .vscode/
