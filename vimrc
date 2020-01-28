@@ -113,3 +113,7 @@ augroup end
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+if filereadable(".git/safe/../../.vimrc")
+  source .git/safe/../../.vimrc
+endif

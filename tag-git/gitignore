@@ -15,4 +15,5 @@ tags
 .tool-versions
 Thumbs.db
 .vagrant/
+.vimrc
 .vscode/
