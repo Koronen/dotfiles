@@ -54,7 +54,7 @@ set wildmode=list:longest,full
 nnoremap <silent> <space> :nohlsearch<CR>
 
 noremap <F1> <Nop>
-nnoremap <F8> <Plug>(ale_fix)
+nmap <F8> <Plug>(ale_fix)
 
 nnoremap Q <Nop>
 nnoremap K <Nop>
