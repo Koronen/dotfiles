@@ -5,3 +5,7 @@ set -e
 wget -O tag-pass/bin/passmenu \
     https://git.zx2c4.com/password-store/plain/contrib/dmenu/passmenu
 sed -i -e 's/dmenu "$@"/dmenu -i -p "pass" "$@"/' tag-pass/bin/passmenu
+
+wget -O tag-pass/bin/otpmenu \
+    https://git.zx2c4.com/password-store/plain/contrib/dmenu/passmenu
+sed -i -e 's/dmenu "$@"/dmenu -i -p "otp" "$@"/' -e 's/pass show/pass otp/' tag-pass/bin/otpmenu
