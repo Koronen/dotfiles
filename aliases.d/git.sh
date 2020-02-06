@@ -19,7 +19,7 @@ alias gc='git commit --verbose'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
 alias gcF='git commit --amend --verbose'
-alias gcs='git show --show-signature'
+alias gcs='git show --format=fuller --show-signature'
 
 # Fetch (f)
 alias gf='git fetch'
