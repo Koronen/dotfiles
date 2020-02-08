@@ -34,6 +34,9 @@
 [init]
 	templatedir = ~/.gittemplate
 
+[interactive]
+	singleKey = true
+
 [log]
 	mailmap = true
 
