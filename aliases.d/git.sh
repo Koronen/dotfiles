@@ -39,6 +39,7 @@ alias gl='git log'
 alias glg='git log --graph --oneline --decorate'
 alias glG='git log --graph --oneline --decorate --all'
 alias glp='git log --patch --no-merges --show-signature'
+alias gls='git log --stat --no-merges --show-signature'
 
 # Merge (m)
 alias gm='git merge'
