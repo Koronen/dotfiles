@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias df='df -h'
 alias pag='ps aux | head -n1; ps aux | grep -i'
 alias path="echo \$PATH | tr -s ':' '\\n'"
