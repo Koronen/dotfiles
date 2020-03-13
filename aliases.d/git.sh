@@ -16,6 +16,7 @@ alias gbX='git branch -D'
 
 # Commit (c)
 alias gc='git commit --verbose'
+alias gcm='git checkout master'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
 alias gcF='git commit --amend --verbose'
