@@ -100,10 +100,6 @@ nmap ga <Plug>(EasyAlign)
 abbreviate irb! binding.irb
 abbreviate pry! require 'pry'; binding.pry
 
-augroup filetypedetect
-  autocmd BufReadPost *.tfstate setlocal filetype=json
-augroup end
-
 augroup vimrc
   autocmd InsertLeave * set nopaste
   autocmd WinEnter * setlocal cursorline
