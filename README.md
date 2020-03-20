@@ -11,7 +11,7 @@ repo using Git and to link the files using RCM.
 
 Install Git by running the following command.
 
-    sudo apt-get install -y git
+    sudo apt-get install git
 
 Install RCM by following the [instructions in the RCM
 Readme](https://github.com/thoughtbot/rcm#Installation).
@@ -19,7 +19,8 @@ Readme](https://github.com/thoughtbot/rcm#Installation).
 Then run the following commands to finish the installation.
 
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
-    RCRC="~/.dotfiles/host-$(hostname -s)/rcrc" rcup
+    ln -s ~/.dotfiles/rcrc ~/.rcrc
+    rcup
 
 ### Z
 
@@ -43,7 +44,7 @@ please load the palette into your terminal emulator.
 
 ## License
 
-Copyright (C) 2011-2019 by Victor Koronen
+Copyright (C) 2011-2020 by Victor Koronen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
