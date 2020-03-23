@@ -67,6 +67,7 @@ alias gr='git rebase'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gri='git rebase --interactive'
+alias grom='git rebase origin/master'
 alias grs='git rebase --skip'
 
 # Remote (R)
