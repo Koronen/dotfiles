@@ -77,6 +77,7 @@ alias gRl='git remote --verbose'
 # Stash (s)
 alias gs='git stash'
 alias gsd='git stash show --patch --stat'
+alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gsx='git stash drop'
 
