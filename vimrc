@@ -2,9 +2,56 @@ if isdirectory("/usr/share/vim/addons")
   set runtimepath+=/usr/share/vim/addons
 endif
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
+function! PackInit() abort
+  packadd minpac
+
+  call minpac#init()
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+  call minpac#add('airblade/vim-gitgutter')
+  call minpac#add('altercation/vim-colors-solarized')
+  call minpac#add('vim-airline/vim-airline')
+  call minpac#add('vim-airline/vim-airline-themes')
+  call minpac#add('bling/vim-bufferline')
+  call minpac#add('bogado/file-line')
+  call minpac#add('ConradIrwin/vim-bracketed-paste')
+  call minpac#add('ctrlpvim/ctrlp.vim')
+  call minpac#add('dense-analysis/ale')
+  call minpac#add('ervandew/supertab')
+  call minpac#add('jgdavey/vim-blockle')
+  call minpac#add('junegunn/vim-easy-align')
+  call minpac#add('kana/vim-textobj-user')
+  call minpac#add('nelstrom/vim-textobj-rubyblock')
+  call minpac#add('pbrisbin/vim-mkdir')
+  call minpac#add('roman/golden-ratio')
+  call minpac#add('sheerun/vim-polyglot')
+  call minpac#add('teoljungberg/vim-grep')
+  call minpac#add('thoughtbot/vim-rspec')
+  call minpac#add('tpope/vim-abolish')
+  call minpac#add('tpope/vim-bundler')
+  call minpac#add('tpope/vim-commentary')
+  call minpac#add('tpope/vim-endwise')
+  call minpac#add('tpope/vim-fugitive')
+  call minpac#add('tpope/vim-projectionist')
+  call minpac#add('tpope/vim-rails')
+  call minpac#add('tpope/vim-rake')
+  call minpac#add('tpope/vim-repeat')
+  call minpac#add('tpope/vim-rhubarb')
+  call minpac#add('tpope/vim-rsi')
+  call minpac#add('tpope/vim-sensible')
+  call minpac#add('tpope/vim-sleuth')
+  call minpac#add('tpope/vim-surround')
+  call minpac#add('tpope/vim-unimpaired')
+  call minpac#add('tpope/vim-vinegar')
+
+  if filereadable(expand("~/.vimrc.bundles.local"))
+    source ~/.vimrc.bundles.local
+  endif
+endfunction
+
+command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac#status()'})
+command! PackClean  call PackInit() | call minpac#clean()
+command! PackStatus call PackInit() | call minpac#status()
 
 let mapleader = ","
 
