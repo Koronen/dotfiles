@@ -7,6 +7,7 @@ alias path="echo \$PATH | tr -s ':' '\\n'"
 if command -v xdg-open > /dev/null 2>&1; then
     alias open='xdg-open'
 fi
+alias RM='rm -rf'
 alias trm='rm -f **/*~'
 
 mkcd() {
