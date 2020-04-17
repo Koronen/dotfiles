@@ -58,7 +58,7 @@ gpx() {
     git push --delete origin "$@"
   fi
 }
-if type compdef > /dev/null 2>&1; then
+if command -v compdef > /dev/null 2>&1; then
   compdef _git gpx=git-push
 fi
 
