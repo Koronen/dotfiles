@@ -1,4 +1,4 @@
-alias debi='sudo apt-get install'
+alias debi='sudo apt install'
 alias debI='sudo dpkg -i'
 alias debl='dpkg -L'
 alias debL='dpkg -c'
