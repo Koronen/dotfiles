@@ -1,6 +1,8 @@
 # Most of these aliases are borrowed from prezto.
 # <https://github.com/sorin-ionescu/prezto/blob/master/modules/git/alias.zsh>
 
+alias cdr='cd `git rev-parse --show-toplevel`'
+
 alias g='git'
 
 # Branch (b)
