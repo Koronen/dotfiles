@@ -8,6 +8,8 @@
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Solarized Dark",
