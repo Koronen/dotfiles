@@ -1,15 +1,15 @@
 {
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.rulers": [80,120],
-    "telemetry.enableTelemetry": false,
-    "workbench.colorTheme": "Solarized Dark",
     "[git-commit]": {
         "editor.rulers": [72]
     },
-    "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 1,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [80,120],
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.startupEditor": "newUntitledFile"
 }
