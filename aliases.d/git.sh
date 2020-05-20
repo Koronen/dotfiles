@@ -24,7 +24,7 @@ alias gcm='git checkout master'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
 alias gcF='git commit --amend --verbose'
-alias gcs='git show --format=fuller --show-signature'
+alias gcs='git show --format=fuller'
 
 # Fetch (f)
 alias gf='git fetch'
@@ -41,10 +41,10 @@ alias giD='git diff --no-ext-diff --cached --word-diff'
 
 # Log (l)
 alias gl='git log'
-alias glg='git log --graph --oneline'
-alias glG='git log --graph --oneline --all'
-alias glp='git log --patch --no-merges --show-signature'
-alias gls='git log --stat --no-merges --show-signature'
+alias glg='git log --graph --oneline --no-show-signature'
+alias glG='git log --graph --oneline --no-show-signature --all'
+alias glp='git log --patch --no-merges'
+alias gls='git log --stat --no-merges'
 
 # Merge (m)
 alias gm='git merge'

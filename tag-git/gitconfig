@@ -42,6 +42,7 @@
 
 [log]
 	decorate = auto
+	showSignature = true
 
 [mergetool]
 	keepBackup = false
