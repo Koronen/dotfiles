@@ -40,9 +40,6 @@
 [interactive]
 	singleKey = true
 
-[log]
-	mailmap = true
-
 [mergetool]
 	keepBackup = false
 	prompt = false
