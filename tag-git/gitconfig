@@ -40,6 +40,9 @@
 [interactive]
 	singleKey = true
 
+[log]
+	decorate = auto
+
 [mergetool]
 	keepBackup = false
 	prompt = false
