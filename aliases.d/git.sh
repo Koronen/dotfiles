@@ -4,6 +4,7 @@
 alias cdr='cd `git rev-parse --show-toplevel`'
 
 alias g='git'
+alias g-='git checkout -'
 
 # Branch (b)
 alias gb='git branch'
@@ -18,6 +19,7 @@ alias gbX='git branch -D'
 
 # Commit (c)
 alias gc='git commit --verbose'
+alias gc-='git checkout -'
 alias gcm='git checkout master'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
