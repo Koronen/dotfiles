@@ -42,6 +42,7 @@
 
 [log]
 	decorate = auto
+	follow = true
 	showSignature = true
 
 [mergetool]
