@@ -1,10 +1,15 @@
 {
     "[git-commit]": {
-        "editor.rulers": [72]
+        "editor.rulers": [
+            72
+        ]
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.rulers": [80,120],
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
