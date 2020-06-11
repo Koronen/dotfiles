@@ -31,6 +31,9 @@
 	fsckObjects = true
 	prune = true
 
+[format]
+	pretty = fuller
+
 [hub]
 	protocol = https
 
