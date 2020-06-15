@@ -34,9 +34,6 @@
 [format]
 	pretty = fuller
 
-[hub]
-	protocol = https
-
 [init]
 	templatedir = ~/.gittemplate
 

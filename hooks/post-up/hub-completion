@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-set -e
-
-if command -v hub > /dev/null; then
-    curl -Ls "https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion" > ~/.zsh/functions/_hub
-fi
