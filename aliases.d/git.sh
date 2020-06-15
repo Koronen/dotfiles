@@ -70,9 +70,9 @@ alias gr='git rebase'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gri='git rebase --interactive'
-alias griom='git rebase --interactive origin/master'
+alias griom='git rebase --interactive `git symbolic-ref --short refs/remotes/origin/HEAD`'
 alias gro='git rebase --onto'
-alias grom='git rebase origin/master'
+alias grom='git rebase `git symbolic-ref --short refs/remotes/origin/HEAD`'
 alias grs='git rebase --skip'
 
 # Remote (R)
