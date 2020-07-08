@@ -41,6 +41,7 @@
 	singleKey = true
 
 [log]
+	date = auto:human
 	decorate = auto
 	follow = true
 	showSignature = true
