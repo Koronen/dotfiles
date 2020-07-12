@@ -76,6 +76,7 @@ set noswapfile
 set number
 set pastetoggle=<F2>
 set shiftwidth=4
+set shortmess-=S
 set showmatch
 set smartcase
 set softtabstop=4
