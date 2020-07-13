@@ -55,6 +55,7 @@
 
 [rebase]
 	autosquash = true
+	stat = true
 
 [receive]
 	fsckObjects = true
