@@ -35,6 +35,7 @@
 	pretty = fuller
 
 [init]
+	defaultBranch = main
 	templatedir = ~/.gittemplate
 
 [interactive]
