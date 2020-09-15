@@ -6,6 +6,7 @@
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
+    "editor.renderWhitespace": "trailing",
     "editor.rulers": [
         80,
         120
