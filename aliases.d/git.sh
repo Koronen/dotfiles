@@ -5,6 +5,7 @@ alias cdr='cd `git rev-parse --show-toplevel`'
 
 alias g='git'
 alias g-='git checkout -'
+alias g.='git add .'
 
 # Branch (b)
 alias gb='git branch'
