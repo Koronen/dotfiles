@@ -19,6 +19,7 @@ function! PackInit() abort
   call minpac#add('dense-analysis/ale')
   call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-easy-align')
+  call minpac#add('junegunn/vim-peekaboo')
   call minpac#add('kana/vim-textobj-user')
   call minpac#add('nelstrom/vim-textobj-rubyblock')
   call minpac#add('pbrisbin/vim-mkdir')
