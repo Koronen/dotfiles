@@ -12,7 +12,6 @@ function! PackInit() abort
   call minpac#add('altercation/vim-colors-solarized')
   call minpac#add('vim-airline/vim-airline')
   call minpac#add('vim-airline/vim-airline-themes')
-  call minpac#add('bling/vim-bufferline')
   call minpac#add('bogado/file-line')
   call minpac#add('ConradIrwin/vim-bracketed-paste')
   call minpac#add('chrisjohnson/vim-grep')
