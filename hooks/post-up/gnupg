@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+mkdir -p "$HOME/.gnupg"
+chmod 700 "$HOME/.gnupg"
