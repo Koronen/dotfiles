@@ -35,13 +35,6 @@ To install the Powerline fonts, please see instructions in the
 
     sudo apt-get install fonts-powerline
 
-### Solarized colorscheme
-
-In order for the solarized colorscheme to work properly,
-please load the palette into your terminal emulator.
-
-* [Iterm2-color-schemes](http://iterm2colorschemes.com/)
-
 ## License
 
 Copyright (C) 2011-2020 by Victor Koronen
