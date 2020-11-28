@@ -12,8 +12,8 @@
 	ui = auto
 
 [core]
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+	excludesFile = ~/.gitignore
+	attributesFile = ~/.gitattributes
 
 [diff "exif"]
 	textconv = exiftool
@@ -21,7 +21,7 @@
 [diff]
 	algorithm = patience
 	colorMoved = default
-	mnemonicprefix = true
+	mnemonicPrefix = true
 	renames = copies
 
 [difftool]
@@ -36,7 +36,7 @@
 
 [init]
 	defaultBranch = main
-	templatedir = ~/.gittemplate
+	templateDir = ~/.gittemplate
 
 [interactive]
 	singleKey = true
@@ -58,7 +58,7 @@
 	default = current
 
 [rebase]
-	autosquash = true
+	autoSquash = true
 	stat = true
 
 [receive]
