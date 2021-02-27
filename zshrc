@@ -4,7 +4,12 @@ zle -N self-insert url-quote-magic
 autoload -z edit-command-line
 zle -N edit-command-line
 
-fpath=($HOME/.zsh/bundle/zsh-completions/src $HOME/.zsh/functions $fpath)
+fpath=(
+    $HOME/.asdf/completions
+    $HOME/.zsh/bundle/zsh-completions/src
+    $HOME/.zsh/functions
+    $fpath
+)
 autoload -Uz compinit && compinit -i
 
 bindkey -e
