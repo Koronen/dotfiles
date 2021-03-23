@@ -214,41 +214,22 @@ EXEC 01;38;5;64
 .webp   00;38;5;136 # https://en.wikipedia.org/wiki/WebP
 
 # Files of special interest (base1 + bold)
-.tex             01;38;5;245
-.rdf             01;38;5;245
-.owl             01;38;5;245
-.n3              01;38;5;245
-.ttl             01;38;5;245
-.nt              01;38;5;245
-.torrent         01;38;5;245
-.xml             01;38;5;245
-*Makefile        01;38;5;245
-*Rakefile        01;38;5;245
-*Dockerfile      01;38;5;245
-*build.xml       01;38;5;245
-*rc              01;38;5;245
-*1               01;38;5;245
-.nfo             01;38;5;245
-*README          01;38;5;245
-*README.txt      01;38;5;245
-*readme.txt      01;38;5;245
-.md              01;38;5;245
-*README.markdown 01;38;5;245
-.ini             01;38;5;245
-.yml             01;38;5;245
-.cfg             01;38;5;245
-.conf            01;38;5;245
-.h               01;38;5;245
-.hpp             01;38;5;245
-.c               01;38;5;245
-.cpp             01;38;5;245
-.cxx             01;38;5;245
-.cc              01;38;5;245
-.objc            01;38;5;245
-.sqlite          01;38;5;245
-.go              01;38;5;245
-.sql             01;38;5;245
-.csv             01;38;5;245
+*Brewfile           01;38;5;245
+*Dockerfile         01;38;5;245
+*Gemfile            01;38;5;245
+*LICENSE            01;38;5;245
+*Makefile           01;38;5;245
+*Pipfile            01;38;5;245
+*Procfile           01;38;5;245
+*README             01;38;5;245
+*README.md          01;38;5;245
+*README.txt         01;38;5;245
+*Rakefile           01;38;5;245
+*docker-compose.yml 01;38;5;245
+*mix.exs            01;38;5;245
+*package.json       01;38;5;245
+*rc                 01;38;5;245
+.gemspec            01;38;5;245
 
 # "unimportant" files as logs and backups (base01)
 .log        00;38;5;240
@@ -324,4 +305,3 @@ EXEC 01;38;5;64
 .anx 01;38;5;166
 .ogv 01;38;5;166
 .ogx 01;38;5;166
-
