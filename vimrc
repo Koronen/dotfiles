@@ -17,6 +17,7 @@ function! PackInit() abort
   call minpac#add('chrisjohnson/vim-grep')
   call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('dense-analysis/ale')
+  call minpac#add('editorconfig/editorconfig-vim')
   call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-easy-align')
   call minpac#add('junegunn/vim-peekaboo')
