@@ -149,6 +149,7 @@ abbreviate irb! binding.irb
 abbreviate pry! require 'pry'; binding.pry
 
 augroup vimrc
+  autocmd!
   autocmd InsertLeave * set nopaste
   autocmd WinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
