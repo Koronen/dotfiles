@@ -1,4 +1,7 @@
 ---
+AllCops:
+  NewCops: enable
+
 Layout/DotPosition:
   EnforcedStyle: trailing
 
