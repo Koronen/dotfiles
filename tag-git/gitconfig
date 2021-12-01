@@ -1,4 +1,5 @@
 [advice]
+	addEmptyPathspec = false
 	detachedHead = false
 
 [alias]
