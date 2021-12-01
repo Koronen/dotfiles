@@ -1,5 +1,6 @@
 [advice]
 	addEmptyPathspec = false
+	addIgnoredFile = false
 	detachedHead = false
 
 [alias]
