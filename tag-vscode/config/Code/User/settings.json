@@ -16,8 +16,14 @@
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "telemetry.enableTelemetry": false,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useIgnoreFiles": true,
+    "telemetry.telemetryLevel": "off",
     "window.zoomLevel": 1,
+    "workbench.colorCustomizations": {
+        "terminal.ansiBrightBlack": "#002B36"
+    },
     "workbench.colorTheme": "Solarized Dark",
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.startupEditor": "newUntitledFile"
 }
