@@ -1,5 +1,6 @@
 export EDITOR='vim'
 export ERL_AFLAGS='-kernel shell_history enabled'
+export GATSBY_TELEMETRY_DISABLED=1
 export GPG_TTY=$(tty)
 export HUSKY_SKIP_INSTALL=1
 export KERL_BUILD_DOCS='yes'
