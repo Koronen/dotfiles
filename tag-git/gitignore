@@ -7,6 +7,9 @@
 *.ipr
 *.iws
 .~lock.*
+.stfolder/
+.stignore
+.stversions/
 .svn/
 *.sublime-project
 *.sublime-workspace
