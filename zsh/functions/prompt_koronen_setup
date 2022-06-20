@@ -51,7 +51,7 @@ prompt_koronen_setup () {
 }
 
 +vi-git-untracked () {
-  if [[ -n $(command git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+  if command git status --porcelain | grep -qF "??"; then
     hook_com[unstaged]+='?'
   fi
 }
