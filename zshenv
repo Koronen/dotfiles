@@ -7,6 +7,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export HUSKY_SKIP_INSTALL=1
 export KERL_BUILD_DOCS='yes'
 export LESS='-FRX'
+export NEXT_TELEMETRY_DISABLED=1
 export PAGER='less'
 export SHELL=$(which zsh)
 export VISUAL='view'
