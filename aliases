@@ -5,6 +5,7 @@ alias df='df -h'
 alias hex='openssl rand -hex'
 alias pag='ps aux | head -n1; ps aux | grep -i'
 alias path="echo \$PATH | tr -s ':' '\\n'"
+alias uuid='uuidgen | tr A-F a-f'
 if command -v xdg-open > /dev/null 2>&1; then
     alias open='xdg-open'
 fi
