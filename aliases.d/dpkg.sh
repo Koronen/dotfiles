@@ -1,5 +1,0 @@
-alias debi='sudo apt install'
-alias debI='sudo dpkg -i'
-alias debl='dpkg -L'
-alias debL='dpkg -c'
-alias debu='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
