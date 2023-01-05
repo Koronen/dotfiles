@@ -12,7 +12,6 @@ fi
 [ -n "$BASH_VERSION" ] && alias reload=". ~/.bashrc"
 [ -n "$ZSH_VERSION" ] && alias reload=". ~/.zshrc"
 alias RM='rm -rf'
-alias trm='rm -f **/*~'
 
 mkcd() {
     mkdir -p "$@" && cd "$_" || return
