@@ -1,3 +1,5 @@
+alias a=ansible
+
 # Playbook (p)
 alias ap='ansible-playbook'
 
