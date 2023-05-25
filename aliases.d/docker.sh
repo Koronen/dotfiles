@@ -1,2 +1,5 @@
-alias d="docker"
-alias dc="docker compose"
+alias d='docker'
+alias dc='docker compose'
+alias dcd='docker compose down'
+alias dcp='docker compose pull'
+alias dcu='docker compose up -d'
