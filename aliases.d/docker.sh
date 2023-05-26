@@ -1,5 +1,6 @@
 alias d='docker'
 alias dc='docker compose'
 alias dcd='docker compose down'
+alias dcl='docker compose ps'
 alias dcp='docker compose pull'
 alias dcu='docker compose up -d'
