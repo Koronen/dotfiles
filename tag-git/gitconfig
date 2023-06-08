@@ -2,6 +2,7 @@
 	addEmptyPathspec = false
 	addIgnoredFile = false
 	detachedHead = false
+	skippedCherryPicks = false
 
 [alias]
 	uncommit = reset --soft HEAD^
