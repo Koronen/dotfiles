@@ -1,4 +1,6 @@
 alias d='docker'
+alias di='docker images'
+alias dl='docker ps'
 alias dc='docker compose'
 alias dcd='docker compose down'
 alias dcl='docker compose ps'
