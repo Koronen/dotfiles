@@ -4,6 +4,7 @@ alias ....='cd ../../..'
 if command -v batcat > /dev/null; then
     alias bat=batcat
 fi
+alias debu='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 alias df='df -h'
 alias hex='openssl rand -hex'
 alias pag='ps aux | head -n1; ps aux | grep -i'
