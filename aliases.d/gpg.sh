@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 if command -v gpg2 > /dev/null; then
     alias gpg=gpg2
 fi

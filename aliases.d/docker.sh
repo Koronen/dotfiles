@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 alias d='docker'
 alias di='docker images'
 alias dl='docker ps'

@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 rorc() {
     if [ -x bin/rails ]; then
         bin/rails console "$@"

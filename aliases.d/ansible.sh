@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 alias a=ansible
 
 # Playbook (p)
