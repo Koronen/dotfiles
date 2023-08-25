@@ -21,11 +21,9 @@ mkcd() {
 }
 
 for aliasfile in "$HOME/.aliases.d"/*.sh; do
-    # shellcheck disable=SC1090
     . "$aliasfile"
 done
 
 if [ -f "$HOME/.aliases.local" ]; then
-    # shellcheck source=/home/koronen/.aliases.local
     . "$HOME/.aliases.local"
 fi
