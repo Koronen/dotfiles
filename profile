@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 # Add user's private bin directories to PATH
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
