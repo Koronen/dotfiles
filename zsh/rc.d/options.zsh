@@ -1,4 +1,4 @@
-# shellcheck shell=sh
+# shellcheck shell=sh disable=SC2034
 
 # Docs: <http://zsh.sourceforge.net/Doc/Release/Options.html>
 
