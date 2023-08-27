@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -e
+
+shellcheck .bin/* \
+  aliases aliases.d/* \
+  bash/rc.d/* bash_profile bashrc \
+  hooks/**/* \
+  profile \
+  zsh/rc.d/* zshenv zshrc
