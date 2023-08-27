@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 export EDITOR='vim'
 export ERL_AFLAGS='-kernel shell_history enabled'
 export GATSBY_TELEMETRY_DISABLED=1

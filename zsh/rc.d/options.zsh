@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 # Docs: <http://zsh.sourceforge.net/Doc/Release/Options.html>
 
 HISTFILE="$HOME/.zhistory"

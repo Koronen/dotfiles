@@ -1,3 +1,5 @@
+# shellcheck shell=sh
+
 # Use caching to make completion for cammands such as dpkg and apt usable.
 zstyle ':completion::complete:*' use-cache on
 
