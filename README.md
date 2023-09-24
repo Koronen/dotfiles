@@ -28,13 +28,6 @@ To enable quick file and directory access, please [install z](https://github.com
 
     git clone https://github.com/rupa/z.git ~/src/z
 
-### Powerline fonts
-
-To install the Powerline fonts, please see instructions in the
-[Powerline fonts README](https://github.com/powerline/fonts#readme).
-
-    sudo apt-get install fonts-powerline
-
 ## License
 
 Copyright (C) by Victor Koronen
