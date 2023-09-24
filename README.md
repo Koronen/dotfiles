@@ -37,7 +37,7 @@ To install the Powerline fonts, please see instructions in the
 
 ## License
 
-Copyright (C) 2011-2020 by Victor Koronen
+Copyright (C) by Victor Koronen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
