@@ -9,15 +9,6 @@ proper credit where due.
 The recommended way to install these dotfiles on a new machine is to clone this
 repo using Git and to link the files using RCM.
 
-Install Git by running the following command.
-
-    sudo apt-get install git
-
-Install RCM by following the [instructions in the RCM
-Readme](https://github.com/thoughtbot/rcm#Installation).
-
-Then run the following commands to finish the installation.
-
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
     ln -s ~/.dotfiles/rcrc ~/.rcrc
     rcup
