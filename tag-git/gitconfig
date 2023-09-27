@@ -2,6 +2,7 @@
 	addEmptyPathspec = false
 	addIgnoredFile = false
 	detachedHead = false
+	diverging = false
 	skippedCherryPicks = false
 
 [alias]
