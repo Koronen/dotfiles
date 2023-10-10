@@ -34,6 +34,7 @@
 [fetch]
 	fsckObjects = true
 	prune = true
+	pruneTags = true
 
 [format]
 	pretty = fuller
