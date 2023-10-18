@@ -12,6 +12,7 @@ export LESS='-FRX'
 export NEXT_TELEMETRY_DISABLED=1
 export PAGER='less'
 export SHELL=$(which zsh)
+export STORYBOOK_DISABLE_TELEMETRY=1
 export VISUAL='view'
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=13'
 
