@@ -1,3 +1,3 @@
 # shellcheck shell=sh
 
-source "$HOME/.aliases"
+. "$HOME/.aliases"

@@ -2,4 +2,4 @@
 
 export _Z_CMD=j
 
-[ -r "$HOME/src/z/z.sh" ] && source "$HOME/src/z/z.sh"
+[ -r "$HOME/src/z/z.sh" ] && . "$HOME/src/z/z.sh"

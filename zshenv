@@ -3,8 +3,8 @@
 export SHELL=$(which zsh)
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=13'
 
-source "$HOME/.shenv"
+. "$HOME/.shenv"
 
 if [ -r "$HOME/.zshenv.local" ]; then
-    source "$HOME/.zshenv.local"
+    . "$HOME/.zshenv.local"
 fi
