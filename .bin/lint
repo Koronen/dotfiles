@@ -7,4 +7,5 @@ shellcheck .bin/* \
   bash/rc.d/* bash_profile bashrc \
   hooks/**/* \
   profile \
+  shenv \
   zsh/rc.d/* zshenv zshrc
