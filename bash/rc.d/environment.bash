@@ -1,3 +1,3 @@
-export SHELL=$(which bash)
+export SHELL="$(which bash)"
 
 source "$HOME/.shenv"
