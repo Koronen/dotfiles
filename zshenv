@@ -16,10 +16,6 @@ export STORYBOOK_DISABLE_TELEMETRY=1
 export VISUAL='view'
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=13'
 
-if [ -z "$LANG" ]; then
-    export LANG='en_US.UTF-8'
-fi
-
 if [ -r "$HOME/.zshenv.local" ]; then
     source "$HOME/.zshenv.local"
 fi
