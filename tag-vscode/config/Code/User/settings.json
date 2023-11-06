@@ -24,6 +24,6 @@
         "terminal.ansiBrightBlack": "#002B36"
     },
     "workbench.colorTheme": "Solarized Dark",
-    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.empty.hint": "hidden",
     "workbench.startupEditor": "newUntitledFile"
 }
