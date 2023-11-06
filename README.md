@@ -1,8 +1,6 @@
 # dotfiles
 
 These are my configuration files for various programs.
-Snippets come from all sorts of places and I try to give
-proper credit where due.
 
 ## Installation
 
@@ -12,12 +10,6 @@ repo using Git and to link the files using RCM.
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
     ln -s ~/.dotfiles/rcrc ~/.rcrc
     rcup
-
-### Z
-
-To enable quick file and directory access, please [install z](https://github.com/rupa/z#readme).
-
-    git clone https://github.com/rupa/z.git ~/src/z
 
 ## License
 
