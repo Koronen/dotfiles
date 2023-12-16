@@ -6,6 +6,7 @@ shellcheck .bin/* \
   aliases aliases.d/* \
   bash/rc.d/* bash_profile bashrc \
   hooks/**/* \
+  install.sh \
   profile \
   shenv \
   zsh/rc.d/* zshenv zshrc

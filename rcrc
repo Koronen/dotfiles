@@ -1,4 +1,4 @@
-EXCLUDES="README.md"
+EXCLUDES="README.md install.sh"
 SYMLINK_DIRS="bash gittemplate vim zsh"
 TAGS="git"
 UNDOTTED="bin"
