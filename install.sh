@@ -3,8 +3,12 @@
 set -e
 
 if [ "$CODESPACES" = "true" ]; then
-  sudo apt-get update
-  sudo apt-get install --yes rcm
+  # shellcheck disable=SC2155
+  export DOTFILES_DIRS="$(pwd)"
+  export RCRC="${DOTFILES_DIRS}/rcrc"
 
-  rcup -d . -f
+  sudo env DEBIAN_FRONTEND=noninteractive apt-get update
+  sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes rcm
+
+  rcup -f
 fi
