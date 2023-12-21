@@ -25,7 +25,9 @@ alias gc='git commit --verbose'
 alias gcm='git checkout `git symbolic-ref --short refs/remotes/origin/HEAD | sed "s/^origin\///"`'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
+alias gcfd='git commit --amend --date=now --reuse-message HEAD'
 alias gcF='git commit --amend --verbose'
+alias gcFd='git commit --amend --date=now --verbose'
 alias gcs='git show --format=fuller'
 
 # Fetch (f)
