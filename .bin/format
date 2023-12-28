@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+set -e
+
+shfmt -p -i 2 -w \
+  .bin/* \
+  aliases.d/* \
+  install.sh
+
+shfmt -p -ci -i 4 -w \
+  aliases \
+  hooks/*/* \
+  profile \
+  shenv \
+  tag-git/bin/* \
+  tag-git/gittemplate/* \
+  tag-gpg/bin/* \
+  tag-i3/bin/*
+
+shfmt -ln=bash -i 4 -w \
+  bash/rc.d/* \
+  bash_profile \
+  bashrc \
+  zsh/functions/_kops \
+  zsh/functions/_kubectl \
+  zsh/rc.d/* \
+  zshenv \
+  zshrc

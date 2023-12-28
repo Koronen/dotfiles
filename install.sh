@@ -12,6 +12,7 @@ if [ "$CODESPACES" = "true" ]; then
     git \
     rcm \
     shellcheck \
+    shfmt \
     yamllint
 
   rcup -f

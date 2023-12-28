@@ -3,7 +3,7 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-if command -v batcat > /dev/null; then
+if command -v batcat >/dev/null; then
     alias bat=batcat
 fi
 alias debu='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
@@ -13,7 +13,7 @@ alias pag='ps aux | head -n1; ps aux | grep -i'
 alias path="echo \$PATH | tr -s ':' '\\n'"
 alias uuid='uuidgen | tr A-F a-f'
 alias v='vim'
-if command -v xdg-open > /dev/null; then
+if command -v xdg-open >/dev/null; then
     alias open='xdg-open'
 fi
 [ -n "$BASH_VERSION" ] && alias reload=". ~/.bashrc"

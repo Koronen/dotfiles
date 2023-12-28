@@ -6,4 +6,5 @@ sudo apt install --yes \
   git \
   rcm \
   shellcheck \
+  shfmt \
   yamllint
