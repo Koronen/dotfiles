@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+
+sudo apt install --yes \
+  git \
+  rcm \
+  shellcheck \
+  yamllint
