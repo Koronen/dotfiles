@@ -1,6 +1,6 @@
 # shellcheck shell=bash
 
-for rcfile in $HOME/.bash/rc.d/*.bash; do
+for rcfile in "$HOME/.bash/rc.d"/*.bash; do
     source "$rcfile"
 done
 

@@ -22,7 +22,7 @@ bindkey '^[[Z' reverse-menu-complete
 . "$HOME/.zsh/bundle/zsh-history-substring-search/zsh-history-substring-search.zsh"
 . "$HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-for rcfile in $HOME/.zsh/rc.d/*.zsh; do
+for rcfile in "$HOME/.zsh/rc.d"/*.zsh; do
     . "$rcfile"
 done
 
