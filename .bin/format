@@ -9,9 +9,9 @@ shfmt -p -i 2 -w \
 
 shfmt -p -ci -i 4 -w \
   aliases \
+  config/shenv.d/* \
   hooks/*/* \
   profile \
-  shenv \
   tag-git/bin/* \
   tag-git/gittemplate/* \
   tag-gpg/bin/* \

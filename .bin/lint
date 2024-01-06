@@ -5,8 +5,8 @@ set -e
 shellcheck .bin/* \
   aliases aliases.d/* \
   bash/rc.d/* bash_profile bashrc \
+  config/shenv.d/* \
   hooks/**/* \
   install.sh \
   profile \
-  shenv \
   zsh/rc.d/* zshenv zshrc

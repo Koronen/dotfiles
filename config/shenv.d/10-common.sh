@@ -14,7 +14,3 @@ export NEXT_TELEMETRY_DISABLED=1
 export PAGER='less'
 export STORYBOOK_DISABLE_TELEMETRY=1
 export VISUAL='view'
-
-if [ -r "$HOME/.shenv.local" ]; then
-    . "$HOME/.shenv.local"
-fi
