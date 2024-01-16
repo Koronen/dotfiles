@@ -29,6 +29,7 @@ alias gcfd='git commit --amend --date=now --reuse-message HEAD'
 alias gcF='git commit --amend --verbose'
 alias gcFd='git commit --amend --date=now --verbose'
 alias gcs='git show --format=fuller'
+alias gcss='git show --format=fuller --stat'
 
 # Fetch (f)
 alias gf='git fetch'
