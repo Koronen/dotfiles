@@ -11,6 +11,7 @@ alias df='df -h'
 alias hex='openssl rand -hex'
 alias pag='ps aux | head -n1; ps aux | grep -i'
 alias path="echo \$PATH | tr -s ':' '\\n'"
+alias sa=ssh-add
 alias uuid='uuidgen | tr A-F a-f'
 alias v='vim'
 if command -v xdg-open >/dev/null; then
