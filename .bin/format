@@ -4,6 +4,7 @@ set -e
 
 shfmt -p -i 2 -w \
   .bin/* \
+  bin/* \
   aliases.d/* \
   install.sh
 

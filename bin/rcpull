@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+. "$HOME/.rcrc"
+
+for DOTFILES_DIR in ${DOTFILES_DIRS:=$HOME/.dotfiles}; do
+  git -C "$DOTFILES_DIR" pull "$@"
+done

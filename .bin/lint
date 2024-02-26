@@ -3,6 +3,7 @@
 set -e
 
 shellcheck .bin/* \
+  bin/* \
   aliases aliases.d/* \
   bash/rc.d/* bash_profile bashrc \
   config/shenv.d/* \
