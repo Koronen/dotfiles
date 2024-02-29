@@ -4,6 +4,8 @@
             72
         ]
     },
+    "dotfiles.repository": "https://github.com/Koronen/dotfiles.git",
+    "dotfiles.targetPath": "~/.dotfiles",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.renderWhitespace": "trailing",
