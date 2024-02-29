@@ -4,7 +4,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 if command -v batcat >/dev/null; then
-    alias bat=batcat
+  alias bat=batcat
 fi
 alias debu='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 alias df='df -h'
@@ -15,20 +15,20 @@ alias sa=ssh-add
 alias uuid='uuidgen | tr A-F a-f'
 alias v='vim'
 if command -v xdg-open >/dev/null; then
-    alias open='xdg-open'
+  alias open='xdg-open'
 fi
 [ -n "$BASH_VERSION" ] && alias reload=". ~/.bashrc"
 [ -n "$ZSH_VERSION" ] && alias reload=". ~/.zshrc"
 alias RM='rm -rf'
 
 mkcd() {
-    mkdir -p "$@" && cd "$_" || return
+  mkdir -p "$@" && cd "$_" || return
 }
 
 for aliasfile in "$HOME/.aliases.d"/*.sh; do
-    . "$aliasfile"
+  . "$aliasfile"
 done
 
 if [ -f "$HOME/.aliases.local" ]; then
-    . "$HOME/.aliases.local"
+  . "$HOME/.aliases.local"
 fi

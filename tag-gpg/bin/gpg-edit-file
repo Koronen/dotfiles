@@ -3,14 +3,14 @@
 set -e
 
 if [ $# -ne 1 ]; then
-    echo "Usage: $0 FILE" >&2
-    exit 1
+  echo "Usage: $0 FILE" >&2
+  exit 1
 fi
 FILE="$1"
 
 tempfile=$(mktemp tmp.XXXXXXXXXX)
 delete_tempfile() {
-    rm -f "$tempfile"
+  rm -f "$tempfile"
 }
 trap delete_tempfile EXIT
 

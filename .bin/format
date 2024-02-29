@@ -2,16 +2,14 @@
 
 set -e
 
-shfmt -p -i 2 -w \
+shfmt -ci -i 2 -p -w \
   .bin/* \
-  bin/* \
-  aliases.d/* \
-  install.sh
-
-shfmt -p -ci -i 4 -w \
   aliases \
+  aliases.d/* \
+  bin/* \
   config/shenv.d/* \
   hooks/*/* \
+  install.sh \
   profile \
   tag-git/bin/* \
   tag-git/gittemplate/* \

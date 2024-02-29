@@ -3,5 +3,5 @@
 set -e
 
 if command -v gh >/dev/null; then
-    gh completion --shell zsh >"$HOME/.zsh/functions/_gh"
+  gh completion --shell zsh >"$HOME/.zsh/functions/_gh"
 fi
