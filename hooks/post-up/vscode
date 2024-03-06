@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+command -v code >/dev/null || exit 0
+
+[ -r "$HOME/.config/Code/User/extensions.txt" ] || exit 0
+
+sed -e 's/^/--install-extension /' <"$HOME/.config/Code/User/extensions.txt" | xargs code
