@@ -11,8 +11,6 @@
 .stignore
 .stversions/
 .svn/
-*.sublime-project
-*.sublime-workspace
 *.sw?
 tags
 .tool-versions
