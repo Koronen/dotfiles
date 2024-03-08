@@ -11,6 +11,13 @@ if [ "$CODESPACES" = "true" ]; then
   sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes git rcm
 
   rcup -f
+elif [ "$REMOTE_CONTAINERS" = "true" ]; then
+  export RCRC="$HOME/.dotfiles/rcrc"
+
+  sudo env DEBIAN_FRONTEND=noninteractive apt-get update
+  sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes git rcm
+
+  rcup -f
 else
   echo "Unsupported environment" >&2
   exit 1
