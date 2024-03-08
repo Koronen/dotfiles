@@ -8,12 +8,7 @@ if [ "$CODESPACES" = "true" ]; then
   export RCRC="${DOTFILES_DIRS}/rcrc"
 
   sudo env DEBIAN_FRONTEND=noninteractive apt-get update
-  sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes \
-    git \
-    rcm \
-    shellcheck \
-    shfmt \
-    yamllint
+  sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes git rcm
 
   rcup -f
 else
