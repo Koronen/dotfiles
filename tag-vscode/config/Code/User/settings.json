@@ -9,6 +9,7 @@
     "dotfiles.targetPath": "~/.dotfiles",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
     "editor.renderWhitespace": "trailing",
     "editor.rulers": [
         80,
