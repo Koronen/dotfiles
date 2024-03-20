@@ -22,7 +22,7 @@ alias gbX='git branch -D'
 
 # Commit (c)
 alias gc='git commit --verbose'
-alias gcm='git checkout `git symbolic-ref --short refs/remotes/origin/HEAD | sed "s/^origin\///"`'
+alias gcm='git checkout `git symbolic-ref --short refs/remotes/origin/HEAD | cut -d/ -f2-`'
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
 alias gcfd='git commit --amend --date=now --reuse-message HEAD'
