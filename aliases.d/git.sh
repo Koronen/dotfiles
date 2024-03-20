@@ -3,6 +3,9 @@
 # Most of these aliases are borrowed from prezto.
 # <https://github.com/sorin-ionescu/prezto/blob/master/modules/git/alias.zsh>
 
+# shellcheck disable=SC2016
+remote_head='`git symbolic-ref --short refs/remotes/origin/HEAD | cut -d/ -f2-`'
+
 alias cdr='cd `git rev-parse --show-toplevel`'
 
 alias g='git'
@@ -22,7 +25,8 @@ alias gbX='git branch -D'
 
 # Commit (c)
 alias gc='git commit --verbose'
-alias gcm='git checkout `git symbolic-ref --short refs/remotes/origin/HEAD | cut -d/ -f2-`'
+# shellcheck disable=SC2139
+alias gcm="git checkout ${remote_head}"
 alias gco='git checkout'
 alias gcf='git commit --amend --reuse-message HEAD'
 alias gcfd='git commit --amend --date=now --reuse-message HEAD'
@@ -36,6 +40,8 @@ alias gf='git fetch'
 alias gfa='git fetch --all'
 alias gfc='git clone'
 alias gff='git pull --ff-only'
+# shellcheck disable=SC2139
+alias gfm="git fetch origin ${remote_head}:${remote_head}"
 alias gfr='git pull --rebase'
 
 # Index (i)
