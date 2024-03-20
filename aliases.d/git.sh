@@ -18,7 +18,8 @@ alias gbc='git checkout -b'
 alias gbd='git diff origin/HEAD...HEAD'
 alias gbl='git branch -v'
 alias gbL='git branch -av'
-alias gbw='git branch --merged | grep -v master | grep -v "\*" | xargs -r git branch -d'
+# shellcheck disable=SC2139
+alias gbw="git branch --merged | grep -v ${remote_head} | grep -vF '*' | xargs -r git branch -d"
 alias gbx='git branch -d'
 alias gbX='git branch -D'
 
