@@ -11,6 +11,7 @@ shfmt -ci -i 2 -p -w \
   hooks/*/* \
   install.sh \
   profile \
+  tag-*/aliases.d/* \
   tag-git/bin/* \
   tag-git/gittemplate/* \
   tag-gpg/bin/* \
