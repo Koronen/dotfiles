@@ -23,6 +23,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
     "liveshare.autoShareServers": false,
     "liveshare.autoShareTerminals": false,
     "liveshare.focusBehavior": "prompt",
