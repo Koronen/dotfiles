@@ -1,0 +1,44 @@
+#!/bin/sh
+
+set -e
+
+if [ "$XDG_CURRENT_DESKTOP" != "GNOME" ] && [ "$XDG_CURRENT_DESKTOP" != "ubuntu:GNOME" ]; then
+  exit 0
+fi
+
+. /etc/os-release
+
+gsettings set org.gnome.desktop.calendar show-weekdate true
+
+gsettings set org.gnome.desktop.interface clock-format '24h'
+gsettings set org.gnome.desktop.interface clock-show-weekday true
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+gsettings set org.gnome.desktop.interface enable-hot-corners false
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+if [ "$ID" = "ubuntu" ]; then
+  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+fi
+
+gsettings set org.gnome.desktop.media-handling autorun-x-content-start-app []
+
+gsettings set org.gnome.desktop.privacy old-files-age 30
+gsettings set org.gnome.desktop.privacy recent-files-max-age 30
+gsettings set org.gnome.desktop.privacy remove-old-temp-files true
+gsettings set org.gnome.desktop.privacy remove-old-trash-files true
+
+gsettings set org.gnome.desktop.screensaver lock-delay 0
+gsettings set org.gnome.desktop.screensaver lock-enabled true
+
+gsettings set org.gnome.desktop.session idle-delay 300
+
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+
+if [ "$ID" = "ubuntu" ]; then
+  gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action 'suspend'
+  gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action 'suspend'
+fi
+gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'interactive'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
+
+gsettings set org.gnome.system.location enabled false
