@@ -56,8 +56,8 @@ alias giD='git diff --no-ext-diff --cached --word-diff'
 alias gl='git log'
 alias glg='git log --graph --oneline --no-show-signature'
 alias glG='git log --graph --oneline --no-show-signature --all'
-alias glp='git log --patch --no-merges'
-alias gls='git log --stat --no-merges'
+alias glp='git log --patch --no-merges --topo-order'
+alias gls='git log --stat --no-merges --topo-order'
 
 # Merge (m)
 alias gm='git merge'
