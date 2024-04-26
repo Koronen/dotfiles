@@ -1,6 +1,9 @@
 # shellcheck shell=sh
 
-alias rbb='bundle'
+alias rbb=bundle
 alias rbbe='bundle exec'
 alias rbbo='bundle open'
 alias rbbu='bundle update'
+
+alias rbc=rubocop
+alias rbca='rubocop --auto-correct'
