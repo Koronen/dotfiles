@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 set -e
 
@@ -14,8 +14,7 @@ shfmt -ci -i 2 -p -w \
   tag-*/aliases.d/* \
   tag-git/bin/* \
   tag-git/gittemplate/* \
-  tag-gpg/bin/* \
-  tag-i3/bin/*
+  tag-gpg/bin/*
 
 shfmt -ln=bash -i 4 -w \
   bash/rc.d/* \
