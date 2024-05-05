@@ -1,0 +1,6 @@
+---
+name: workstation-playbook
+root: ~/src/github.com/Koronen/workstation-playbook
+
+windows:
+  - zsh:
