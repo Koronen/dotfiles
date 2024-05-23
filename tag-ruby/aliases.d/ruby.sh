@@ -6,4 +6,4 @@ alias rbbo='bundle open'
 alias rbbu='bundle update'
 
 alias rbc=rubocop
-alias rbca='rubocop --auto-correct'
+alias rbca='rubocop --autocorrect'
