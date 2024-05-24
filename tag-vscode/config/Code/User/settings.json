@@ -1,44 +1,39 @@
 {
-    "[git-commit]": {
-        "editor.rulers": [
-            72
-        ]
-    },
-    "[ruby]": {
-        "editor.formatOnSaveMode": "file"
-    },
-    "dev.containers.copyGitConfig": false,
-    "dotfiles.repository": "https://github.com/Koronen/dotfiles.git",
-    "dotfiles.targetPath": "~/.dotfiles",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modificationsIfAvailable",
-    "editor.renderWhitespace": "trailing",
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.wordWrap": "on",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "extensions.ignoreRecommendations": true,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "githubPullRequests.pullBranch": "never",
-    "liveshare.autoShareServers": false,
-    "liveshare.autoShareTerminals": false,
-    "liveshare.focusBehavior": "prompt",
-    "liveshare.guestApprovalRequired": true,
-    "rdbg.rubyVersionManager": "asdf",
-    "search.useGlobalIgnoreFiles": true,
-    "search.useIgnoreFiles": true,
-    "telemetry.telemetryLevel": "off",
-    "window.zoomLevel": 1,
-    "workbench.colorCustomizations": {
-        "terminal.ansiBrightBlack": "#002B36"
-    },
-    "workbench.colorTheme": "Solarized Dark",
-    "workbench.editor.empty.hint": "hidden",
-    "workbench.startupEditor": "newUntitledFile"
+  "[git-commit]": {
+    "editor.rulers": [72]
+  },
+  "[ruby]": {
+    "editor.formatOnSaveMode": "file"
+  },
+  "dev.containers.copyGitConfig": false,
+  "dotfiles.repository": "https://github.com/Koronen/dotfiles.git",
+  "dotfiles.targetPath": "~/.dotfiles",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.renderWhitespace": "trailing",
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "githubPullRequests.pullBranch": "never",
+  "liveshare.autoShareServers": false,
+  "liveshare.autoShareTerminals": false,
+  "liveshare.focusBehavior": "prompt",
+  "liveshare.guestApprovalRequired": true,
+  "rdbg.rubyVersionManager": "asdf",
+  "search.useGlobalIgnoreFiles": true,
+  "search.useIgnoreFiles": true,
+  "telemetry.telemetryLevel": "off",
+  "window.zoomLevel": 1,
+  "workbench.colorCustomizations": {
+    "terminal.ansiBrightBlack": "#002B36"
+  },
+  "workbench.colorTheme": "Solarized Dark",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.startupEditor": "newUntitledFile"
 }
