@@ -128,8 +128,6 @@ function! PreservingSearchAndCursor(command)
 endfunction
 noremap <silent> <leader><space> :call PreservingSearchAndCursor("%s/\\s\\+$//e")<CR>
 
-vnoremap <leader>64d y:let @"=substitute(system('base64 --decode -w 0', @"), '\n$', '', 'g')<cr>gvP
-vnoremap <leader>64e y:let @"=system('base64 -w 0', @")<cr>gvP
 nnoremap <leader>gg :Ggrep<Space>
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
