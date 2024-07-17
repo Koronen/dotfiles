@@ -1,6 +1,8 @@
 {
   "[git-commit]": {
-    "editor.rulers": [72]
+    "editor.rulers": [
+      72
+    ]
   },
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp",
@@ -13,7 +15,10 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.renderWhitespace": "trailing",
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
