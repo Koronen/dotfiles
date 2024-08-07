@@ -47,7 +47,7 @@ prompt_koronen_setup () {
   zstyle ':vcs_info:hg*' branchformat "%b"
 
   PROMPT='${_prompt_koronen_host}%(!.#.$) '
-  RPROMPT='%(?::%F{red}ret:$?%f )${vcs_info_msg_0_}${_prompt_koronen_pwd}'
+  RPROMPT='%(?::%F{red}ret:$?%f )%T ${vcs_info_msg_0_}${_prompt_koronen_pwd}'
 }
 
 +vi-git-untracked () {
