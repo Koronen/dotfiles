@@ -7,3 +7,6 @@ alias rbbu='bundle update'
 
 alias rbc=rubocop
 alias rbca='rubocop --autocorrect'
+
+alias rbt=standardrb
+alias rbtf='standardrb --fix'
