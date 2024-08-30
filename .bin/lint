@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 set -e
 
@@ -11,3 +11,5 @@ shellcheck .bin/* \
   install.sh \
   profile \
   zsh/rc.d/* zshenv zshrc
+
+yamllint . tag-ruby/gemrc
