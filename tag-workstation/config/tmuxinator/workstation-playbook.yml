@@ -1,5 +1,8 @@
 ---
 name: workstation-playbook
+on_project_first_start: >
+  [ -d ~/src/github.com/Koronen/workstation-playbook ] ||
+    git clone git@github.com:Koronen/workstation-playbook.git ~/src/github.com/Koronen/workstation-playbook
 root: ~/src/github.com/Koronen/workstation-playbook
 
 windows:
