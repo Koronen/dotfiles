@@ -143,9 +143,6 @@ nmap [A <Plug>(ale_first)
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-abbreviate irb! binding.irb
-abbreviate pry! require 'pry'; binding.pry
-
 augroup vimrc
   autocmd!
   autocmd InsertLeave * set nopaste
