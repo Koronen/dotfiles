@@ -59,10 +59,6 @@ alias glG='git log --graph --oneline --no-show-signature --all'
 alias glp='git log --patch --no-merges --topo-order'
 alias gls='git log --stat --no-merges --topo-order'
 
-# Merge (m)
-alias gm='git merge'
-alias gmt='git mergetool'
-
 # Push (p)
 alias gp='git push'
 alias gpc='git push --set-upstream origin `git symbolic-ref --short HEAD`'
