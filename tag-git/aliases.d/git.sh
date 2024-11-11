@@ -57,6 +57,7 @@ alias gl='git log'
 alias glg='git log --graph --oneline --no-show-signature'
 alias glG='git log --graph --oneline --no-show-signature --all'
 alias glp='git log --patch --no-merges --topo-order'
+alias glpr='git log --patch --no-merges --topo-order --reverse'
 alias gls='git log --stat --no-merges --topo-order'
 
 # Push (p)
