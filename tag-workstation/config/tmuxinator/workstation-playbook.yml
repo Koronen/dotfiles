@@ -3,7 +3,9 @@ name: workstation-playbook
 on_project_first_start: >
   [ -d ~/src/github.com/Koronen/workstation-playbook ] ||
     git clone git@github.com:Koronen/workstation-playbook.git ~/src/github.com/Koronen/workstation-playbook
+startup_window: vim
 root: ~/src/github.com/Koronen/workstation-playbook
 
 windows:
+  - vim: vim main.yml
   - zsh:
