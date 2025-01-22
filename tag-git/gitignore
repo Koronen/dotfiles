@@ -15,7 +15,6 @@
 .tool-versions
 .vagrant/
 .vimrc
-.vscode/
 .~lock.*
 Thumbs.db
 compose.override.yml
