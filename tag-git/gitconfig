@@ -16,7 +16,6 @@
 	ui = auto
 
 [core]
-	excludesFile = ~/.gitignore
 	attributesFile = ~/.gitattributes
 
 [diff "exif"]
