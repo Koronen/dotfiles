@@ -15,9 +15,6 @@
 [color]
 	ui = auto
 
-[core]
-	attributesFile = ~/.gitattributes
-
 [diff "exif"]
 	textconv = exiftool
 
