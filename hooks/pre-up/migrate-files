@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+if [ -d "$HOME/.tmux" ] && [ ! -d "$HOME/.config/tmux" ]; then
+  mkdir -p "$HOME/.config"
+  mv "$HOME/.tmux" "$HOME/.config/tmux"
+fi
+
+if [ -L "$HOME/.vim" ] && [ -d "$HOME/.dotfiles/vim/pack" ]; then
+  rm "$HOME/.vim"
+  mkdir "$HOME/.vim"
+  mv "$HOME/.dotfiles/vim/pack" "$HOME/.vim/pack"
+fi
