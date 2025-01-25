@@ -10,6 +10,7 @@ remove_old_symlink() {
 
 remove_old_symlink "$HOME/.dircolors"
 remove_old_symlink "$HOME/.gitattributes"
+remove_old_symlink "$HOME/.gitconfig"
 remove_old_symlink "$HOME/.gitconfig.local"
 remove_old_symlink "$HOME/.gitignore"
 remove_old_symlink "$HOME/.tmux.conf"
