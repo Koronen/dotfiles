@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+remove_old_symlink() {
+  if [ -L "$1" ] && [ ! -e "$1" ]; then
+    rm "$1"
+  fi
+}
+
+remove_old_symlink "$HOME/.dircolors"
+remove_old_symlink "$HOME/.gitattributes"
+remove_old_symlink "$HOME/.gitignore"
+remove_old_symlink "$HOME/.tmux.conf"
