@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+allowed_signers_file="$(git config gpg.ssh.allowedSignersFile)"
+if [ -n "$allowed_signers_file" ]; then
+  mkdir -p "$(dirname "$allowed_signers_file")"
+  touch "$allowed_signers_file"
+fi
