@@ -13,8 +13,8 @@ shfmt -ci -i 2 -p -w \
   profile \
   tag-*/aliases.d/* \
   tag-git/bin/* \
-  tag-git/gittemplate/* \
-  tag-gpg/bin/*
+  tag-gpg/bin/* \
+  tag-workstation/config/git/templates/hooks/*
 
 shfmt -ln=bash -i 4 -w \
   bash/rc.d/* \

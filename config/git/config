@@ -37,7 +37,6 @@
 
 [init]
 	defaultBranch = main
-	templateDir = ~/.gittemplate
 
 [interactive]
 	singleKey = true
@@ -75,6 +74,9 @@
 
 [web]
 	browser = xdg-open
+
+[include]
+	path = ~/.config/git/config_workstation
 
 [include]
 	path = ~/.config/git/config_local

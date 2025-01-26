@@ -10,6 +10,7 @@ shellcheck .bin/* \
   hooks/**/* \
   install.sh \
   profile \
+  tag-workstation/config/git/templates/hooks/* \
   zsh/rc.d/* zshenv zshrc
 
 yamllint . tag-ruby/gemrc

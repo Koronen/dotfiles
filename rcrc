@@ -1,5 +1,5 @@
 COPY_ALWAYS="local/share/flatpak/overrides/* var/app/*"
 EXCLUDES="README.md install.sh"
-SYMLINK_DIRS="bash gittemplate vim/ft* vim/indent vim/plugin zsh"
+SYMLINK_DIRS="bash vim/ft* vim/indent vim/plugin zsh"
 TAGS="git"
 UNDOTTED="bin"
