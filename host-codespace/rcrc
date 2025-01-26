@@ -1,5 +1,4 @@
 EXCLUDES="README.md install.sh"
 HOSTNAME="codespace"
 SYMLINK_DIRS="bash vim/ft* vim/indent vim/plugin zsh"
-TAGS="git"
 UNDOTTED="bin"

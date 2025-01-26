@@ -12,7 +12,6 @@ shfmt -ci -i 2 -p -w \
   install.sh \
   profile \
   tag-*/aliases.d/* \
-  tag-git/bin/* \
   tag-gpg/bin/* \
   tag-workstation/config/git/templates/hooks/*
 
