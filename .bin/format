@@ -2,7 +2,7 @@
 
 set -e
 
-shfmt -ci -i 2 -p -w \
+shfmt --case-indent --indent 2 --posix --write \
   .bin/* \
   aliases \
   aliases.d/* \
@@ -16,7 +16,7 @@ shfmt -ci -i 2 -p -w \
   tag-workstation/config/git/templates/hooks/* \
   tag-workstation/zlogin
 
-shfmt -ln=bash -i 4 -w \
+shfmt --language-dialect bash --indent 4 --write \
   bash/rc.d/* \
   bash_profile \
   bashrc \
