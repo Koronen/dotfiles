@@ -22,6 +22,7 @@ fi
 alias RM='rm -rf'
 
 mkcd() {
+  # shellcheck disable=SC3028
   mkdir -p "$@" && cd "$_" || return
 }
 

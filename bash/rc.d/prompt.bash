@@ -1,3 +1,4 @@
+# shellcheck disable=SC2154
 PS1="\$( ret=\$?; [[ \$ret -ne 0 ]] && echo \"\[\e[0;31m\]\$ret\[\e[0m\] \" )"
 [[ -n "$SSH_CONNECTION" ]] && PS1="${PS1}\\h:"
 PS1="${PS1}\\w"

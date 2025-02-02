@@ -1,7 +1,8 @@
-# shellcheck shell=sh
+# shellcheck shell=bash
 
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
+# shellcheck disable=SC2154
 bindkey "${terminfo[kcuu1]}" history-substring-search-up
 bindkey "${terminfo[kcud1]}" history-substring-search-down
 

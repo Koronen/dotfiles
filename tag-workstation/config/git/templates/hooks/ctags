@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+# shellcheck disable=SC2064
 trap "rm -f .git/tags.$$" EXIT
 ctags --tag-relative=yes --recurse=yes -f .git/tags.$$
 mv .git/tags.$$ .git/tags

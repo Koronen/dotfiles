@@ -24,9 +24,11 @@ zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
 # Increase the number of errors based on the length of the typed word.
+# shellcheck disable=SC2016
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
 
 # Kill
+# shellcheck disable=SC2016
 zstyle ':completion:*:*:*:*:processes' command 'ps -u $USER -o pid,user,command -w'
 zstyle ':completion:*:*:kill:*' menu yes select
 
