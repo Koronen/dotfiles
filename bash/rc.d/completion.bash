@@ -11,11 +11,6 @@ if command -v kubectl >/dev/null; then
     source <(kubectl completion bash)
 fi
 
-if command -v kops >/dev/null; then
-    # shellcheck source=/dev/null
-    source <(kops completion bash)
-fi
-
 if command -v volta >/dev/null; then
     eval "$(volta completions bash)"
 fi

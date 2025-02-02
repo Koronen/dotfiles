@@ -21,7 +21,6 @@ shfmt --case-indent --indent 4 --language-dialect bash --write \
   bash_profile \
   bashrc \
   tag-workstation/zlogin \
-  zsh/functions/_kops \
   zsh/functions/_kubectl \
   zsh/rc.d/* \
   zshenv \
