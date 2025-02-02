@@ -3,7 +3,6 @@
 export EDITOR='vim'
 export ERL_AFLAGS='-kernel shell_history enabled'
 export GATSBY_TELEMETRY_DISABLED=1
-# shellcheck disable=SC2155
 export GPG_TTY="$(tty)"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1

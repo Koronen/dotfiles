@@ -3,7 +3,6 @@
 set -e
 
 if [ "$CODESPACES" = "true" ]; then
-  # shellcheck disable=SC2155
   export DOTFILES_DIRS="$(pwd)"
   export RCRC="${DOTFILES_DIRS}/host-codespace/rcrc"
 elif [ "$REMOTE_CONTAINERS" = "true" ]; then
