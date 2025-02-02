@@ -4,7 +4,7 @@ export SHELL="$(which zsh)"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=13'
 
 if [ -z "$SSH_AUTH_SOCK" ] && [ -S "${XDG_RUNTIME_DIR}/openssh_agent" ]; then
-  export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/openssh_agent"
+    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/openssh_agent"
 fi
 
 for envfile in "$HOME/.config/shenv.d"/*.sh; do

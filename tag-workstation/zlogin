@@ -1,5 +1,5 @@
 # shellcheck shell=sh
 
 if [ -z "$SSH_CONNECTION" ] && [ "$XDG_CURRENT_DESKTOP" != "GNOME" ]; then
-  systemctl --user start ssh-agent.service
+    systemctl --user start ssh-agent.service
 fi
