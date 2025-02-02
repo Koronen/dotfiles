@@ -7,10 +7,10 @@ autoload -z edit-command-line
 zle -N edit-command-line
 
 fpath=(
-    $HOME/.asdf/completions
-    $HOME/.zsh/bundle/zsh-completions/src
-    $HOME/.zsh/functions
-    $fpath
+  $HOME/.asdf/completions
+  $HOME/.zsh/bundle/zsh-completions/src
+  $HOME/.zsh/functions
+  $fpath
 )
 autoload -Uz compinit && compinit -i
 
@@ -23,11 +23,11 @@ bindkey '^[[Z' reverse-menu-complete
 . "$HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 for rcfile in "$HOME/.zsh/rc.d"/*.zsh; do
-    . "$rcfile"
+  . "$rcfile"
 done
 
 path=(.git/safe/../../bin $path)
 
 if [ -r "$HOME/.zshrc.local" ]; then
-    . "$HOME/.zshrc.local"
+  . "$HOME/.zshrc.local"
 fi
