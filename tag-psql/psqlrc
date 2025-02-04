@@ -1,6 +1,7 @@
 \pset null '(null)'
 \set COMP_KEYWORD_CASE upper
-\set HISTCONTROL ignoredups
+\set HISTCONTROL ignoreboth
+\set HISTSIZE 10000
 \set ON_ERROR_ROLLBACK interactive
 \timing
 \x auto
