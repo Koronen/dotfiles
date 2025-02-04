@@ -9,13 +9,6 @@ end
 
 IRB.conf[:SAVE_HISTORY] = 1000
 
-begin
-  gem 'awesome_print', '~> 1.1'
-  require 'awesome_print'
-  AwesomePrint.irb!
-rescue Gem::LoadError # rubocop:disable Lint/HandleExceptions
-end
-
 def numerical_summary(numbers)
   sorted_numbers = numbers.sort
 
