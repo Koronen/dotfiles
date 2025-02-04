@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 set -e
 
@@ -8,3 +8,7 @@ sudo apt install --yes \
   shellcheck \
   shfmt \
   yamllint
+
+mkdir -p .git/hooks
+printf "#!/bin/sh\n.bin/format && .bin/lint\n" >.git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
