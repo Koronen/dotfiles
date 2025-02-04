@@ -14,4 +14,4 @@ shellcheck .bin/* \
   tag-workstation/zlogin \
   zsh/rc.d/* zshenv zshrc
 
-yamllint . tag-ruby/gemrc
+yamllint . tag-ruby/config/gem/gemrc
