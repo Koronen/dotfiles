@@ -25,6 +25,14 @@ mkcd() {
   mkdir -p "$@" && cd "$_" || return
 }
 
+wbat() {
+  which "$@" | grep -vE "aliased to|not found" | xargs --no-run-if-empty batcat
+}
+wfile() {
+  which "$@" | grep --color=never -E "aliased to|not found"
+  which "$@" | grep -vE "aliased to|not found" | xargs --no-run-if-empty file
+}
+
 for aliasfile in "$HOME/.aliases.d"/*.sh; do
   . "$aliasfile"
 done
