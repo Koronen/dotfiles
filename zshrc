@@ -6,11 +6,14 @@ zle -N self-insert url-quote-magic
 autoload -z edit-command-line
 zle -N edit-command-line
 
+# shellcheck disable=SC2034
+typeset -U FPATH fpath
+typeset -U PATH path
+
 # shellcheck disable=SC2206
 fpath=(
-  "$HOME/.asdf/completions"
-  "$HOME/.zsh/bundle/zsh-completions/src"
   "$HOME/.zsh/functions"
+  "$HOME/.zsh/bundle/zsh-completions/src"
   $fpath
 )
 autoload -Uz compinit && compinit -i
@@ -28,7 +31,11 @@ for rcfile in "$HOME/.zsh/rc.d"/*.zsh; do
 done
 
 # shellcheck disable=SC2206
-path=(.git/safe/../../bin $path)
+path=(
+  .git/safe/../../bin
+  "$HOME/.asdf/shims"
+  $path
+)
 
 if [ -r "$HOME/.zshrc.local" ]; then
   . "$HOME/.zshrc.local"
