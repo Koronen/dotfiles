@@ -32,7 +32,6 @@ done
 
 # shellcheck disable=SC2206
 path=(
-  .git/safe/../../bin
   "$HOME/.asdf/shims"
   $path
 )
