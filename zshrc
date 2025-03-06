@@ -8,6 +8,7 @@ zle -N edit-command-line
 
 # shellcheck disable=SC2034
 typeset -U FPATH fpath
+# shellcheck disable=SC2034
 typeset -U PATH path
 
 # shellcheck disable=SC2206
@@ -30,11 +31,9 @@ for rcfile in "$HOME/.zsh/rc.d"/*.zsh; do
   . "$rcfile"
 done
 
-# shellcheck disable=SC2206
-path=(
-  "$HOME/.asdf/shims"
-  $path
-)
+if [ -d "${ASDF_DATA_DIR:-$HOME/.asdf}/shims" ]; then
+  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fi
 
 if [ -r "$HOME/.zshrc.local" ]; then
   . "$HOME/.zshrc.local"
