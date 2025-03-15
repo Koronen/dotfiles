@@ -9,7 +9,6 @@ shellcheck .bin/* \
   config/shenv.d/* \
   hooks/**/* \
   install.sh \
-  profile \
   tag-workstation/config/git/templates/hooks/* \
   tag-workstation/zlogin \
   zsh/rc.d/* zshenv zshrc

@@ -1,3 +1,7 @@
 # shellcheck shell=bash
-. "$HOME/.profile"
-[ -n "$SSH_CONNECTION" ] && . "$HOME/.bashrc"
+
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
+if [ -n "$SSH_CONNECTION" ] || [ "$TERM" = "linux" ]; then
+  . "$HOME/.bashrc"
+fi

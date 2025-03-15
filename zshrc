@@ -8,8 +8,6 @@ zle -N edit-command-line
 
 # shellcheck disable=SC2034
 typeset -U FPATH fpath
-# shellcheck disable=SC2034
-typeset -U PATH path
 
 # shellcheck disable=SC2206
 fpath=(
@@ -30,10 +28,6 @@ bindkey '^[[Z' reverse-menu-complete
 for rcfile in "$HOME/.zsh/rc.d"/*.zsh; do
   . "$rcfile"
 done
-
-if [ -d "${ASDF_DATA_DIR:-$HOME/.asdf}/shims" ]; then
-  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-fi
 
 if [ -r "$HOME/.zshrc.local" ]; then
   . "$HOME/.zshrc.local"
