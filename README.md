@@ -7,6 +7,7 @@ These are my configuration files for various programs.
 The recommended way to install these dotfiles on a new machine is to clone this
 repo using Git and to link the files using RCM.
 
+    sudo apt install curl git rcm
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
     ln -s ~/.dotfiles/rcrc ~/.rcrc
     rcup

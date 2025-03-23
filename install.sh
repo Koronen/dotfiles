@@ -19,6 +19,6 @@ else
 fi
 
 $sudo env DEBIAN_FRONTEND=noninteractive apt-get update
-$sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes git rcm
+$sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes curl git rcm
 
 rcup -f -v
