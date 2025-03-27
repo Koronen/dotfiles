@@ -14,3 +14,5 @@ alias rbt=bin/standardrb
 alias rbtf='bin/standardrb --fix'
 
 alias rspec=bin/rspec
+alias rspecg='bin/rspec $(git status --porcelain spec | grep -v "^ \?D" | cut -b 4-)'
+alias rspecG='bin/rspec $(git diff-tree --no-commit-id --name-only --diff-filter=d -r HEAD spec)'
