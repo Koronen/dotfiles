@@ -1,8 +1,12 @@
 # shellcheck shell=bash
 
 # shellcheck disable=SC2034
+typeset -U CDPATH cdpath
+
+# shellcheck disable=SC2034
 typeset -U PATH path
 
+export CDPATH="$HOME/src/github.com"
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export SHELL="$(which zsh)"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=13'
