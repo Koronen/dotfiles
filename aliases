@@ -6,6 +6,7 @@ alias ....='cd ../../..'
 if command -v batcat >/dev/null; then
   alias bat=batcat
 fi
+alias cdpath="echo \$CDPATH | tr -s ':' '\\n'"
 alias debu='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 alias df='df -h'
 alias hex='openssl rand -hex'
