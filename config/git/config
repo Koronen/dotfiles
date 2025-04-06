@@ -87,5 +87,8 @@
 [include]
 	path = ~/.config/git/config_workstation
 
+[includeIf "gitdir:~/src/github.com/ThisisDeploy/"]
+	path = ~/.config/git/config_thisisdeploy
+
 [include]
 	path = ~/.config/git/config_local
