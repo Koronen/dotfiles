@@ -12,14 +12,20 @@
 [apply]
 	whitespace = fix
 
+[branch]
+	sort = -committerdate
+
 [color]
+	ui = auto
+
+[column]
 	ui = auto
 
 [diff "exif"]
 	textconv = exiftool
 
 [diff]
-	algorithm = patience
+	algorithm = histogram
 	colorMoved = default
 	mnemonicPrefix = true
 	renames = copies
@@ -44,6 +50,9 @@
 [grep]
 	lineNumber = true
 
+[help]
+	autoCorrect = prompt
+
 [init]
 	defaultBranch = main
 
@@ -56,12 +65,19 @@
 	follow = true
 	showSignature = true
 
+[merge]
+	conflictStyle = zdiff3
+
 [mergetool]
 	keepBackup = false
 	prompt = false
 
 [pull]
 	ff = only
+
+[push]
+	autoSetupRemote = true
+	followTags = true
 
 [rebase]
 	autoSquash = true
@@ -72,7 +88,11 @@
 	fsckObjects = true
 
 [rerere]
+	autoUpdate = true
 	enabled = true
+
+[tag]
+	sort = version:refname
 
 [transfer]
 	fsckObjects = true
