@@ -91,6 +91,9 @@
 	autoUpdate = true
 	enabled = true
 
+[revert]
+	reference = true
+
 [tag]
 	sort = version:refname
 
