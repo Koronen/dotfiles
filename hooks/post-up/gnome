@@ -8,6 +8,8 @@ fi
 
 . /etc/os-release
 
+gsettings set org.gnome.calculator refresh-interval 0
+
 gsettings set org.gnome.desktop.calendar show-weekdate true
 
 gsettings set org.gnome.desktop.interface clock-format '24h'
