@@ -15,6 +15,7 @@ set $term gnome-terminal
 set $menu fuzzel
 
 include /etc/sway/config-vars.d/*
+include /etc/sway/config.d/*
 
 ### Output configuration
 #
@@ -36,7 +37,6 @@ exec swayidle -w \
 
 ### Input configuration
 #
-
 input type:keyboard {
     xkb_layout se
 }
@@ -222,17 +222,14 @@ bindsym $mod+r mode "resize"
 #
     bindsym $mod+F11 exec swaylock -f -c 000000
 
+### Status Bar
 #
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
 }
 
-#
-# Miscellaneous:
+### Miscellaneous
 #
 for_window [shell="xwayland"] title_format "[XW] %title"
 
-include /etc/sway/config.d/*
+include ~/.config/sway/config.d/*
