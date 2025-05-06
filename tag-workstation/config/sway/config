@@ -1,7 +1,3 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
@@ -22,8 +18,8 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg #333333 solid_color
+
 #
 # Example configuration:
 #
@@ -43,6 +39,11 @@ exec swayidle -w \
 
 input type:keyboard {
     xkb_layout se
+}
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
 }
 
 ### Key bindings
@@ -129,6 +130,11 @@ input type:keyboard {
     bindsym $mod+Ctrl+Shift+$down move workspace to output down
     bindsym $mod+Ctrl+Shift+$up move workspace to output up
     bindsym $mod+Ctrl+Shift+$right move workspace to output right
+    # Ditto, with arrow keys
+    bindsym $mod+Ctrl+Shift+Left move workspace to output left
+    bindsym $mod+Ctrl+Shift+Down move workspace to output down
+    bindsym $mod+Ctrl+Shift+Up move workspace to output up
+    bindsym $mod+Ctrl+Shift+Right move workspace to output right
 
 #
 # Layout stuff:
@@ -212,11 +218,21 @@ bindsym $mod+r mode "resize"
     bindsym XF86ScreenSaver exec swaylock -f -c 000000
 
 #
+# Alternate media keys:
+#
+    bindsym $mod+F11 exec swaylock -f -c 000000
+
+#
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
 }
+
+#
+# Miscellaneous:
+#
+for_window [shell="xwayland"] title_format "[XW] %title"
 
 include /etc/sway/config.d/*
