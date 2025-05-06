@@ -1,6 +1,7 @@
 # shellcheck shell=sh
 
 export ASDF_DATA_DIR="$HOME/.asdf"
+export ELECTRON_OZONE_PLATFORM_HINT=auto
 export ERL_AFLAGS='-kernel shell_history enabled'
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
