@@ -222,6 +222,12 @@ bindsym $mod+r mode "resize"
 #
     bindsym $mod+F11 exec swaylock -f -c 000000
 
+#
+# Screen capture:
+#
+    bindsym Print exec grimshot save active
+    bindsym $mod+Print exec grimshot copy area
+
 ### Status Bar
 #
 bar {
