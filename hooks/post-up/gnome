@@ -19,6 +19,7 @@ gsettings set org.gnome.desktop.interface enable-hot-corners false
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 if [ "$ID" = "ubuntu" ]; then
   gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-dark'
 fi
 
 gsettings set org.gnome.desktop.media-handling autorun-x-content-start-app []
