@@ -22,6 +22,7 @@
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.excludeGitIgnore": false,
   "extensions.ignoreRecommendations": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -35,6 +36,7 @@
   "rdbg.rubyVersionManager": "asdf",
   "search.useGlobalIgnoreFiles": true,
   "search.useIgnoreFiles": true,
+  "search.useParentIgnoreFiles": true,
   "telemetry.telemetryLevel": "off",
   "window.zoomLevel": 1,
   "workbench.colorCustomizations": {
