@@ -12,5 +12,3 @@ shellcheck .bin/* \
   tag-workstation/config/git/templates/hooks/* \
   tag-workstation/zlogin \
   zsh/rc.d/* zshenv zshrc
-
-yamllint . tag-ruby/config/gem/gemrc

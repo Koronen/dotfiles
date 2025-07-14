@@ -1,0 +1,19 @@
+---
+repos:
+  - repo: local
+    hooks:
+      - id: shfmt
+        name: shfmt
+        language: script
+        entry: .bin/shfmt
+        pass_filenames: false
+      - id: shellcheck
+        name: shellcheck
+        language: script
+        entry: .bin/shellcheck
+        pass_filenames: false
+      - id: yamllint
+        name: yamllint
+        language: system
+        entry: yamllint
+        types: [yaml]
