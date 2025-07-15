@@ -2,11 +2,18 @@
 repos:
   - repo: local
     hooks:
-      - id: shfmt
-        name: shfmt
-        language: script
-        entry: .bin/shfmt
-        pass_filenames: false
+      - id: shfmt-posix
+        name: shfmt (POSIX)
+        language: system
+        entry: shfmt --case-indent --indent 2 --posix --write
+        types: [shell]
+        exclude: ^(bash|hooks/|zsh)
+      - id: shfmt-auto
+        name: shfmt (auto)
+        language: system
+        entry: shfmt --case-indent --indent 2 --language-dialect auto --write
+        files: ^(aliases$|bash|hooks/|tag-workstation/zlogin$|zsh)
+        exclude: ^zsh/functions/prompt_koronen_setup$
       - id: shellcheck
         name: shellcheck
         language: script
