@@ -16,9 +16,14 @@ repos:
         exclude: ^zsh/functions/prompt_koronen_setup$
       - id: shellcheck
         name: shellcheck
-        language: script
-        entry: .bin/shellcheck
-        pass_filenames: false
+        language: system
+        entry: shellcheck
+        types: [shell]
+      - id: shellcheck-extra
+        name: shellcheck (extra)
+        language: system
+        entry: shellcheck
+        files: ^(aliases|bash_profile|bashrc|tag-workstation/zlogin|zshenv|zshrc)$
       - id: yamllint
         name: yamllint
         language: system
