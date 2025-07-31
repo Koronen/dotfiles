@@ -1,4 +1,5 @@
 docker.io/library/debian:bookworm
+docker.io/library/debian:trixie
 docker.io/library/node:lts
 mcr.microsoft.com/devcontainers/base:bookworm
 mcr.microsoft.com/devcontainers/ruby:3.3-bookworm
