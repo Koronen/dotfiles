@@ -34,6 +34,11 @@ gsettings set org.gnome.desktop.screensaver lock-enabled true
 
 gsettings set org.gnome.desktop.session idle-delay 300
 
+gsettings set org.gnome.evolution.calendar show-week-numbers true
+gsettings set org.gnome.evolution.calendar use-24hour-format true
+gsettings set org.gnome.evolution.calendar week-start-day-name 'monday'
+gsettings set org.gnome.evolution.mail image-loading-policy 'never'
+
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 
 if [ "$ID" = "ubuntu" ]; then
