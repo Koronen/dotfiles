@@ -9,6 +9,8 @@
 ._*
 .bundle/
 .idea/
+.mise.*.local.toml
+.mise.local.toml
 .stfolder/
 .stignore
 .stversions/
