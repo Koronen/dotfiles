@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-set -e
-
-if command -v volta >/dev/null; then
-  volta completions zsh >"$HOME/.zsh/functions/_volta"
-fi
