@@ -2,6 +2,6 @@
 
 set -e
 
-if command -v asdf >/dev/null && [ "$(command -v asdf)" != "$HOME/.asdf/bin/asdf" ]; then
+if command -v asdf >/dev/null; then
   asdf completion zsh >"$HOME/.zsh/functions/_asdf"
 fi
