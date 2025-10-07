@@ -9,6 +9,9 @@
     "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSaveMode": "file"
   },
+  "[terraform]": {
+    "editor.formatOnSave": false
+  },
   "dev.containers.copyGitConfig": false,
   "dotfiles.repository": "https://github.com/Koronen/dotfiles.git",
   "dotfiles.targetPath": "~/.dotfiles",
