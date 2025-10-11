@@ -8,6 +8,7 @@
 *.ex      diff=elixir
 *.exs     diff=elixir
 *.gif     diff=exif
+*.gpg     diff=gpg
 *.go      diff=golang
 *.h       diff=cpp
 *.h++     diff=cpp
