@@ -1,0 +1,5 @@
+#compdef sops
+
+if command -v sops >/dev/null; then
+  source <(sops completion zsh)
+fi
