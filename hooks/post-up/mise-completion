@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+if command -v mise >/dev/null; then
+  mkdir -p "$HOME/.local/share/bash-completion/completions"
+  mise completion bash --include-bash-completion-lib >"$HOME/.local/share/bash-completion/completions/mise"
+  mise completion zsh >"$HOME/.zsh/functions/_mise"
+fi
