@@ -8,6 +8,7 @@ remove_old_symlink() {
   fi
 }
 
+remove_old_symlink "$HOME/.default-gems"
 remove_old_symlink "$HOME/.dircolors"
 remove_old_symlink "$HOME/.gemrc"
 remove_old_symlink "$HOME/.gitattributes"
