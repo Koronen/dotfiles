@@ -1,0 +1,8 @@
+[settings]
+idiomatic_version_file_enable_tools = ["node", "ruby"]
+
+[settings.ruby]
+default_packages_file = "~/.config/ruby/default-gems"
+
+[tools]
+usage = "latest"
