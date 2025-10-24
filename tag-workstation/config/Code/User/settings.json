@@ -34,7 +34,6 @@
   "liveshare.autoShareTerminals": false,
   "liveshare.focusBehavior": "prompt",
   "liveshare.guestApprovalRequired": true,
-  "rdbg.rubyVersionManager": "asdf",
   "search.useGlobalIgnoreFiles": true,
   "search.useIgnoreFiles": true,
   "search.useParentIgnoreFiles": true,
