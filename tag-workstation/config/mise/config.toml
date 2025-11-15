@@ -6,5 +6,6 @@ idiomatic_version_file_enable_tools = ["node", "ruby"]
 default_packages_file = "~/.config/ruby/default-gems"
 
 [tools]
+gh = "latest"
 sops = "latest"
 usage = "latest"
