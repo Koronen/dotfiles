@@ -128,7 +128,7 @@ function! PreservingSearchAndCursor(command)
 endfunction
 noremap <silent> <leader><space> :call PreservingSearchAndCursor("%s/\\s\\+$//e")<CR>
 
-nnoremap <leader>gg :Ggrep<Space>
+nnoremap <leader>gg :Ggrep<Space><C-r>=expand("<cword>")<CR>
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
