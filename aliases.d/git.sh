@@ -61,6 +61,9 @@ alias glp='git log --patch --no-merges --topo-order'
 alias glpr='git log --patch --no-merges --topo-order --reverse'
 alias gls='git log --stat --no-merges --topo-order'
 
+# Merge (m)
+alias gm='git merge'
+
 # Push (p)
 alias gp='git push'
 alias gpc='git push --set-upstream origin `git symbolic-ref --short HEAD`'
