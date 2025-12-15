@@ -1,7 +1,0 @@
-#!/bin/sh
-
-set -e
-
-if command -v asdf >/dev/null; then
-  asdf completion zsh >"$HOME/.zsh/functions/_asdf"
-fi
