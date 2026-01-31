@@ -7,5 +7,6 @@ default_packages_file = "~/.config/ruby/default-gems"
 
 [tools]
 gh = "latest"
+ruby = "latest"
 sops = "latest"
 usage = "latest"
