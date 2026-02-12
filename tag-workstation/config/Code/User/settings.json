@@ -25,6 +25,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.excludeGitIgnore": false,
   "extensions.ignoreRecommendations": true,
+  "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
@@ -37,7 +38,9 @@
   "search.useGlobalIgnoreFiles": true,
   "search.useIgnoreFiles": true,
   "search.useParentIgnoreFiles": true,
+  "task.allowAutomaticTasks": false,
   "telemetry.telemetryLevel": "off",
+  "update.mode": "start",
   "window.zoomLevel": 1,
   "workbench.colorCustomizations": {
     "terminal.ansiBrightBlack": "#002B36"
