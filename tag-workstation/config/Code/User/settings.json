@@ -25,7 +25,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.excludeGitIgnore": false,
   "extensions.ignoreRecommendations": true,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
