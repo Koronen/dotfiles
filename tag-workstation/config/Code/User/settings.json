@@ -13,6 +13,7 @@
     "editor.formatOnSave": false
   },
   "claudeCode.initialPermissionMode": "plan",
+  "claudeCode.preferredLocation": "panel",
   "dev.containers.copyGitConfig": false,
   "dotfiles.repository": "https://github.com/Koronen/dotfiles.git",
   "dotfiles.targetPath": "~/.dotfiles",
