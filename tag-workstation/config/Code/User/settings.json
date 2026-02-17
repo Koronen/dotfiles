@@ -12,6 +12,7 @@
   "[terraform]": {
     "editor.formatOnSave": false
   },
+  "claudeCode.initialPermissionMode": "plan",
   "dev.containers.copyGitConfig": false,
   "dotfiles.repository": "https://github.com/Koronen/dotfiles.git",
   "dotfiles.targetPath": "~/.dotfiles",
