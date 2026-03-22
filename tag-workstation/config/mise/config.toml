@@ -1,6 +1,7 @@
 [settings]
 auto_install = false
 idiomatic_version_file_enable_tools = ["node", "ruby"]
+install_before = "3d"
 
 [settings.ruby]
 default_packages_file = "~/.config/ruby/default-gems"
