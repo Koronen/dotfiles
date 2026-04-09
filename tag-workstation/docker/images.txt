@@ -1,3 +1,4 @@
+docker.io/library/alpine:latest
 docker.io/library/debian:trixie
 docker.io/library/node:lts
 mcr.microsoft.com/devcontainers/base:trixie
