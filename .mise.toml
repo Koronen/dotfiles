@@ -1,0 +1,4 @@
+[tasks.install]
+alias = "i"
+description = "Install dependencies"
+run = ".bin/setup"
