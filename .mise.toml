@@ -1,4 +1,26 @@
+[tasks.format]
+alias = "f"
+description = "Format all files"
+depends = ["format:*"]
+
+[tasks."format:yamlfmt"]
+description = "Format YAML files"
+run = "yamlfmt ."
+
 [tasks.install]
 alias = "i"
 description = "Install dependencies"
 run = ".bin/setup"
+
+[tasks.lint]
+alias = "n"
+description = "Lint all files"
+depends = ["lint:*"]
+
+[tasks."lint:yamllint"]
+description = "Lint YAML files"
+run = "yamllint ."
+wait_for = ["format:yamlfmt"]
+
+[tools]
+yamlfmt = "latest"
