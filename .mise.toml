@@ -7,11 +7,6 @@ depends = ["format:*"]
 description = "Format YAML files"
 run = "yamlfmt ."
 
-[tasks.install]
-alias = "i"
-description = "Install dependencies"
-run = ".bin/setup"
-
 [tasks.lint]
 alias = "n"
 description = "Lint all files"
