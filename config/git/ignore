@@ -24,4 +24,5 @@ CLAUDE.local.md
 Thumbs.db
 compose.override.yml
 docker-compose.override.yml
+hk.local.pkl
 tags
