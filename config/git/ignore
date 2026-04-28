@@ -25,4 +25,6 @@ Thumbs.db
 compose.override.yml
 docker-compose.override.yml
 hk.local.pkl
+mise.*.local.toml
+mise.local.toml
 tags
