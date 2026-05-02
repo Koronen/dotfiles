@@ -1,9 +1,9 @@
-min_version = "2026.1.2"
+min_version = "2026.4.22"
 
 [settings]
 auto_install = false
 idiomatic_version_file_enable_tools = ["node", "ruby"]
-install_before = "3d"
+minimum_release_age = "3d"
 
 [settings.ruby]
 default_packages_file = "~/.config/ruby/default-gems"
