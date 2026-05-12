@@ -10,8 +10,8 @@
 .bundle/
 .claude/*.local.*
 .idea/
-.mise.*.local.toml
-.mise.local.toml
+.mise.*.local.*
+.mise.local.*
 .stfolder/
 .stignore
 .stversions/
@@ -25,6 +25,6 @@ Thumbs.db
 compose.override.yml
 docker-compose.override.yml
 hk.local.pkl
-mise.*.local.toml
-mise.local.toml
+mise.*.local.*
+mise.local.*
 tags
