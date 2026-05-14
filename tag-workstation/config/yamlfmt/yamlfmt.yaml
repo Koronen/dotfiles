@@ -1,5 +1,8 @@
 ---
 formatter:
   type: basic
+  drop_merge_tag: true
   include_document_start: true
+  max_line_length: 120
   retain_line_breaks: true
+  scan_folded_as_literal: true
