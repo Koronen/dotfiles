@@ -4,10 +4,7 @@ set -e
 
 sudo apt install --yes \
   git \
-  pre-commit \
   rcm \
   shellcheck \
   shfmt \
   yamllint
-
-pre-commit install

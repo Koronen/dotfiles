@@ -1,0 +1,52 @@
+amends "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Builtins.pkl"
+
+local shell_glob =
+  List(
+    "**/*.sh",
+    "**/*.bash",
+    "**/*.zsh",
+    ".bin/*",
+    "bash_profile",
+    "bashrc",
+    "bin/*",
+    "hooks/**/*",
+    "tag-gpg/bin/gpg-edit-file",
+    "tag-workstation/config/git/templates/hooks/*",
+    "tag-workstation/zlogin",
+    "tag-workstation/functions/_*",
+    "zshenv",
+    "zshrc",
+  )
+
+local linters = new Mapping<String, Step> {
+  ["mise"] = Builtins.mise
+  ["pkl-format"] = Builtins.pkl_format
+  ["shellcheck"] = (Builtins.shellcheck) {
+    depends = "shfmt"
+    glob = shell_glob
+  }
+  ["shfmt"] = (Builtins.shfmt) {
+    glob = shell_glob
+  }
+  ["trailing-whitespace"] = Builtins.trailing_whitespace
+  ["yamlfmt"] = Builtins.yamlfmt
+  ["yamllint"] = (Builtins.yamllint) {
+    depends = "yamlfmt"
+  }
+}
+
+hooks {
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps = linters
+  }
+  ["fix"] {
+    fix = true
+    steps = linters
+  }
+  ["check"] {
+    steps = linters
+  }
+}

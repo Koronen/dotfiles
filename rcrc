@@ -1,4 +1,4 @@
 COPY_ALWAYS="local/share/flatpak/overrides/* var/app/*"
-EXCLUDES="README.md install.sh"
+EXCLUDES="README.md hk.pkl install.sh"
 SYMLINK_DIRS="bash vim/ft* vim/indent vim/plugin zsh"
 UNDOTTED="bin"

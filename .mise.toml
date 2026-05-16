@@ -1,21 +1,26 @@
+[env]
+HK_MISE = 1
+
+[hooks]
+postinstall = "hk install --mise"
+
+[settings]
+experimental = true # Enable hooks
+
 [tasks.format]
 alias = "f"
 description = "Format all files"
-depends = ["format:*"]
-
-[tasks."format:yamlfmt"]
-description = "Format YAML files"
-run = "yamlfmt ."
+run = "hk fix --all"
 
 [tasks.lint]
 alias = "n"
 description = "Lint all files"
-depends = ["lint:*"]
+run = "hk check --all"
 
-[tasks."lint:yamllint"]
-description = "Lint YAML files"
-run = "yamllint ."
-wait_for = ["format:yamlfmt"]
+[tasks.pre-commit]
+run = "hk run pre-commit"
 
 [tools]
+hk = "latest"
+pkl = "latest"
 yamlfmt = "latest"
