@@ -1,0 +1,35 @@
+root = true
+
+[*]
+indent_size        = 2
+indent_style       = space
+shell_variant      = posix
+switch_case_indent = true
+
+[.gitmodules]
+indent_size  = 8
+indent_style = tab
+
+[bash/**]
+shell_variant = bash
+
+[config/git/config]
+indent_size  = 8
+indent_style = tab
+
+[hooks/post-up/git]
+shell_variant = bash
+
+[Makefile]
+indent_size  = 8
+indent_style = tab
+
+[tag-workstation/config/git/config_workstation]
+indent_size  = 8
+indent_style = tab
+
+[zsh/**]
+shell_variant = bash
+
+[zsh/bundle/**]
+ignore = true
