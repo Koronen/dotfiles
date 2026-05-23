@@ -45,6 +45,7 @@ alias gf='git fetch'
 alias gfa='git fetch --all'
 alias gfc='git clone'
 alias gff='git pull --ff-only'
+alias gfff='git pull --ff-only --force'
 # shellcheck disable=SC2139
 alias gfm="git fetch origin ${remote_head}:${remote_head}"
 alias gfr='git pull --rebase'
