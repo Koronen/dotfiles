@@ -71,16 +71,7 @@ alias gp='git push'
 alias gpc='git push --set-upstream origin `git symbolic-ref --short HEAD`'
 alias gpf='git push --force-with-lease'
 alias gpF='git push --force'
-gpx() {
-  if [ $# -gt 1 ]; then
-    git push --delete "$@"
-  else
-    git push --delete origin "$@"
-  fi
-}
-if command -v compdef >/dev/null 2>&1; then
-  compdef _git gpx=git-push
-fi
+alias gpx='git push --delete origin'
 
 # Rebase (r)
 alias gr='git rebase'
