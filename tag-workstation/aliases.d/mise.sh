@@ -2,10 +2,11 @@
 
 alias m=mise
 alias md='mise deps'
+alias mi='mise install'
 alias ml='mise ls'
+alias mL='mise ls-remote'
 alias mu='mise upgrade'
 alias mU='mise self-update'
-alias mr='mise run'
 
 alias b='mise run build'
 alias c='mise run console'
