@@ -13,7 +13,7 @@ function! PackInit() abort
   call minpac#add('bogado/file-line')
   call minpac#add('ConradIrwin/vim-bracketed-paste')
   call minpac#add('ctrlpvim/ctrlp.vim', {'frozen': v:true, 'rev': '3739dcd638f457559d5a1ae1e398276175694e4b'})
-  call minpac#add('dense-analysis/ale')
+  call minpac#add('dense-analysis/ale', {'frozen': v:true, 'rev': '178fe113564d31cba304263765aeb21e7ed23a7e'})
   call minpac#add('editorconfig/editorconfig-vim', {'frozen': v:true, 'rev': 'c0227885a06b155d5aa5465e08b9800e8c939f70'})
   call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-peekaboo')
