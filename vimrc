@@ -12,7 +12,6 @@ function! PackInit() abort
   call minpac#add('vim-airline/vim-airline-themes')
   call minpac#add('bogado/file-line')
   call minpac#add('ConradIrwin/vim-bracketed-paste')
-  call minpac#add('chrisjohnson/vim-grep')
   call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('dense-analysis/ale')
   call minpac#add('editorconfig/editorconfig-vim', {'frozen': v:true, 'rev': 'c0227885a06b155d5aa5465e08b9800e8c939f70'})
