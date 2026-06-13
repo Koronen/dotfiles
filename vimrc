@@ -42,10 +42,6 @@ function! PackInit() abort
   call minpac#add('tpope/vim-surround')
   call minpac#add('tpope/vim-unimpaired')
   call minpac#add('tpope/vim-vinegar')
-
-  if filereadable(expand("~/.vimrc.bundles.local"))
-    source ~/.vimrc.bundles.local
-  endif
 endfunction
 
 command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac#status()'})
