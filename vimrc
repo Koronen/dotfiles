@@ -6,8 +6,6 @@ function! PackInit() abort
   packadd minpac
 
   call minpac#init()
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
-
   call minpac#add('airblade/vim-gitgutter')
   call minpac#add('altercation/vim-colors-solarized')
   call minpac#add('vim-airline/vim-airline')
