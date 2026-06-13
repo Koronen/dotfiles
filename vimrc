@@ -24,7 +24,6 @@ function! PackInit() abort
   call minpac#add('roman/golden-ratio')
   call minpac#add('sheerun/vim-polyglot')
   call minpac#add('thoughtbot/vim-rspec', {'frozen': v:true, 'rev': 'c0251b2e40eba5c9fb145adb8896424fa11972da'})
-  call minpac#add('tpope/vim-abolish')
   call minpac#add('tpope/vim-bundler')
   call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-endwise')
