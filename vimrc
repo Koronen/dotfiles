@@ -19,7 +19,6 @@ function! PackInit() abort
   call minpac#add('dense-analysis/ale')
   call minpac#add('editorconfig/editorconfig-vim')
   call minpac#add('ervandew/supertab')
-  call minpac#add('junegunn/vim-easy-align')
   call minpac#add('junegunn/vim-peekaboo')
   call minpac#add('kana/vim-textobj-user')
   call minpac#add('nelstrom/vim-textobj-rubyblock')
@@ -139,9 +138,6 @@ nmap ]a <Plug>(ale_next)
 nmap [a <Plug>(ale_previous)
 nmap ]A <Plug>(ale_last)
 nmap [A <Plug>(ale_first)
-
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 augroup vimrc
   autocmd!
