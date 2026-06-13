@@ -15,7 +15,7 @@ function! PackInit() abort
   call minpac#add('chrisjohnson/vim-grep')
   call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('dense-analysis/ale')
-  call minpac#add('editorconfig/editorconfig-vim')
+  call minpac#add('editorconfig/editorconfig-vim', {'frozen': v:true, 'rev': 'c0227885a06b155d5aa5465e08b9800e8c939f70'})
   call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-peekaboo')
   call minpac#add('kana/vim-textobj-user')
