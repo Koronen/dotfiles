@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -e
+
+PACKS_PATH="$HOME/.vim/pack"
+
+mkdir -p "$PACKS_PATH"
+
+pack() {
+  url="$1"
+  ref="$2"
+  plugin_path="${PACKS_PATH}/$3"
+
+  if [ ! -d "$plugin_path" ]; then
+    git clone "$url" "$plugin_path"
+  fi
+
+  git -C "$plugin_path" checkout --quiet "$ref"
+}
+
+pack "https://github.com/altercation/vim-colors-solarized.git" "528a59f26d12278698bb946f8fb82a63711eec21" "minpac/start/vim-colors-solarized"
+pack "https://github.com/ctrlpvim/ctrlp.vim.git" "3739dcd638f457559d5a1ae1e398276175694e4b" "minpac/start/ctrlp.vim"
+pack "https://github.com/dense-analysis/ale.git" "178fe113564d31cba304263765aeb21e7ed23a7e" "minpac/start/ale"
+pack "https://github.com/editorconfig/editorconfig-vim.git" "c0227885a06b155d5aa5465e08b9800e8c939f70" "minpac/start/editorconfig-vim"
+pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c14606098404e38625" "minpac/opt/minpac"
+pack "https://github.com/thoughtbot/vim-rspec.git" "c0251b2e40eba5c9fb145adb8896424fa11972da" "minpac/start/vim-rspec"

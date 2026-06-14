@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-if [ ! -d "$HOME/.vim/pack/minpac/opt/minpac" ]; then
-  git clone https://github.com/k-takata/minpac.git "$HOME/.vim/pack/minpac/opt/minpac"
-fi
-
-git -C "$HOME/.vim/pack/minpac/opt/minpac" checkout --quiet 7a616ad2393139dbdf7514c14606098404e38625
