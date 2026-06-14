@@ -13,6 +13,8 @@ pack() {
 
   if [ ! -d "$plugin_path" ]; then
     git clone "$url" "$plugin_path"
+  else
+    git -C "$plugin_path" fetch --quiet
   fi
 
   git -C "$plugin_path" checkout --quiet "$ref"
