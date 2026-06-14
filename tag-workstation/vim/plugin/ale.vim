@@ -9,3 +9,9 @@ let g:ale_linters_ignore = {
 \ 'elixir': ['dialyxir'],
 \ 'ruby': ['brakeman', 'rubocop']
 \}
+
+nmap <F8> <Plug>(ale_fix)
+nmap ]a <Plug>(ale_next)
+nmap [a <Plug>(ale_previous)
+nmap ]A <Plug>(ale_last)
+nmap [A <Plug>(ale_first)

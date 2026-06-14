@@ -88,7 +88,6 @@ set wildmode=list:longest,full
 nnoremap <silent> <space> :nohlsearch<CR>
 
 noremap <F1> <Nop>
-nmap <F8> <Plug>(ale_fix)
 
 nnoremap Q <Nop>
 nnoremap K <Nop>
@@ -115,16 +114,6 @@ endfunction
 noremap <silent> <leader><space> :call PreservingSearchAndCursor("%s/\\s\\+$//e")<CR>
 
 nnoremap <leader>gg :Ggrep<Space><C-r>=expand("<cword>")<CR>
-
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-nmap ]a <Plug>(ale_next)
-nmap [a <Plug>(ale_previous)
-nmap ]A <Plug>(ale_last)
-nmap [A <Plug>(ale_first)
 
 augroup vimrc
   autocmd!
