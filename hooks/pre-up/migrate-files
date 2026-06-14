@@ -13,6 +13,20 @@ if [ -L "$HOME/.vim" ] && [ -d "$HOME/.dotfiles/vim/pack" ]; then
   mv "$HOME/.dotfiles/vim/pack" "$HOME/.vim/pack"
 fi
 
+mkdir -p "$HOME/.vim/pack/plugins/start"
+
+move_plugin() {
+  if [ -d "$HOME/.vim/pack/minpac/start/$1" ] && [ ! -d "$HOME/.vim/pack/plugins/start/$1" ]; then
+    mv "$HOME/.vim/pack/minpac/start/$1" "$HOME/.vim/pack/plugins/start/$1"
+  fi
+}
+
+move_plugin "ale"
+move_plugin "ctrlp.vim"
+move_plugin "editorconfig-vim"
+move_plugin "vim-colors-solarized"
+move_plugin "vim-rspec"
+
 if [ -L "$HOME/.vim/plugin" ]; then
   rm "$HOME/.vim/plugin"
 fi
