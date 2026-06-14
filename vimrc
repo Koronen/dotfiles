@@ -10,7 +10,6 @@ function! PackInit() abort
   call minpac#add('vim-airline/vim-airline')
   call minpac#add('vim-airline/vim-airline-themes')
   call minpac#add('bogado/file-line')
-  call minpac#add('ConradIrwin/vim-bracketed-paste')
   call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-peekaboo')
   call minpac#add('kana/vim-textobj-user')
