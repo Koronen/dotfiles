@@ -20,6 +20,6 @@ run = "hk check --all"
 run = "hk run pre-commit"
 
 [tools]
-hk = "latest"
+hk = "1"
 pkl = "latest"
 yamlfmt = "latest"
