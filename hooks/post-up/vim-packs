@@ -32,5 +32,4 @@ if [ -L "$HOME/.vim/spell/Makefile" ]; then
   pack "https://github.com/dense-analysis/ale.git" "178fe113564d31cba304263765aeb21e7ed23a7e" "plugins/start/ale"
   pack "https://github.com/junegunn/vim-peekaboo.git" "2a8a3187ba6b15201b2563a3f0331fcdf49da36c" "plugins/start/vim-peekaboo"
   pack "https://github.com/sheerun/vim-polyglot.git" "f061eddb7cdcc614c8406847b2bfb53099832a4e" "plugins/start/vim-polyglot"
-  pack "https://github.com/thoughtbot/vim-rspec.git" "c0251b2e40eba5c9fb145adb8896424fa11972da" "plugins/start/vim-rspec"
 fi

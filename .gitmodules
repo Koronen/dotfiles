@@ -1,3 +1,6 @@
+[submodule "tag-workstation/vim/pack/submodules/start/vim-rspec"]
+	path = tag-workstation/vim/pack/submodules/start/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec.git
 [submodule "vim/pack/submodules/start/vim-colors-solarized"]
 	path = vim/pack/submodules/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
