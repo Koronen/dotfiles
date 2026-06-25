@@ -22,7 +22,6 @@ move_plugin() {
 }
 
 move_plugin "ale"
-move_plugin "ctrlp.vim"
 move_plugin "file-line"
 move_plugin "golden-ratio"
 move_plugin "supertab"
