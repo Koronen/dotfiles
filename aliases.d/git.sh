@@ -12,6 +12,8 @@ alias g='git'
 alias g-='git checkout -'
 alias g.='git add .'
 
+alias lg=lazygit
+
 # Branch (b)
 alias gb='git branch'
 alias gbc='git checkout -b'
