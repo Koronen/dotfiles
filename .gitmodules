@@ -7,6 +7,9 @@
 [submodule "tag-workstation/vim/pack/submodules/start/vim-peekaboo"]
 	path = tag-workstation/vim/pack/submodules/start/vim-peekaboo
 	url = https://github.com/junegunn/vim-peekaboo.git
+[submodule "tag-workstation/vim/pack/submodules/start/vim-polyglot"]
+	path = tag-workstation/vim/pack/submodules/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
 [submodule "tag-workstation/vim/pack/submodules/start/vim-rspec"]
 	path = tag-workstation/vim/pack/submodules/start/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git

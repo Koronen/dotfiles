@@ -21,7 +21,3 @@ pack() {
 }
 
 pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c14606098404e38625" "minpac/opt/minpac"
-
-if [ -L "$HOME/.vim/spell/Makefile" ]; then
-  pack "https://github.com/sheerun/vim-polyglot.git" "f061eddb7cdcc614c8406847b2bfb53099832a4e" "plugins/start/vim-polyglot"
-fi
