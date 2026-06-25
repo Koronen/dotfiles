@@ -25,6 +25,7 @@ move_plugin "ale"
 move_plugin "ctrlp.vim"
 move_plugin "editorconfig-vim"
 move_plugin "vim-colors-solarized"
+move_plugin "vim-polyglot"
 move_plugin "vim-rspec"
 
 if [ -L "$HOME/.vim/plugin" ]; then

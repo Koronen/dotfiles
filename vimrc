@@ -13,7 +13,6 @@ function! PackInit() abort
   call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-peekaboo')
   call minpac#add('roman/golden-ratio')
-  call minpac#add('sheerun/vim-polyglot')
   call minpac#add('tpope/vim-bundler')
   call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-endwise')
