@@ -22,6 +22,7 @@ pack() {
 
 pack "https://github.com/altercation/vim-colors-solarized.git" "528a59f26d12278698bb946f8fb82a63711eec21" "plugins/start/vim-colors-solarized"
 pack "https://github.com/bogado/file-line.git" "067ebe45dd3da0344d543b09441ee9b7fd886851" "plugins/start/file-line"
+pack "https://github.com/ervandew/supertab.git" "8705ae0e43b34339c06328fa6dab24ecaf21aab6" "plugins/start/supertab"
 pack "https://github.com/ctrlpvim/ctrlp.vim.git" "3739dcd638f457559d5a1ae1e398276175694e4b" "plugins/start/ctrlp.vim"
 pack "https://github.com/editorconfig/editorconfig-vim.git" "c0227885a06b155d5aa5465e08b9800e8c939f70" "plugins/start/editorconfig-vim"
 pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c14606098404e38625" "minpac/opt/minpac"

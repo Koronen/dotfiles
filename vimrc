@@ -9,7 +9,6 @@ function! PackInit() abort
   call minpac#add('airblade/vim-gitgutter')
   call minpac#add('vim-airline/vim-airline')
   call minpac#add('vim-airline/vim-airline-themes')
-  call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-peekaboo')
   call minpac#add('roman/golden-ratio')
   call minpac#add('tpope/vim-bundler')
