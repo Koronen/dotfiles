@@ -20,7 +20,6 @@ pack() {
   git -C "$plugin_path" checkout --quiet "$ref"
 }
 
-pack "https://github.com/ervandew/supertab.git" "8705ae0e43b34339c06328fa6dab24ecaf21aab6" "plugins/start/supertab"
 pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c14606098404e38625" "minpac/opt/minpac"
 
 if [ -L "$HOME/.vim/spell/Makefile" ]; then

@@ -16,6 +16,9 @@
 [submodule "vim/pack/submodules/start/golden-ratio"]
 	path = vim/pack/submodules/start/golden-ratio
 	url = https://github.com/roman/golden-ratio.git
+[submodule "vim/pack/submodules/start/supertab"]
+	path = vim/pack/submodules/start/supertab
+	url = https://github.com/ervandew/supertab.git
 [submodule "vim/pack/submodules/start/vim-airline"]
 	path = vim/pack/submodules/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git

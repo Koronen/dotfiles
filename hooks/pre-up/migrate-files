@@ -21,7 +21,6 @@ move_plugin() {
   fi
 }
 
-move_plugin "supertab"
 move_plugin "vim-gitgutter"
 move_plugin "vim-peekaboo"
 move_plugin "vim-polyglot"
