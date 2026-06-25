@@ -10,6 +10,12 @@
 [submodule "vim/pack/submodules/start/editorconfig-vim"]
 	path = vim/pack/submodules/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "vim/pack/submodules/start/vim-airline"]
+	path = vim/pack/submodules/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/submodules/start/vim-airline-themes"]
+	path = vim/pack/submodules/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim/pack/submodules/start/vim-colors-solarized"]
 	path = vim/pack/submodules/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git

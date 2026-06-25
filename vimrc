@@ -6,8 +6,6 @@ function! PackInit() abort
   packadd minpac
 
   call minpac#init()
-  call minpac#add('vim-airline/vim-airline')
-  call minpac#add('vim-airline/vim-airline-themes')
   call minpac#add('tpope/vim-bundler')
   call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-endwise')
