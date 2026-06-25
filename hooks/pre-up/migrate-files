@@ -28,6 +28,7 @@ move_plugin "file-line"
 move_plugin "supertab"
 move_plugin "vim-colors-solarized"
 move_plugin "vim-gitgutter"
+move_plugin "vim-peekaboo"
 move_plugin "vim-polyglot"
 move_plugin "vim-rspec"
 
