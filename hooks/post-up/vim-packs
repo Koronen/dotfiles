@@ -28,7 +28,8 @@ pack "https://github.com/editorconfig/editorconfig-vim.git" "c0227885a06b155d5aa
 pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c14606098404e38625" "minpac/opt/minpac"
 
 if [ -L "$HOME/.vim/spell/Makefile" ]; then
+  pack "https://github.com/airblade/vim-gitgutter.git" "21c977e8597c468c7dc76001389b0b430d46a4b0" "plugins/start/vim-gitgutter"
   pack "https://github.com/dense-analysis/ale.git" "178fe113564d31cba304263765aeb21e7ed23a7e" "plugins/start/ale"
-  pack "https://github.com/thoughtbot/vim-rspec.git" "c0251b2e40eba5c9fb145adb8896424fa11972da" "plugins/start/vim-rspec"
   pack "https://github.com/sheerun/vim-polyglot.git" "f061eddb7cdcc614c8406847b2bfb53099832a4e" "plugins/start/vim-polyglot"
+  pack "https://github.com/thoughtbot/vim-rspec.git" "c0251b2e40eba5c9fb145adb8896424fa11972da" "plugins/start/vim-rspec"
 fi

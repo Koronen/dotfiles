@@ -6,7 +6,6 @@ function! PackInit() abort
   packadd minpac
 
   call minpac#init()
-  call minpac#add('airblade/vim-gitgutter')
   call minpac#add('vim-airline/vim-airline')
   call minpac#add('vim-airline/vim-airline-themes')
   call minpac#add('junegunn/vim-peekaboo')
