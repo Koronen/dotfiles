@@ -24,6 +24,7 @@ move_plugin() {
 move_plugin "ale"
 move_plugin "ctrlp.vim"
 move_plugin "editorconfig-vim"
+move_plugin "file-line"
 move_plugin "vim-colors-solarized"
 move_plugin "vim-polyglot"
 move_plugin "vim-rspec"
