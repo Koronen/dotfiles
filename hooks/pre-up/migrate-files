@@ -7,10 +7,8 @@ if [ -d "$HOME/.tmux" ] && [ ! -d "$HOME/.config/tmux" ]; then
   mv "$HOME/.tmux" "$HOME/.config/tmux"
 fi
 
-if [ -L "$HOME/.vim" ] && [ -d "$HOME/.dotfiles/vim/pack" ]; then
+if [ -L "$HOME/.vim" ]; then
   rm "$HOME/.vim"
-  mkdir "$HOME/.vim"
-  mv "$HOME/.dotfiles/vim/pack" "$HOME/.vim/pack"
 fi
 
 if [ -L "$HOME/.vim/plugin" ]; then
