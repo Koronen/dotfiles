@@ -12,7 +12,6 @@ function! PackInit() abort
   call minpac#add('bogado/file-line')
   call minpac#add('ervandew/supertab')
   call minpac#add('junegunn/vim-peekaboo')
-  call minpac#add('kana/vim-textobj-user')
   call minpac#add('pbrisbin/vim-mkdir')
   call minpac#add('roman/golden-ratio')
   call minpac#add('sheerun/vim-polyglot')
