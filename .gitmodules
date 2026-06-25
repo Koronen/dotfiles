@@ -10,6 +10,9 @@
 [submodule "vim/pack/submodules/start/editorconfig-vim"]
 	path = vim/pack/submodules/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "vim/pack/submodules/start/file-line"]
+	path = vim/pack/submodules/start/file-line
+	url = https://github.com/bogado/file-line.git
 [submodule "vim/pack/submodules/start/vim-airline"]
 	path = vim/pack/submodules/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git

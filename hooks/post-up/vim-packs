@@ -20,7 +20,6 @@ pack() {
   git -C "$plugin_path" checkout --quiet "$ref"
 }
 
-pack "https://github.com/bogado/file-line.git" "067ebe45dd3da0344d543b09441ee9b7fd886851" "plugins/start/file-line"
 pack "https://github.com/ervandew/supertab.git" "8705ae0e43b34339c06328fa6dab24ecaf21aab6" "plugins/start/supertab"
 pack "https://github.com/roman/golden-ratio.git" "636b8a1ea6bfe18296e61a8ac271b0101cb2ad3b" "plugins/start/golden-ratio"
 pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c14606098404e38625" "minpac/opt/minpac"
