@@ -27,7 +27,6 @@ pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c1460609840
 
 if [ -L "$HOME/.vim/spell/Makefile" ]; then
   pack "https://github.com/airblade/vim-gitgutter.git" "21c977e8597c468c7dc76001389b0b430d46a4b0" "plugins/start/vim-gitgutter"
-  pack "https://github.com/dense-analysis/ale.git" "178fe113564d31cba304263765aeb21e7ed23a7e" "plugins/start/ale"
   pack "https://github.com/junegunn/vim-peekaboo.git" "2a8a3187ba6b15201b2563a3f0331fcdf49da36c" "plugins/start/vim-peekaboo"
   pack "https://github.com/sheerun/vim-polyglot.git" "f061eddb7cdcc614c8406847b2bfb53099832a4e" "plugins/start/vim-polyglot"
 fi
