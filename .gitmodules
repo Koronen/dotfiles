@@ -1,3 +1,6 @@
+[submodule "vim/pack/submodules/start/vim-colors-solarized"]
+	path = vim/pack/submodules/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "zsh/bundle/zsh-syntax-highlighting"]
 	path = zsh/bundle/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
