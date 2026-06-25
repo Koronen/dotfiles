@@ -23,6 +23,5 @@ pack() {
 pack "https://github.com/k-takata/minpac.git" "7a616ad2393139dbdf7514c14606098404e38625" "minpac/opt/minpac"
 
 if [ -L "$HOME/.vim/spell/Makefile" ]; then
-  pack "https://github.com/junegunn/vim-peekaboo.git" "2a8a3187ba6b15201b2563a3f0331fcdf49da36c" "plugins/start/vim-peekaboo"
   pack "https://github.com/sheerun/vim-polyglot.git" "f061eddb7cdcc614c8406847b2bfb53099832a4e" "plugins/start/vim-polyglot"
 fi

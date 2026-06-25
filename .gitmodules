@@ -4,6 +4,9 @@
 [submodule "tag-workstation/vim/pack/submodules/start/vim-gitgutter"]
 	path = tag-workstation/vim/pack/submodules/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "tag-workstation/vim/pack/submodules/start/vim-peekaboo"]
+	path = tag-workstation/vim/pack/submodules/start/vim-peekaboo
+	url = https://github.com/junegunn/vim-peekaboo.git
 [submodule "tag-workstation/vim/pack/submodules/start/vim-rspec"]
 	path = tag-workstation/vim/pack/submodules/start/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git

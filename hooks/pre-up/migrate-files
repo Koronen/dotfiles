@@ -21,7 +21,6 @@ move_plugin() {
   fi
 }
 
-move_plugin "vim-peekaboo"
 move_plugin "vim-polyglot"
 
 if [ -L "$HOME/.vim/plugin" ]; then
