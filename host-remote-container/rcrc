@@ -1,4 +1,4 @@
-EXCLUDES="README.md hk.pkl install.sh"
+EXCLUDES="README.md install.sh"
 HOSTNAME="remote-container"
 SYMLINK_DIRS="bash vim/ft* vim/indent vim/pack/submodules/start/* zsh"
 TAGS="psql ruby"
