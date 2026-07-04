@@ -1,5 +1,6 @@
 # shellcheck shell=sh
 
+export DO_NOT_TRACK=1
 export GATSBY_TELEMETRY_DISABLED=1
 export HOMEBREW_NO_ANALYTICS=1
 export MISE_USE_VERSIONS_HOST_TRACK=0
