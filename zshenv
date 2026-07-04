@@ -6,6 +6,11 @@ typeset -U CDPATH cdpath
 # shellcheck disable=SC2034
 typeset -U PATH path
 
+if [ -d "/nix" ]; then
+  export NIX_REMOTE="${NIX_REMOTE:-daemon}"
+  export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
+fi
+
 export CDPATH="$HOME/src/github.com"
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export SHELL="$(which zsh)"
