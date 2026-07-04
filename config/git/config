@@ -61,6 +61,10 @@
 [help]
 	autoCorrect = prompt
 
+[hook "hk-pre-commit"]
+	command = "if command -v hk >/dev/null; then hk run pre-commit --from-hook \"$@\"; fi"
+	event = pre-commit
+
 [init]
 	defaultBranch = main
 
