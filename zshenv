@@ -6,7 +6,7 @@ typeset -U CDPATH cdpath
 # shellcheck disable=SC2034
 typeset -U PATH path
 
-if [ -d "/nix" ]; then
+if [ -d "/nix" ] && [ -r /usr/lib/environment.d/nix-daemon.conf ]; then
   export NIX_REMOTE="${NIX_REMOTE:-daemon}"
   export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
 fi
