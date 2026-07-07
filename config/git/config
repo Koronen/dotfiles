@@ -62,7 +62,7 @@
 	autoCorrect = prompt
 
 [hook "hk-pre-commit"]
-	command = "if command -v hk >/dev/null; then hk run pre-commit --from-hook \"$@\"; fi"
+	command = "if command -v hk >/dev/null; then hk run pre-commit --from-hook --staged \"$@\"; fi"
 	event = pre-commit
 
 [init]
