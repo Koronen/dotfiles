@@ -1,3 +1,5 @@
 --exclude=*.min.js
+--exclude=.claude/worktrees
 --exclude=.git
+--exclude=.yarn
 --exclude=node_modules
