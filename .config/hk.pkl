@@ -1,34 +1,36 @@
-amends "package://github.com/jdx/hk/releases/download/v1.49.0/hk@1.49.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v1.53.0/hk@1.53.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v1.49.0/hk@1.49.0#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.53.0/hk@1.53.0#/Builtins.pkl"
 
-local shell_glob =
+local shell_match_any =
   List(
-    "**/*.sh",
-    "**/*.bash",
-    "**/*.zsh",
-    ".bin/*",
-    "bash_profile",
-    "bashrc",
-    "bin/*",
-    "hooks/**/*",
-    "tag-gpg/bin/gpg-edit-file",
-    "tag-workstation/config/git/templates/hooks/*",
-    "tag-workstation/zlogin",
-    "tag-workstation/functions/_*",
-    "zshenv",
-    "zshrc",
+    new FileSelector {
+      glob =
+        List(
+          "**/*.sh",
+          "**/*.bash",
+          "**/*.zsh",
+          "bash_profile",
+          "bashrc",
+          "tag-workstation/zlogin",
+          "zsh/functions/*",
+          "zshenv",
+          "zshrc",
+        )
+    },
+    new FileSelector { types = List("sh", "bash") },
   )
 
 local linters = new Mapping<String, Step> {
   ["mise"] = Builtins.mise
   ["pkl-format"] = Builtins.pkl_format
   ["shellcheck"] = (Builtins.shellcheck) {
+    exclude = List("zsh/functions/prompt_koronen_setup")
     depends = "shfmt"
-    glob = shell_glob
+    match_any = shell_match_any
   }
   ["shfmt"] = (Builtins.shfmt) {
-    glob = shell_glob
+    match_any = shell_match_any
   }
   ["trailing-whitespace"] = Builtins.trailing_whitespace
   ["yamlfmt"] = Builtins.yamlfmt

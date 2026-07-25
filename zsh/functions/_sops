@@ -1,4 +1,5 @@
 #compdef sops
+# shellcheck shell=bash
 
 if command -v sops >/dev/null; then
   source <(sops completion zsh)
