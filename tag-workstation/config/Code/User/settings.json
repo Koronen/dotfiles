@@ -48,6 +48,7 @@
   "liveshare.autoShareTerminals": false,
   "liveshare.focusBehavior": "prompt",
   "liveshare.guestApprovalRequired": true,
+  "python.analysis.typeCheckingMode": "strict",
   "search.useGlobalIgnoreFiles": true,
   "search.useIgnoreFiles": true,
   "search.useParentIgnoreFiles": true,
