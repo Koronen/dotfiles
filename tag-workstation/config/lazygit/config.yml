@@ -4,3 +4,6 @@
 git:
   autoFetch: false
   fetchAll: false
+
+gui:
+  skipDiscardChangeWarning: true
