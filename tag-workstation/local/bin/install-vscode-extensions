@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+if [ -r "$HOME/.config/Code/User/extensions.txt" ]; then
+  sed -e 's/^/--install-extension /' <"$HOME/.config/Code/User/extensions.txt" | xargs code
+fi
