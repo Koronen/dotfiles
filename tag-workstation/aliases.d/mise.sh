@@ -4,6 +4,7 @@ alias m=mise
 alias md='mise deps'
 alias mi='mise install'
 alias ml='mise ls'
+alias mll='mise ls --local'
 alias mL='mise ls-remote'
 alias mu='mise upgrade'
 alias mU='mise self-update'
