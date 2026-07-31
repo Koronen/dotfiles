@@ -236,7 +236,8 @@ bindsym $mod+r mode "resize"
 ### Status Bar
 #
 bar {
-    swaybar_command waybar
+    # Managed by systemd
+    #swaybar_command waybar
 }
 
 ### Miscellaneous
