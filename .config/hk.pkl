@@ -2,6 +2,8 @@ amends "package://github.com/jdx/hk/releases/download/v1.53.0/hk@1.53.0#/Config.
 
 import "package://github.com/jdx/hk/releases/download/v1.53.0/hk@1.53.0#/Builtins.pkl"
 
+min_hk_version = "1.51.0"
+
 local shell_match_any =
   List(
     new FileSelector {
