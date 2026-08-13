@@ -9,7 +9,6 @@ minimum_release_age = "3d"
 default_packages_file = "~/.config/ruby/default-gems"
 
 [tools]
-devcontainer-cli = "latest"
 gh = "latest"
 node = "lts"
 ruby = "latest"
