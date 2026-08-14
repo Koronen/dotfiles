@@ -1,4 +1,19 @@
-min_version = "2026.4.22"
+min_version = "2026.7.16"
+
+[bootstrap.packages]
+"apt:build-essential" = "latest"
+"apt:curl" = "latest"
+"apt:rcm" = "latest"
+"apt:zsh" = "latest"
+
+[bootstrap.repos]
+"~/.dotfiles" = { url = "git@github.com:Koronen/dotfiles.git" }
+
+[bootstrap.user]
+login_shell = "/usr/bin/zsh"
+
+[dotfiles]
+"~/.config/mise/config.toml" = "~/.dotfiles/tag-workstation/config/mise/config.toml"
 
 [settings]
 auto_install = false
