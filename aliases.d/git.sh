@@ -22,6 +22,7 @@ alias gbd='git diff origin/HEAD...HEAD'
 alias gbg='git branch -vv | grep -E "\[origin/([^:]+): gone\]" | awk "{ print \$1 }" | xargs -r git branch -D'
 alias gbl='git branch -v'
 alias gbL='git branch -av'
+alias gbs='git switch'
 # shellcheck disable=SC2139
 alias gbw="git branch --merged | grep -v ${remote_head} | grep -vF '*' | xargs -r git branch -d"
 alias gbx='git branch -d'
