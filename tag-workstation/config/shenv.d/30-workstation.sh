@@ -5,3 +5,5 @@ export ERL_AFLAGS='-kernel shell_history enabled'
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HUSKY_SKIP_INSTALL=1
 export KERL_BUILD_DOCS='yes'
+export RUSTUP_AUTO_INSTALL=0
+export RUSTUP_HOME="$HOME/.local/share/rustup"
