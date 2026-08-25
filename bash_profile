@@ -14,6 +14,10 @@ if [ -d "/nix" ] && [ -r /usr/lib/environment.d/nix-daemon.conf ]; then
   esac
 fi
 
+if [ -d "$HOME/.cargo/bin" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 export CDPATH="$HOME/src/github.com"
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 

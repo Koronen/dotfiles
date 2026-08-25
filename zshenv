@@ -11,6 +11,10 @@ if [ -d "/nix" ] && [ -r /usr/lib/environment.d/nix-daemon.conf ]; then
   export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
 fi
 
+if [ -d "$HOME/.cargo/bin" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 export CDPATH="$HOME/src/github.com"
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export SHELL="$(which zsh)"
