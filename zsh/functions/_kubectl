@@ -1,6 +1,0 @@
-#compdef kubectl
-# shellcheck shell=bash
-
-if command -v kubectl >/dev/null; then
-  source <(kubectl completion zsh)
-fi

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p "$HOME/.local/share/zsh/completions"
+
+if command -v gh >/dev/null; then
+  gh completion --shell zsh >"$HOME/.local/share/zsh/completions/_gh"
+fi
+
+if command -v kubectl >/dev/null; then
+  kubectl completion zsh >"$HOME/.local/share/zsh/completions/_kubectl"
+fi
+
+if command -v mise >/dev/null; then
+  mise completion zsh >"$HOME/.local/share/zsh/completions/_mise"
+fi
+
+if command -v sops >/dev/null; then
+  sops completion zsh >"$HOME/.local/share/zsh/completions/_sops"
+fi
