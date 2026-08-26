@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p "$HOME/.local/share/bash-completion/completions"
+
+if command -v gh >/dev/null; then
+  gh completion --shell bash >"$HOME/.local/share/bash-completion/completions/gh"
+fi
+
+if command -v kubectl >/dev/null; then
+  kubectl completion bash >"$HOME/.local/share/bash-completion/completions/kubectl"
+fi
+
+if command -v mise >/dev/null; then
+  mise completion bash >"$HOME/.local/share/bash-completion/completions/mise"
+fi
+
+if command -v sops >/dev/null; then
+  sops completion bash >"$HOME/.local/share/bash-completion/completions/sops"
+fi
