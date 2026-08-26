@@ -11,7 +11,7 @@ typeset -U FPATH fpath
 
 # shellcheck disable=SC2206
 fpath=(
-  "$HOME/.zsh/functions"
+  "$HOME/.local/share/zsh/functions"
   "$HOME/.local/share/zsh/completions"
   "$HOME/.zsh/bundle/zsh-completions/src"
   $fpath

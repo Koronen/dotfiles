@@ -14,3 +14,7 @@ fi
 if [ -L "$HOME/.vim/plugin" ]; then
   rm "$HOME/.vim/plugin"
 fi
+
+if [ -L "$HOME/.zsh" ]; then
+  rm "$HOME/.zsh"
+fi

@@ -15,7 +15,7 @@ local shell_match_any =
           "bash_profile",
           "bashrc",
           "tag-workstation/zlogin",
-          "zsh/functions/*",
+          "local/share/zsh/functions/*",
           "zshenv",
           "zshrc",
         )
@@ -27,7 +27,7 @@ local linters = new Mapping<String, Step> {
   ["mise"] = Builtins.mise
   ["pkl-format"] = Builtins.pkl_format
   ["shellcheck"] = (Builtins.shellcheck) {
-    exclude = List("zsh/functions/prompt_koronen_setup")
+    exclude = List("local/share/zsh/functions/prompt_koronen_setup")
     depends = "shfmt"
     match_any = shell_match_any
   }
