@@ -27,7 +27,10 @@ if [ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 fi
 
 . "$HOME/.zsh/bundle/zsh-history-substring-search/zsh-history-substring-search.zsh"
-. "$HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+if [ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 for rcfile in "$HOME/.zsh/rc.d"/*.zsh; do
   . "$rcfile"
