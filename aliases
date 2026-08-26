@@ -9,6 +9,9 @@ fi
 alias cdpath="echo \$CDPATH | tr -s ':' '\\n'"
 alias debu='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 alias df='df -h'
+if command -v fdfind >/dev/null; then
+  alias fd=fdfind
+fi
 alias hex='openssl rand -hex'
 alias pag='ps aux | head -n1; ps aux | grep -i'
 alias path="echo \$PATH | tr -s ':' '\\n'"
