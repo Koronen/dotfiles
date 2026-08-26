@@ -13,9 +13,6 @@
 [submodule "tag-workstation/vim/pack/submodules/start/vim-rspec"]
 	path = tag-workstation/vim/pack/submodules/start/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
-[submodule "vim/pack/submodules/start/ctrlp.vim"]
-	path = vim/pack/submodules/start/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "vim/pack/submodules/start/editorconfig-vim"]
 	path = vim/pack/submodules/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
