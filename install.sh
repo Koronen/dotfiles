@@ -24,6 +24,8 @@ $sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes \
   git \
   rcm \
   vim \
+  vim-airline \
+  vim-airline-themes \
   vim-ctrlp \
   vim-solarized \
   zsh \

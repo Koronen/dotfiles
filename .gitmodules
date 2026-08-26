@@ -25,12 +25,6 @@
 [submodule "vim/pack/submodules/start/supertab"]
 	path = vim/pack/submodules/start/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/pack/submodules/start/vim-airline"]
-	path = vim/pack/submodules/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule "vim/pack/submodules/start/vim-airline-themes"]
-	path = vim/pack/submodules/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "zsh/bundle/zsh-completions"]
 	path = zsh/bundle/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
