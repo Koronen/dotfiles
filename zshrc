@@ -22,7 +22,10 @@ bindkey -e
 bindkey "^X^E" edit-command-line
 bindkey '^[[Z' reverse-menu-complete
 
-. "$HOME/.zsh/bundle/zsh-autosuggestions/zsh-autosuggestions.zsh"
+if [ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 . "$HOME/.zsh/bundle/zsh-history-substring-search/zsh-history-substring-search.zsh"
 . "$HOME/.zsh/bundle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
