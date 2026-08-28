@@ -1,6 +1,15 @@
+[core]
+	pager = delta
+
+[delta]
+	line-numbers = true
+
 [hook "ctags"]
 	command = git-ctags
 	event = post-checkout
 	event = post-commit
 	event = post-merge
 	event = post-rewrite
+
+[interactive]
+	diffFilter = delta --color-only
