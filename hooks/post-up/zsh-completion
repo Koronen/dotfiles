@@ -16,6 +16,10 @@ if command -v mise >/dev/null; then
   mise completion zsh >"$HOME/.local/share/zsh/completions/_mise"
 fi
 
+if command -v rustup >/dev/null; then
+  rustup completions zsh >"$HOME/.local/share/zsh/completions/_rustup"
+fi
+
 if command -v sops >/dev/null; then
   sops completion zsh >"$HOME/.local/share/zsh/completions/_sops"
 fi
