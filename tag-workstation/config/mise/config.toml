@@ -24,8 +24,8 @@ minimum_release_age = "3d"
 default_packages_file = "~/.config/ruby/default-gems"
 
 [tools]
-gh = "latest"
+gh = "2"
 node = "lts"
-ruby = "latest"
-sops = "latest"
+ruby = "4"
+sops = "3"
 yamlfmt = "latest"
