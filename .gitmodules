@@ -1,6 +1,9 @@
 [submodule "tag-workstation/vim/pack/submodules/start/ale"]
 	path = tag-workstation/vim/pack/submodules/start/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "tag-workstation/vim/pack/submodules/start/vim-commentary"]
+	path = tag-workstation/vim/pack/submodules/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "tag-workstation/vim/pack/submodules/start/vim-gitgutter"]
 	path = tag-workstation/vim/pack/submodules/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git

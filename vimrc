@@ -6,7 +6,6 @@ function! PackInit() abort
   packadd minpac
 
   call minpac#init()
-  call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-endwise')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('tpope/vim-projectionist')
