@@ -8,5 +8,6 @@ config
 frontend
 linter
 refactor
+toolchain
 whitespace
 worktree
