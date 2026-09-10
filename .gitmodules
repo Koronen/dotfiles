@@ -4,6 +4,9 @@
 [submodule "tag-workstation/vim/pack/submodules/start/vim-commentary"]
 	path = tag-workstation/vim/pack/submodules/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "tag-workstation/vim/pack/submodules/start/vim-endwise"]
+	path = tag-workstation/vim/pack/submodules/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
 [submodule "tag-workstation/vim/pack/submodules/start/vim-gitgutter"]
 	path = tag-workstation/vim/pack/submodules/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
