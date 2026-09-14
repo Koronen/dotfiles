@@ -20,3 +20,5 @@
 
 # Syntax mappings: map a certain filename pattern to a language.
 --map-syntax "hk.pkl:Lua"
+--map-syntax ".rcrc:Bourne Again Shell (bash)"
+--map-syntax "rcrc:Bourne Again Shell (bash)"
