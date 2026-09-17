@@ -1,8 +1,8 @@
-amends "package://github.com/jdx/hk/releases/download/v1.58.1/hk@1.58.1#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v1.58.1/hk@1.58.1#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.pkl"
 
-min_hk_version = "1.51.0"
+min_hk_version = "2.0.0"
 
 local shell_match_any =
   List(
@@ -23,7 +23,7 @@ local shell_match_any =
     new FileSelector { types = List("sh", "bash") },
   )
 
-local linters = new Mapping<String, Step> {
+steps {
   ["mise"] = Builtins.mise
   ["pkl-format"] = Builtins.pkl_format
   ["shellcheck"] = (Builtins.shellcheck) {
@@ -38,20 +38,5 @@ local linters = new Mapping<String, Step> {
   ["yamlfmt"] = Builtins.yamlfmt
   ["yamllint"] = (Builtins.yamllint) {
     depends = "yamlfmt"
-  }
-}
-
-hooks {
-  ["pre-commit"] {
-    fix = true
-    stash = "git"
-    steps = linters
-  }
-  ["fix"] {
-    fix = true
-    steps = linters
-  }
-  ["check"] {
-    steps = linters
   }
 }
