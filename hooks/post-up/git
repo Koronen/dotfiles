@@ -1,8 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
-allowed_signers_file="$(git config --global gpg.ssh.allowedSignersFile)"
-if [ -n "$allowed_signers_file" ]; then
-  touch "${allowed_signers_file/#\~/$HOME}"
-fi
+mkdir -p "$HOME/.config/git"
+touch "$HOME/.config/git/allowed_signers"
