@@ -4,14 +4,7 @@ These are my configuration files for various programs.
 
 ## Installation
 
-The recommended way to install these dotfiles on a new machine is to clone this
-repo using Git and to link the files using RCM.
-
-    sudo apt install curl git rcm
-    sudo apt install vim vim-ctrlp vim-solarized
-    git clone https://github.com/Koronen/dotfiles ~/.dotfiles
-    ln -s ~/.dotfiles/rcrc ~/.rcrc
-    rcup -v
+    curl -sSL https://raw.githubusercontent.com/Koronen/dotfiles/refs/heads/master/install.sh | sh
 
 ## License
 
