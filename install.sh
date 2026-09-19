@@ -27,9 +27,6 @@ $sudo env DEBIAN_FRONTEND=noninteractive apt-get install --yes \
   vim-airline \
   vim-airline-themes \
   vim-ctrlp \
-  vim-solarized \
-  zsh \
-  zsh-autosuggestions \
-  zsh-syntax-highlighting
+  vim-solarized
 
 rcup -f -v

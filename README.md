@@ -9,7 +9,6 @@ repo using Git and to link the files using RCM.
 
     sudo apt install curl git rcm
     sudo apt install vim vim-ctrlp vim-solarized
-    sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting
     git clone https://github.com/Koronen/dotfiles ~/.dotfiles
     ln -s ~/.dotfiles/rcrc ~/.rcrc
     rcup -v
