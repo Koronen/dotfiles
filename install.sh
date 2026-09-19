@@ -11,6 +11,8 @@ if [ "$CODESPACES" = "true" ]; then
 elif [ "$REMOTE_CONTAINERS" = "true" ]; then
   export DEBIAN_FRONTEND=noninteractive
   export RCRC="$HOME/.dotfiles/host-remote-container/rcrc"
+elif [ ! -t 0 ]; then
+  export DEBIAN_FRONTEND=noninteractive
 fi
 
 if [ "$(id -u)" = 0 ]; then
@@ -52,7 +54,7 @@ if [ ! -e "$HOME/.rcrc" ]; then
   ln -s "${RCRC:-$HOME/.dotfiles/rcrc}" "$HOME/.rcrc"
 fi
 
-if [ "$CODESPACES" = "true" ] || [ "$REMOTE_CONTAINERS" = "true" ]; then
+if [ "$CODESPACES" = "true" ] || [ "$REMOTE_CONTAINERS" = "true" ] || [ ! -t 0 ]; then
   rcup -f -v
 else
   rcup -v
