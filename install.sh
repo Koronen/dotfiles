@@ -35,7 +35,7 @@ case "$ID" in
     ;;
   "debian" | "ubuntu")
     $sudo apt-get update
-    $sudo apt-get --yes --no-install-recommends install curl git rcm vim vim-ctrlp vim-solarized
+    $sudo apt-get install --yes --no-install-recommends curl git rcm vim vim-ctrlp vim-solarized
     ;;
   "fedora")
     $sudo dnf install curl git rcm vim vim-ctrlp
@@ -63,7 +63,7 @@ fi
 case "$ID" in
   "alpine" | "fedora")
     mkdir -p "$HOME/.vim/colors"
-    curl -sSo "$HOME/.vim/colors/solarized.vim" \
+    curl -sSLo "$HOME/.vim/colors/solarized.vim" \
       "https://raw.githubusercontent.com/altercation/vim-colors-solarized/528a59f26d12278698bb946f8fb82a63711eec21/colors/solarized.vim"
     ;;
 esac
