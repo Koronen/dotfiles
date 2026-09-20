@@ -1,4 +1,4 @@
-min_version = "2026.7.16"
+min_version = "2026.9.7"
 
 [bootstrap.packages]
 "apt:build-essential" = "latest"
@@ -24,8 +24,10 @@ minimum_release_age = "3d"
 default_packages_file = "~/.config/ruby/default-gems"
 
 [tools]
+aube = "2"
 gh = "2"
 node = "lts"
+prettier = "3"
 ruby = "4"
 sops = "3"
 yamlfmt = "latest"
