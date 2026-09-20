@@ -4,7 +4,10 @@ These are my configuration files for various programs.
 
 ## Installation
 
-    curl -sSL https://raw.githubusercontent.com/Koronen/dotfiles/refs/heads/master/install.sh | sh
+    curl -sSLO https://raw.githubusercontent.com/Koronen/dotfiles/refs/heads/master/install.sh
+    less install.sh
+    chmod +x install.sh
+    ./install.sh
 
 ## License
 
