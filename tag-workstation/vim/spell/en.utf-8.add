@@ -5,8 +5,13 @@ TypeScript
 backend
 bytecode
 config
+dotfile
+dotfiles
 frontend
 linter
+lockfile
+lockfiles
+mise
 refactor
 toolchain
 whitespace
