@@ -23,6 +23,9 @@ minimum_release_age = "3d"
 [settings.ruby]
 default_packages_file = "~/.config/ruby/default-gems"
 
+[settings.self_update]
+minimum_release_age = "24h"
+
 [tools]
 aube = "2"
 gh = "2"
