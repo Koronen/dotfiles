@@ -1,4 +1,4 @@
-min_version = "2026.9.2"
+min_version = { hard = "2026.9.2", soft = "2026.9.16" }
 
 [tasks.format]
 alias = "f"
