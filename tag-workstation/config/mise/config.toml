@@ -4,6 +4,9 @@ min_version = { hard = "2026.9.2", soft = "2026.9.16" }
 "apt:build-essential" = "latest"
 "apt:curl" = "latest"
 "apt:rcm" = "latest"
+"apt:vim" = "latest"
+"apt:vim-ctrlp" = "latest"
+"apt:vim-solarized" = "latest"
 "apt:zsh" = "latest"
 
 [bootstrap.repos]
