@@ -1,5 +1,11 @@
 min_version = { hard = "2026.9.2", soft = "2026.9.16" }
 
+[bootstrap.hooks.pre-dotfiles]
+run = [
+  "git -C ~/.dotfiles submodule init --quiet",
+  "git -C ~/.dotfiles submodule update --recursive",
+]
+
 [bootstrap.packages]
 "apt:build-essential" = "latest"
 "apt:curl" = "latest"
@@ -16,7 +22,15 @@ min_version = { hard = "2026.9.2", soft = "2026.9.16" }
 login_shell = "/usr/bin/zsh"
 
 [dotfiles]
+"~/.aliases" = "~/.dotfiles/aliases"
+"~/.aliases.d" = { source = "~/.dotfiles/aliases.d", mode = "symlink-each" }
 "~/.config/mise/config.toml" = "~/.dotfiles/tag-workstation/config/mise/config.toml"
+"~/.config/shenv.d" = { source = "~/.dotfiles/config/shenv.d", mode = "symlink-each" }
+"~/.local/share/zsh/functions/prompt_koronen_setup" = "~/.dotfiles/local/share/zsh/functions/prompt_koronen_setup"
+"~/.zsh/bundle" = "~/.dotfiles/zsh/bundle"
+"~/.zsh/rc.d" = "~/.dotfiles/zsh/rc.d"
+"~/.zshenv" = "~/.dotfiles/zshenv"
+"~/.zshrc" = "~/.dotfiles/zshrc"
 
 [settings]
 auto_install = false
