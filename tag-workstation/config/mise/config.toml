@@ -38,9 +38,6 @@ disable_hints = ["auto_update"]
 idiomatic_version_file_enable_tools = ["node", "ruby"]
 minimum_release_age = "3d"
 
-[settings.ruby]
-default_packages_file = "~/.config/ruby/default-gems"
-
 [settings.self_update]
 minimum_release_age = "24h"
 
@@ -49,6 +46,6 @@ aube = "2"
 gh = "2"
 node = "lts"
 prettier = "3"
-ruby = "4"
+ruby = { version = "4", postinstall = "gem install bundler-audit gem-ctags ruby-lsp standard" }
 sops = "3"
 yamlfmt = "latest"

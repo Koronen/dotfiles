@@ -10,7 +10,7 @@ remove_old_symlink() {
 
 remove_old_symlink "$HOME/.aliases.d/elixir.sh"
 remove_old_symlink "$HOME/.aliases.d/phoenix_framework.sh"
-remove_old_symlink "$HOME/.default-gems"
+remove_old_symlink "$HOME/.config/ruby/default-gems"
 remove_old_symlink "$HOME/.dircolors"
 remove_old_symlink "$HOME/.gemrc"
 remove_old_symlink "$HOME/.gitattributes"
